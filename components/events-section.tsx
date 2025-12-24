@@ -162,6 +162,8 @@ export function EventsSection() {
                       controls
                       controlsList="nodownload"
                       suppressHydrationWarning
+                      onError={() => console.log("[v0] Video error: freshvid" + videoNum)}
+                      onLoadedMetadata={() => console.log("[v0] Video loaded: freshvid" + videoNum)}
                     >
                       <source src={`/freshvid${videoNum}.mp4`} type="video/mp4" />
                     </video>
