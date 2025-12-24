@@ -35,13 +35,6 @@ export function Header() {
   const audioRef = useRef<HTMLAudioElement>(null)
   const [isPlaying, setIsPlaying] = useState(false)
   const [currentTrackIndex, setCurrentTrackIndex] = useState(0)
-  const [volume, setVolume] = useState(0.7)
-
-  useEffect(() => {
-    if (audioRef.current) {
-      audioRef.current.volume = volume
-    }
-  }, [volume])
 
   useEffect(() => {
     const audio = audioRef.current
@@ -172,17 +165,6 @@ export function Header() {
               <SkipForward size={18} className="text-primary" />
             </button>
 
-            <input
-              type="range"
-              min="0"
-              max="1"
-              step="0.1"
-              value={volume}
-              onChange={(e) => setVolume(Number.parseFloat(e.target.value))}
-              className="w-16 h-1.5 bg-primary/20 rounded appearance-none cursor-pointer accent-primary"
-              aria-label="Volume"
-            />
-
             <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90">
               <Link href="#contact">Get In Touch</Link>
             </Button>
@@ -218,16 +200,9 @@ export function Header() {
               <SkipForward size={16} className="text-primary" />
             </button>
 
-            <input
-              type="range"
-              min="0"
-              max="1"
-              step="0.1"
-              value={volume}
-              onChange={(e) => setVolume(Number.parseFloat(e.target.value))}
-              className="w-12 h-1 bg-primary/20 rounded appearance-none cursor-pointer accent-primary"
-              aria-label="Volume"
-            />
+            <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90">
+              <Link href="#contact">Get In Touch</Link>
+            </Button>
           </div>
 
           <button

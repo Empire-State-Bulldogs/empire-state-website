@@ -66,7 +66,7 @@ export function HeroSection() {
 
         {/* Headline */}
         <h1
-          className={`text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-2 sm:mb-3 md:mb-4 text-balance px-2 ${isVisible ? "scroll-fade-up delay-100" : "opacity-0"}`}
+          className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-3 sm:mb-4 md:mb-4 text-balance px-2 ${isVisible ? "scroll-fade-up delay-100" : "opacity-0"}`}
         >
           <span className="text-foreground">New York&apos;s Premier</span>
           <br />
@@ -75,7 +75,7 @@ export function HeroSection() {
         </h1>
 
         <p
-          className={`text-sm sm:text-base md:text-lg lg:text-xl text-white max-w-md sm:max-w-xl md:max-w-2xl mx-auto mb-3 sm:mb-4 md:mb-6 text-pretty px-4 sm:px-6 md:px-3 py-3 sm:py-4 md:py-2 rounded-2xl md:rounded-3xl text-stroke ${isVisible ? "scroll-fade-up delay-200" : "opacity-0"}`}
+          className={`text-base sm:text-lg md:text-lg lg:text-xl text-white max-w-md sm:max-w-xl md:max-w-2xl mx-auto mb-4 sm:mb-5 md:mb-6 text-pretty px-5 sm:px-6 md:px-3 py-4 sm:py-4 md:py-2 rounded-2xl md:rounded-3xl text-stroke ${isVisible ? "scroll-fade-up delay-200" : "opacity-0"}`}
           style={{
             background: "rgba(0, 0, 0, 0.5)",
             backdropFilter: "blur(4px)",
@@ -87,33 +87,37 @@ export function HeroSection() {
 
         {/* Trust Badges */}
         <div
-          className={`flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-6 mb-4 sm:mb-6 md:mb-8 px-2 ${isVisible ? "scroll-fade-up delay-300" : "opacity-0"}`}
+          className={`flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-6 mb-5 sm:mb-6 md:mb-8 px-2 ${isVisible ? "scroll-fade-up delay-300" : "opacity-0"}`}
         >
-          <div className="flex items-center gap-2 text-xs sm:text-sm md:text-base text-white text-stroke hover:scale-110 transition-transform duration-300">
-            <MapPin className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 text-primary flex-shrink-0" />
+          <div className="flex items-center gap-2 text-sm sm:text-base md:text-base text-white text-stroke hover:scale-110 transition-transform duration-300">
+            <MapPin className="w-4 h-4 sm:w-4 sm:h-4 md:w-5 md:h-5 text-primary flex-shrink-0" />
             <span>Albany, NY</span>
           </div>
-          <div className="flex items-center gap-2 text-xs sm:text-sm md:text-base text-white text-stroke hover:scale-110 transition-transform duration-300">
-            <Award className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 text-accent flex-shrink-0" />
+          <div className="flex items-center gap-2 text-sm sm:text-base md:text-base text-white text-stroke hover:scale-110 transition-transform duration-300">
+            <Award className="w-4 h-4 sm:w-4 sm:h-4 md:w-5 md:h-5 text-accent flex-shrink-0" />
             <span>Health Guaranteed</span>
           </div>
-          <div className="flex items-center gap-2 text-xs sm:text-sm md:text-base text-white text-stroke hover:scale-110 transition-transform duration-300">
-            <Heart className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 text-accent flex-shrink-0" />
+          <div className="flex items-center gap-2 text-sm sm:text-base md:text-base text-white text-stroke hover:scale-110 transition-transform duration-300">
+            <Heart className="w-4 h-4 sm:w-4 sm:h-4 md:w-5 md:h-5 text-accent flex-shrink-0" />
             <span>Family Raised</span>
           </div>
         </div>
 
         {/* CTA Buttons */}
         <div
-          className={`flex flex-col sm:flex-row gap-2 sm:gap-3 justify-center mb-4 sm:mb-6 md:mb-8 w-full sm:w-auto max-w-xs sm:max-w-none px-2 sm:px-0 ${isVisible ? "scroll-fade-up delay-400" : "opacity-0"}`}
+          className={`flex flex-row flex-wrap gap-3 sm:gap-3 justify-center mb-5 sm:mb-6 md:mb-8 w-full sm:w-auto max-w-md sm:max-w-none px-2 sm:px-0 ${isVisible ? "scroll-fade-up delay-400" : "opacity-0"}`}
         >
-          <Button asChild size="lg" className="bg-primary text-primary-foreground hover-lift text-base sm:text-lg">
+          <Button
+            asChild
+            size="lg"
+            className="bg-primary text-primary-foreground hover-lift text-base sm:text-lg flex-1 sm:flex-initial min-w-[140px]"
+          >
             <Link href="#studs">View Our Studs</Link>
           </Button>
           <Button
             asChild
             size="lg"
-            className="border-2 border-primary bg-primary/10 text-primary hover-lift text-base sm:text-lg"
+            className="border-2 border-primary bg-primary/10 text-primary hover-lift text-base sm:text-lg flex-1 sm:flex-initial min-w-[140px]"
           >
             <Link href="#puppies">Available Puppies</Link>
           </Button>
