@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { Menu, X } from "lucide-react"
+import { Menu, X, Facebook, Instagram, Twitter, Youtube } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const navLinks = [
@@ -12,6 +12,13 @@ const navLinks = [
   { href: "#gallery", label: "Gallery" },
   { href: "#events", label: "Events" },
   { href: "#contact", label: "Contact" },
+]
+
+const socialLinks = [
+  { href: "https://www.facebook.com/EmpireStateBulldogs", icon: Facebook, label: "Facebook" },
+  { href: "https://www.instagram.com/EmpireStateBulldogs", icon: Instagram, label: "Instagram" },
+  { href: "https://x.com/Empire_State_Bulldogs", icon: Twitter, label: "X" },
+  { href: "https://www.youtube.com/@EmpireStateBulldogs", icon: Youtube, label: "YouTube" },
 ]
 
 export function Header() {
@@ -58,23 +65,43 @@ export function Header() {
         </div>
 
         {isMenuOpen && (
-          <nav className="lg:hidden py-6 px-4 border-t border-border animate-in fade-in slide-in-from-top-2 duration-300">
+          <nav className="lg:hidden py-6 px-4 border-t border-border menu-slide-down">
             <div className="flex flex-col gap-4 items-center text-center">
               {navLinks.map((link, index) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-xl md:text-2xl font-medium text-muted-foreground hover:text-primary transition-all duration-300 py-3 hover:scale-110 animate-in fade-in slide-in-from-left-4"
+                  className="text-xl md:text-2xl font-medium text-muted-foreground hover:text-primary transition-all duration-300 py-3 hover:scale-110 menu-item-slide"
                   style={{ animationDelay: `${index * 50}ms` }}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {link.label}
                 </Link>
               ))}
+
+              <div className="flex gap-6 justify-center pt-4 border-t border-border mt-4 w-full">
+                {socialLinks.map((social, index) => {
+                  const Icon = social.icon
+                  return (
+                    <Link
+                      key={social.href}
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary hover:text-accent transition-all duration-300 hover:scale-125 menu-item-slide"
+                      style={{ animationDelay: `${(navLinks.length + index) * 50}ms` }}
+                      aria-label={social.label}
+                    >
+                      <Icon size={28} />
+                    </Link>
+                  )
+                })}
+              </div>
+
               <Button
                 asChild
-                className="bg-primary text-primary-foreground hover:bg-primary/90 mt-4 w-full text-lg py-6 animate-in fade-in slide-in-from-left-4"
-                style={{ animationDelay: `${navLinks.length * 50}ms` }}
+                className="bg-primary text-primary-foreground hover:bg-primary/90 mt-4 w-full text-lg py-6 menu-item-slide"
+                style={{ animationDelay: `${(navLinks.length + socialLinks.length) * 50}ms` }}
               >
                 <Link href="#contact" onClick={() => setIsMenuOpen(false)}>
                   Get In Touch
