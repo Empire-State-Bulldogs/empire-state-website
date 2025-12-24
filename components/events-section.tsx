@@ -160,9 +160,9 @@ export function EventsSection() {
               onCanPlay={() => console.log("[v0] Video loaded successfully")}
               onError={(e) => console.log("[v0] Video error:", e)}
             >
-              <source src="/freshvid1.mp4" type="video/mp4" />
+              <source src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/freshvid1-ZeUWtkjRwl9kb1C8R6naxwxppMPqwd.mp4" type="video/mp4" />
               Your browser does not support the video tag. Please try a different browser or{" "}
-              <a href="/freshvid1.mp4" download className="text-primary underline">
+              <a href="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/freshvid1-ZeUWtkjRwl9kb1C8R6naxwxppMPqwd.mp4" download className="text-primary underline">
                 download the video here
               </a>
               .
