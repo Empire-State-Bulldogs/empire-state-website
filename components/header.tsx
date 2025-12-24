@@ -43,67 +43,75 @@ export function Header() {
     }
   }, [volume])
 
+  useEffect(() => {
+    const audio = audioRef.current
+    if (!audio) return
+
+    const updatePlayingState = () => {
+      setIsPlaying(!audio.paused)
+    }
+
+    audio.addEventListener("play", updatePlayingState)
+    audio.addEventListener("pause", updatePlayingState)
+
+    return () => {
+      audio.removeEventListener("play", updatePlayingState)
+      audio.removeEventListener("pause", updatePlayingState)
+    }
+  }, [])
+
+  const playTrack = (index: number) => {
+    setCurrentTrackIndex(index)
+    if (audioRef.current) {
+      const newSrc = `/music/${songs[index].file}`
+      audioRef.current.src = newSrc
+      audioRef.current.load()
+
+      setTimeout(() => {
+        if (audioRef.current) {
+          const playPromise = audioRef.current.play()
+          if (playPromise !== undefined) {
+            playPromise.catch((error: Error) => {
+              console.log("[v0] Audio play error:", error.message)
+            })
+          }
+        }
+      }, 100)
+
+      setIsPlaying(true)
+    }
+  }
+
   const togglePlay = () => {
     if (audioRef.current) {
       if (isPlaying) {
         audioRef.current.pause()
+        setIsPlaying(false)
       } else {
         const playPromise = audioRef.current.play()
         if (playPromise !== undefined) {
-          playPromise.catch((error) => {
-            console.error("Audio play error:", error)
+          playPromise.catch((error: Error) => {
+            console.log("[v0] Audio play error:", error.message)
           })
         }
+        setIsPlaying(true)
       }
-      setIsPlaying(!isPlaying)
     }
   }
 
   const nextTrack = () => {
     const newIndex = (currentTrackIndex + 1) % songs.length
-    setCurrentTrackIndex(newIndex)
-    if (audioRef.current) {
-      const newSrc = `/music/${songs[newIndex].file}`
-      audioRef.current.src = newSrc
-      audioRef.current.load()
-
-      const playPromise = audioRef.current.play()
-      if (playPromise !== undefined) {
-        playPromise.catch((error) => {
-          console.error("Audio play error on next track:", error)
-        })
-      }
-      setIsPlaying(true)
-    }
+    playTrack(newIndex)
   }
 
   const prevTrack = () => {
     const newIndex = (currentTrackIndex - 1 + songs.length) % songs.length
-    setCurrentTrackIndex(newIndex)
-    if (audioRef.current) {
-      const newSrc = `/music/${songs[newIndex].file}`
-      audioRef.current.src = newSrc
-      audioRef.current.load()
-
-      const playPromise = audioRef.current.play()
-      if (playPromise !== undefined) {
-        playPromise.catch((error) => {
-          console.error("Audio play error on prev track:", error)
-        })
-      }
-      setIsPlaying(true)
-    }
+    playTrack(newIndex)
   }
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
-      <audio
-        ref={audioRef}
-        src={`/music/${songs[currentTrackIndex].file}`}
-        onEnded={nextTrack}
-        crossOrigin="anonymous"
-        preload="metadata"
-      />
+      <audio ref={audioRef} onEnded={nextTrack} crossOrigin="anonymous" preload="metadata" suppressHydrationWarning />
 
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
