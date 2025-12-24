@@ -4,18 +4,19 @@ import { useState } from "react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { X } from "lucide-react"
+import { BackgroundElements } from "@/components/background-elements"
 
 const categories = ["All", "Studs", "Puppies", "Events", "Lifestyle"]
 
 const galleryImages = [
-  { src: "/placeholder.svg?height=600&width=600", category: "Studs", alt: "French Bulldog Stud" },
-  { src: "/placeholder.svg?height=600&width=600", category: "Puppies", alt: "Playful Frenchie Puppy" },
-  { src: "/placeholder.svg?height=600&width=600", category: "Events", alt: "Dog Show Event" },
-  { src: "/placeholder.svg?height=600&width=600", category: "Lifestyle", alt: "Happy Owner with Frenchie" },
-  { src: "/placeholder.svg?height=600&width=600", category: "Studs", alt: "Blue French Bulldog" },
-  { src: "/placeholder.svg?height=600&width=600", category: "Puppies", alt: "Adorable Puppy Litter" },
-  { src: "/placeholder.svg?height=600&width=600", category: "Lifestyle", alt: "Stylish Frenchie" },
-  { src: "/placeholder.svg?height=600&width=600", category: "Events", alt: "Breeder Meetup" },
+  { src: "/fresh1.jpg", category: "Studs", alt: "French Bulldog Stud" },
+  { src: "/fresh2.jpg", category: "Puppies", alt: "Playful Frenchie Puppy" },
+  { src: "/fresh3.jpg", category: "Events", alt: "Dog Show Event" },
+  { src: "/fresh4.jpg", category: "Lifestyle", alt: "Happy Owner with Frenchie" },
+  { src: "/fresh1.jpg", category: "Studs", alt: "Blue French Bulldog" },
+  { src: "/fresh2.jpg", category: "Puppies", alt: "Adorable Puppy Litter" },
+  { src: "/fresh3.jpg", category: "Lifestyle", alt: "Stylish Frenchie" },
+  { src: "/fresh4.jpg", category: "Events", alt: "Breeder Meetup" },
 ]
 
 export function GallerySection() {
@@ -26,30 +27,34 @@ export function GallerySection() {
     activeCategory === "All" ? galleryImages : galleryImages.filter((img) => img.category === activeCategory)
 
   return (
-    <section id="gallery" className="py-24 bg-background">
-      <div className="container mx-auto px-4">
+    <section id="gallery" className="py-16 md:py-24 bg-background scattered-background">
+      <BackgroundElements />
+
+      <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-12">
-          <span className="text-primary text-sm font-semibold uppercase tracking-wider">Gallery</span>
-          <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-4 text-foreground">Our Beautiful Bulldogs</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto text-pretty">
+        <div className="text-center mb-8 md:mb-12">
+          <span className="text-primary text-base md:text-lg font-semibold uppercase tracking-wider">Gallery</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-2 mb-4 text-foreground">
+            Our Beautiful Bulldogs
+          </h2>
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
             Browse through photos of our studs, puppies, events, and the Empire State Bulldogs lifestyle.
           </p>
         </div>
 
         {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-2 mb-12">
+        <div className="flex flex-wrap justify-center gap-2 mb-8 md:mb-12">
           {categories.map((category) => (
             <Button
               key={category}
               variant={activeCategory === category ? "default" : "outline"}
               size="sm"
               onClick={() => setActiveCategory(category)}
-              className={
+              className={`text-base md:text-lg ${
                 activeCategory === category
                   ? "bg-primary text-primary-foreground"
                   : "border-border text-muted-foreground hover:text-foreground hover:border-primary"
-              }
+              }`}
             >
               {category}
             </Button>
@@ -57,11 +62,11 @@ export function GallerySection() {
         </div>
 
         {/* Gallery Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-4">
           {filteredImages.map((image, index) => (
             <button
               key={index}
-              className="relative aspect-square rounded-xl overflow-hidden group cursor-pointer"
+              className="relative aspect-square rounded-lg md:rounded-xl overflow-hidden group cursor-pointer"
               onClick={() => setSelectedImage(image.src)}
             >
               <Image
@@ -71,7 +76,7 @@ export function GallerySection() {
                 className="object-cover transition-transform duration-300 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-background/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                <span className="text-foreground font-medium text-sm">{image.category}</span>
+                <span className="text-foreground font-medium text-base md:text-lg">{image.category}</span>
               </div>
             </button>
           ))}

@@ -1,5 +1,8 @@
+"use client"
+
 import { Shield, Stethoscope, Users, Trophy } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
+import { useScrollAnimation } from "@/hooks/use-scroll-animation"
 
 const features = [
   {
@@ -25,70 +28,79 @@ const features = [
 ]
 
 export function AboutSection() {
+  const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 })
+
   return (
-    <section id="about" className="py-24 bg-card">
+    <section ref={ref} id="about" className="py-16 md:py-24 bg-card">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <span className="text-primary text-sm font-semibold uppercase tracking-wider">About Us</span>
-          <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-4 text-card-foreground">
+        <div className={`text-center mb-12 md:mb-16 ${isVisible ? "scroll-fade-up" : "opacity-0"}`}>
+          <span className="text-primary text-base md:text-lg font-semibold uppercase tracking-wider">About Us</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-2 mb-4 text-card-foreground">
             More Than a Breeder — A Lifestyle Brand
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto text-pretty">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
             Empire State Bulldogs is dedicated to the highest standards of dog care, breeding excellence, and community
             engagement. Based in Albany, NY, we serve dog lovers within a 500-mile radius.
           </p>
         </div>
 
         {/* Story Section */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
-          <div>
-            <h3 className="text-2xl font-bold mb-4 text-card-foreground">Our Story</h3>
-            <p className="text-muted-foreground mb-4 leading-relaxed">
+        <div
+          className={`grid lg:grid-cols-2 gap-8 md:gap-12 items-center mb-16 md:mb-20 ${isVisible ? "scroll-fade-up delay-100" : "opacity-0"}`}
+        >
+          <div className="text-center lg:text-left">
+            <h3 className="text-2xl md:text-3xl font-bold mb-4 text-card-foreground">Our Story</h3>
+            <p className="text-lg md:text-xl text-muted-foreground mb-4 leading-relaxed">
               What started as a passion for French Bulldogs has grown into New York State&apos;s premier breeding
               program. We believe every puppy deserves the best start in life, which is why we invest in professional
               veterinary care, nutrition, and early socialization.
             </p>
-            <p className="text-muted-foreground mb-4 leading-relaxed">
+            <p className="text-lg md:text-xl text-muted-foreground mb-4 leading-relaxed">
               Our commitment goes beyond breeding — we&apos;re building a community. From dog shows and breeder events
               to community meetups, Empire State Bulldogs brings together people who share our love for these incredible
               companions.
             </p>
-            <p className="text-muted-foreground leading-relaxed">
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
               Whether you&apos;re looking for your next family member, seeking stud services, or want to connect with
               fellow enthusiasts, you&apos;ve found your home.
             </p>
           </div>
-          <div className="grid grid-cols-2 gap-4">
-            <div className="bg-secondary rounded-xl p-6 text-center">
-              <div className="text-4xl font-bold text-primary mb-2">500+</div>
-              <div className="text-sm text-muted-foreground">Mile Service Radius</div>
-            </div>
-            <div className="bg-secondary rounded-xl p-6 text-center">
-              <div className="text-4xl font-bold text-accent mb-2">100%</div>
-              <div className="text-sm text-muted-foreground">Health Guaranteed</div>
-            </div>
-            <div className="bg-secondary rounded-xl p-6 text-center">
-              <div className="text-4xl font-bold text-primary mb-2">24/7</div>
-              <div className="text-sm text-muted-foreground">Lifetime Support</div>
-            </div>
-            <div className="bg-secondary rounded-xl p-6 text-center">
-              <div className="text-4xl font-bold text-accent mb-2">5★</div>
-              <div className="text-sm text-muted-foreground">Customer Reviews</div>
-            </div>
+          <div className="grid grid-cols-2 gap-3 md:gap-4">
+            {[
+              { value: "500+", label: "Mile Service Radius" },
+              { value: "100%", label: "Health Guaranteed" },
+              { value: "24/7", label: "Lifetime Support" },
+              { value: "5★", label: "Customer Reviews" },
+            ].map((stat, i) => (
+              <div
+                key={stat.value}
+                className={`bg-secondary rounded-lg md:rounded-xl p-4 md:p-6 text-center hover-lift ${
+                  isVisible ? `scroll-scale-in delay-${(i + 1) * 100}` : "opacity-0"
+                }`}
+              >
+                <div className="text-3xl md:text-5xl font-bold text-primary mb-2">{stat.value}</div>
+                <div className="text-base md:text-lg text-muted-foreground">{stat.label}</div>
+              </div>
+            ))}
           </div>
         </div>
 
         {/* Features Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {features.map((feature) => (
-            <Card key={feature.title} className="bg-secondary border-border hover:border-primary/50 transition-colors">
-              <CardContent className="p-6 text-center">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                  <feature.icon className="w-6 h-6 text-primary" />
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+          {features.map((feature, i) => (
+            <Card
+              key={feature.title}
+              className={`bg-secondary border-border hover:border-primary/50 hover-lift transition-all duration-300 ${
+                isVisible ? `scroll-fade-up delay-${i * 100}` : "opacity-0"
+              }`}
+            >
+              <CardContent className="p-4 md:p-6 text-center">
+                <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3 md:mb-4">
+                  <feature.icon className="w-5 h-5 md:w-6 md:h-6 text-primary" />
                 </div>
-                <h4 className="font-semibold mb-2 text-card-foreground">{feature.title}</h4>
-                <p className="text-sm text-muted-foreground">{feature.description}</p>
+                <h4 className="font-semibold mb-2 text-lg md:text-xl text-card-foreground">{feature.title}</h4>
+                <p className="text-base md:text-lg text-muted-foreground">{feature.description}</p>
               </CardContent>
             </Card>
           ))}

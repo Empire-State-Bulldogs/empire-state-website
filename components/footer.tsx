@@ -24,10 +24,10 @@ const footerLinks = {
 }
 
 const socialLinks = [
-  { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
-  { icon: Facebook, href: "https://facebook.com", label: "Facebook" },
-  { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
-  { icon: Youtube, href: "https://youtube.com", label: "YouTube" },
+  { icon: Facebook, href: "https://www.facebook.com/EmpireStateBulldogs", label: "Facebook" },
+  { icon: Instagram, href: "https://www.instagram.com/EmpireStateBulldogs", label: "Instagram" },
+  { icon: Twitter, href: "https://x.com/Empire_State_Bulldogs", label: "X (Twitter)" },
+  { icon: Youtube, href: "https://www.youtube.com/@EmpireStateBulldogs", label: "YouTube" },
 ]
 
 export function Footer() {
@@ -39,7 +39,7 @@ export function Footer() {
           <div className="col-span-2 md:col-span-4 lg:col-span-1">
             <Link href="/" className="flex items-center gap-3 mb-4">
               <Image
-                src="/images/logomain.png"
+                src="/logomain.png"
                 alt="Empire State Bulldogs Logo"
                 width={60}
                 height={60}
@@ -114,7 +114,7 @@ export function Footer() {
             <p className="text-sm text-muted-foreground">
               © {new Date().getFullYear()} Empire State Bulldogs. All rights reserved.
             </p>
-            <p className="text-sm text-muted-foreground">Proudly serving New York State and beyond 🗽</p>
+            <p className="text-sm text-muted-foreground">Proudly serving New York State and beyond</p>
           </div>
         </div>
       </div>

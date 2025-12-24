@@ -9,6 +9,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { Card, CardContent } from "@/components/ui/card"
 import { Mail, Phone, MapPin, Send, MessageCircle } from "lucide-react"
+import { BackgroundElements } from "@/components/background-elements"
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
@@ -28,13 +29,15 @@ export function ContactSection() {
   }
 
   return (
-    <section id="contact" className="py-24 bg-background">
-      <div className="container mx-auto px-4">
+    <section id="contact" className="py-24 bg-background scattered-background">
+      <BackgroundElements />
+
+      <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <span className="text-primary text-sm font-semibold uppercase tracking-wider">Contact Us</span>
+          <span className="text-primary text-base md:text-lg font-semibold uppercase tracking-wider">Contact Us</span>
           <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-4 text-foreground">Let&apos;s Connect</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto text-pretty">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
             Whether you&apos;re interested in a puppy, stud services, or just want to learn more about Empire State
             Bulldogs, we&apos;d love to hear from you.
           </p>
@@ -42,28 +45,31 @@ export function ContactSection() {
 
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Contact Info */}
-          <div className="space-y-6">
+          <div className="space-y-6 lg:col-span-1">
             <Card className="bg-card border-border">
-              <CardContent className="p-6 flex items-start gap-4">
+              <CardContent className="p-6 flex flex-col sm:flex-row lg:flex-col items-center sm:items-start lg:items-start gap-4 text-center sm:text-left lg:text-left">
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
                   <MapPin className="w-6 h-6 text-primary" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-card-foreground mb-1">Location</h4>
-                  <p className="text-muted-foreground text-sm">Albany, New York</p>
-                  <p className="text-muted-foreground text-sm">Serving a 500-mile radius</p>
+                  <p className="text-muted-foreground text-base md:text-lg">Albany, New York</p>
+                  <p className="text-muted-foreground text-base md:text-lg">Serving a 500-mile radius</p>
                 </div>
               </CardContent>
             </Card>
 
             <Card className="bg-card border-border">
-              <CardContent className="p-6 flex items-start gap-4">
+              <CardContent className="p-6 flex flex-col sm:flex-row lg:flex-col items-center sm:items-start lg:items-start gap-4 text-center sm:text-left lg:text-left">
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
                   <Mail className="w-6 h-6 text-primary" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-card-foreground mb-1">Email</h4>
-                  <a href="mailto:info@empirestatebulldogs.com" className="text-primary text-sm hover:underline">
+                  <a
+                    href="mailto:info@empirestatebulldogs.com"
+                    className="text-primary text-base md:text-lg hover:underline"
+                  >
                     info@empirestatebulldogs.com
                   </a>
                 </div>
@@ -71,13 +77,13 @@ export function ContactSection() {
             </Card>
 
             <Card className="bg-card border-border">
-              <CardContent className="p-6 flex items-start gap-4">
+              <CardContent className="p-6 flex flex-col sm:flex-row lg:flex-col items-center sm:items-start lg:items-start gap-4 text-center sm:text-left lg:text-left">
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
                   <Phone className="w-6 h-6 text-primary" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-card-foreground mb-1">Phone</h4>
-                  <a href="tel:+15185551234" className="text-primary text-sm hover:underline">
+                  <a href="tel:+15185551234" className="text-primary text-base md:text-lg hover:underline">
                     (518) 555-1234
                   </a>
                 </div>
@@ -85,13 +91,13 @@ export function ContactSection() {
             </Card>
 
             <Card className="bg-card border-border">
-              <CardContent className="p-6 flex items-start gap-4">
+              <CardContent className="p-6 flex flex-col sm:flex-row lg:flex-col items-center sm:items-start lg:items-start gap-4 text-center sm:text-left lg:text-left">
                 <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center shrink-0">
                   <MessageCircle className="w-6 h-6 text-accent" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-card-foreground mb-1">Response Time</h4>
-                  <p className="text-muted-foreground text-sm">We typically respond within 24 hours</p>
+                  <p className="text-muted-foreground text-base md:text-lg">We typically respond within 24 hours</p>
                 </div>
               </CardContent>
             </Card>
@@ -99,8 +105,10 @@ export function ContactSection() {
 
           {/* Contact Form */}
           <Card className="lg:col-span-2 bg-card border-border">
-            <CardContent className="p-8">
-              <h3 className="text-xl font-bold mb-6 text-card-foreground">Send Us a Message</h3>
+            <CardContent className="p-6 md:p-8">
+              <h3 className="text-2xl md:text-3xl font-bold mb-6 text-card-foreground text-center md:text-left">
+                Send Us a Message
+              </h3>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div className="space-y-2">
