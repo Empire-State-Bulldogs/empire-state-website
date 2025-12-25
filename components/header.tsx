@@ -199,10 +199,6 @@ export function Header() {
             >
               <SkipForward size={16} className="text-primary" />
             </button>
-
-            <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90">
-              <Link href="#contact">Get In Touch</Link>
-            </Button>
           </div>
 
           <button

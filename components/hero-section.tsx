@@ -59,7 +59,7 @@ export function HeroSection() {
             alt="Empire State Bulldogs"
             width={200}
             height={200}
-            className="drop-shadow-2xl w-40 sm:w-48 md:w-56 lg:w-64 h-auto"
+            className="drop-shadow-2xl w-44 sm:w-48 md:w-56 lg:w-64 h-auto"
             priority
           />
         </div>
@@ -68,10 +68,9 @@ export function HeroSection() {
         <h1
           className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-3 sm:mb-4 md:mb-4 text-balance px-2 ${isVisible ? "scroll-fade-up delay-100" : "opacity-0"}`}
         >
-          <span className="text-foreground">New York&apos;s Premier</span>
+          <span className="text-foreground">New York's Premier</span>
           <br />
-          <span className="text-primary">French Bulldog</span>
-          <span className="text-foreground"> Breeder</span>
+          <span className="text-primary text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">French Bulldogs</span>
         </h1>
 
         <p
@@ -117,7 +116,7 @@ export function HeroSection() {
           <Button
             asChild
             size="lg"
-            className="border-2 border-primary bg-primary/10 text-primary hover-lift text-base sm:text-lg flex-1 sm:flex-initial min-w-[140px]"
+            className="bg-primary text-primary-foreground hover-lift text-base sm:text-lg flex-1 sm:flex-initial min-w-[140px]"
           >
             <Link href="#puppies">Available Puppies</Link>
           </Button>
