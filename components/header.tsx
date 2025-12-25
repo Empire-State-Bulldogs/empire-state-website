@@ -2,10 +2,8 @@
 
 import { useState, useRef, useEffect } from "react"
 import Link from "next/link"
-import { Menu, XIcon, Facebook, Instagram, Youtube, Play, Pause, SkipForward, SkipBack } from "lucide-react"
+import { Menu, XIcon, Facebook, Instagram, Play, Pause, SkipForward, SkipBack } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faXTwitter } from "@fortawesome/free-brands-svg-icons"
 
 const navLinks = [
   { href: "#about", label: "About" },
@@ -18,8 +16,6 @@ const navLinks = [
 const socialLinks = [
   { href: "https://www.facebook.com/EmpireStateBulldogs", icon: Facebook, label: "Facebook" },
   { href: "https://www.instagram.com/Empire_State_Bulldogs", icon: Instagram, label: "Instagram" },
-  { href: "https://x.com/EmpireStateBD", isXTwitter: true, label: "X" },
-  { href: "https://www.youtube.com/@EmpireStateBulldogs", icon: Youtube, label: "YouTube" },
 ]
 
 const songs = [
@@ -249,7 +245,7 @@ export function Header() {
                       style={{ animationDelay: `${(navLinks.length + index) * 50}ms` }}
                       aria-label={social.label}
                     >
-                      {social.isXTwitter ? <FontAwesomeIcon icon={faXTwitter} size="2x" /> : <social.icon size={28} />}
+                      <social.icon size={28} />
                     </Link>
                   )
                 })}

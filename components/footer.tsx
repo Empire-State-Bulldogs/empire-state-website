@@ -1,8 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { Instagram, Facebook, Youtube } from "lucide-react"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faXTwitter } from "@fortawesome/free-brands-svg-icons"
+import { Instagram, Facebook } from "lucide-react"
 
 const footerLinks = {
   explore: [
@@ -27,8 +25,6 @@ const footerLinks = {
 const socialLinks = [
   { icon: Facebook, href: "https://www.facebook.com/EmpireStateBulldogs", label: "Facebook" },
   { icon: Instagram, href: "https://www.instagram.com/Empire_State_Bulldogs", label: "Instagram" },
-  { isXTwitter: true, href: "https://x.com/EmpireStateBD", label: "X" },
-  { icon: Youtube, href: "https://www.youtube.com/@EmpireStateBulldogs", label: "YouTube" },
 ]
 
 export function Footer() {
@@ -60,11 +56,7 @@ export function Footer() {
                   className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center hover:bg-primary/20 transition-colors"
                   aria-label={social.label}
                 >
-                  {social.isXTwitter ? (
-                    <FontAwesomeIcon icon={faXTwitter} className="text-muted-foreground hover:text-primary text-lg" />
-                  ) : (
-                    <social.icon className="w-5 h-5 text-muted-foreground hover:text-primary" />
-                  )}
+                  <social.icon className="w-5 h-5 text-muted-foreground hover:text-primary" />
                 </Link>
               ))}
             </div>

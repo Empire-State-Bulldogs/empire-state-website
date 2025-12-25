@@ -1,8 +1,6 @@
 "use client"
 
-import { useState } from "react"
 import Image from "next/image"
-import { X } from "lucide-react"
 import { BackgroundElements } from "@/components/background-elements"
 
 const galleryImages = [
@@ -13,8 +11,6 @@ const galleryImages = [
 ]
 
 export function GallerySection() {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null)
-
   return (
     <section id="gallery" className="py-16 md:py-24 bg-background scattered-background">
       <BackgroundElements />
@@ -31,12 +27,12 @@ export function GallerySection() {
           </p>
         </div>
 
+        {/* Removed lightbox functionality and state */}
         <div className="flex gap-3 md:gap-4 justify-center flex-wrap">
           {galleryImages.map((image, index) => (
-            <button
+            <div
               key={index}
-              className="relative rounded-lg md:rounded-xl overflow-hidden group cursor-pointer flex-shrink-0 w-48 md:w-56 h-auto"
-              onClick={() => setSelectedImage(image.src)}
+              className="relative rounded-lg md:rounded-xl overflow-hidden group flex-shrink-0 w-48 md:w-56 h-auto"
             >
               <Image
                 src={image.src || "/placeholder.svg"}
@@ -45,28 +41,9 @@ export function GallerySection() {
                 height={400}
                 className="w-full h-auto object-contain transition-transform duration-300 group-hover:scale-105"
               />
-            </button>
+            </div>
           ))}
         </div>
-
-        {/* Lightbox */}
-        {selectedImage && (
-          <div
-            className="fixed inset-0 z-[60] bg-background/95 flex items-center justify-center p-4"
-            onClick={() => setSelectedImage(null)}
-          >
-            <button
-              className="absolute top-4 right-4 w-10 h-10 rounded-full bg-card flex items-center justify-center hover:bg-secondary transition-colors z-[70]"
-              onClick={() => setSelectedImage(null)}
-              aria-label="Close lightbox"
-            >
-              <X className="w-5 h-5 text-foreground" />
-            </button>
-            <div className="relative w-full max-w-3xl max-h-[80vh] h-auto">
-              <Image src={selectedImage || "/placeholder.svg"} alt="Gallery image" fill className="object-contain" />
-            </div>
-          </div>
-        )}
       </div>
     </section>
   )
