@@ -91,11 +91,6 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: "/favicon.ico",
-        sizes: "48x48",
-        type: "image/x-icon",
-      },
-      {
         url: "/favicon.svg",
         type: "image/svg+xml",
       },
@@ -148,6 +143,7 @@ export default function RootLayout({
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
         <meta name="msapplication-TileColor" content="#1a1035" />
         <meta name="msapplication-config" content="/browserconfig.xml" />
+        <meta name="apple-mobile-web-app-title" content="Empire State Bulldogs" />
 
         <script
           type="application/ld+json"
