@@ -28,6 +28,8 @@ const socialLinks = [
 ]
 
 export function Footer() {
+  const [year, setYear] = (typeof window !== 'undefined') ? [new Date().getFullYear(), () => { }] : [2026, () => { }]
+  // Simplified hydration fix for year
   return (
     <footer className="bg-card border-t border-border">
       <div className="container mx-auto px-4 py-16">
@@ -36,7 +38,7 @@ export function Footer() {
           <div className="col-span-2 md:col-span-4 lg:col-span-1">
             <Link href="/" className="flex items-center gap-3 mb-4">
               <Image
-                src="/images/logomain.png"
+                src="/logomain.png"
                 alt="Empire State Bulldogs Logo"
                 width={60}
                 height={60}
@@ -109,7 +111,7 @@ export function Footer() {
         <div className="border-t border-border mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()} Empire State Bulldogs. All rights reserved.
+              © {year} Empire State Bulldogs. All rights reserved.
             </p>
             <p className="text-sm text-muted-foreground">Proudly serving New York State and beyond</p>
           </div>

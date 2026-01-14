@@ -121,10 +121,10 @@ export function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
             <img
-              src="/images/logomain.png"
+              src="/logomain.png"
               alt="Empire State Bulldogs"
               className="md:hidden h-12 w-auto"
-              onError={(e) => console.log("[v0] Logo not found at /images/logomain.png")}
+              onError={(e) => console.log("[v0] Logo not found at /logomain.png")}
             />
             <span className="hidden md:block text-lg md:text-2xl lg:text-4xl font-bold text-foreground">
               <span className="block">Empire State Bulldogs</span>

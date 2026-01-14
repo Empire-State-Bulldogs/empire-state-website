@@ -80,12 +80,12 @@ export const metadata: Metadata = {
         type: "image/svg+xml",
       },
       {
-        url: "/images/favicon-96x96.png",
+        url: "/favicon-96x96.png",
         sizes: "96x96",
         type: "image/png",
       },
       {
-        url: "/images/logomain.png",
+        url: "/logomain.png",
         sizes: "any",
         type: "image/png",
       },
@@ -101,7 +101,7 @@ export const metadata: Metadata = {
     other: [
       {
         rel: "manifest",
-        url: "/images/site.webmanifest",
+        url: "/site.webmanifest",
       },
     ],
   },
