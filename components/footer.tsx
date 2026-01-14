@@ -36,11 +36,11 @@ export function Footer() {
           <div className="col-span-2 md:col-span-4 lg:col-span-1">
             <Link href="/" className="flex items-center gap-3 mb-4">
               <Image
-                src="/logomain.png"
+                src="/images/logomain.png"
                 alt="Empire State Bulldogs Logo"
                 width={60}
                 height={60}
-                className="rounded-full"
+                className="rounded-2xl"
               />
             </Link>
             <p className="text-muted-foreground text-sm mb-4">
