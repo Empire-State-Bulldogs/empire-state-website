@@ -45,7 +45,7 @@ export function Footer() {
                 className="rounded-2xl"
               />
             </Link>
-            <p className="text-muted-foreground text-sm mb-4">
+            <p className="text-muted-foreground text-base mb-4">
               New York&apos;s premier French Bulldog breeder and lifestyle brand, based in Albany, NY.
             </p>
             <div className="flex gap-3">
@@ -70,7 +70,7 @@ export function Footer() {
             <ul className="space-y-2">
               {footerLinks.explore.map((link) => (
                 <li key={link.label}>
-                  <Link href={link.href} className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  <Link href={link.href} className="text-base text-muted-foreground hover:text-primary transition-colors">
                     {link.label}
                   </Link>
                 </li>
@@ -84,7 +84,7 @@ export function Footer() {
             <ul className="space-y-2">
               {footerLinks.support.map((link) => (
                 <li key={link.label}>
-                  <Link href={link.href} className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  <Link href={link.href} className="text-base text-muted-foreground hover:text-primary transition-colors">
                     {link.label}
                   </Link>
                 </li>
@@ -98,7 +98,7 @@ export function Footer() {
             <ul className="space-y-2">
               {footerLinks.legal.map((link) => (
                 <li key={link.label}>
-                  <Link href={link.href} className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  <Link href={link.href} className="text-base text-muted-foreground hover:text-primary transition-colors">
                     {link.label}
                   </Link>
                 </li>
@@ -110,10 +110,10 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-border mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-muted-foreground">
+            <p className="text-base text-muted-foreground">
               © {year} Empire State Bulldogs. All rights reserved.
             </p>
-            <p className="text-sm text-muted-foreground">Proudly serving New York State and beyond</p>
+            <p className="text-base text-muted-foreground">Proudly serving New York State and beyond</p>
           </div>
         </div>
       </div>

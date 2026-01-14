@@ -23,9 +23,9 @@ export function ContactSection() {
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <span className="text-primary text-base md:text-lg font-semibold uppercase tracking-wider">Contact Us</span>
+          <span className="text-primary text-base md:text-xl font-semibold uppercase tracking-wider">Contact Us</span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-2 mb-4 text-foreground">Let&apos;s Connect</h2>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
+          <p className="text-lg md:text-2xl text-muted-foreground max-w-3xl mx-auto text-pretty">
             Whether you&apos;re interested in a puppy, stud services, or just want to learn more about Empire State
             Bulldogs, we&apos;d love to hear from you.
           </p>
@@ -38,8 +38,8 @@ export function ContactSection() {
                 <Mail className="w-10 h-10 text-primary" />
               </div>
 
-              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-foreground">Send Us an Email</h3>
-              <p className="text-muted-foreground mb-8 text-lg">
+              <h3 className="text-2xl md:text-4xl font-bold mb-4 text-foreground">Send Us an Email</h3>
+              <p className="text-muted-foreground mb-8 text-xl">
                 The fastest way to get in touch with our team for inquiries and support.
               </p>
 

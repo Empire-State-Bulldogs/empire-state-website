@@ -116,6 +116,10 @@
     @apply bg-background text-foreground;
     /* add fade-in animation on page load */
     animation: pageLoadFadeIn 0.6s ease-out;
+    
+    @media (min-width: 1024px) {
+      font-size: 1.1rem;
+    }
   }
 
   h1,

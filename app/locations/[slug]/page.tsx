@@ -58,10 +58,10 @@ export default function CityPage({ params }: { params: { slug: string } }) {
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto text-center">
                         <h2 className="text-3xl md:text-5xl font-bold mb-8 italic">Quality Genetics, Delivered to {cityName}</h2>
-                        <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8">
+                        <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed mb-8">
                             Empire State Bulldogs is proud to extend our world-class French Bulldog breeding program to the <strong>{cityName}</strong> community. Whether you are looking for a rare <strong>blue merle</strong>, a <strong>lilac tan</strong>, or a <strong>fluffy Frenchie</strong>, we provide healthy, AKC-registered puppies with nationwide delivery options.
                         </p>
-                        <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+                        <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
                             Our stud services, featuring the legendary <strong>King Simba</strong>, are available for breeders in {cityName} looking to elevate their program with elite genetics and proven structure.
                         </p>
                     </div>

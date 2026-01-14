@@ -38,8 +38,19 @@ export function FamilySection() {
                                 src={photo.src}
                                 alt={photo.alt}
                                 fill
-                                className="object-contain p-4 rounded-2xl transition-transform duration-500"
+                                className="object-contain p-2 rounded-2xl transition-transform duration-500"
                             />
+                            {index === 0 && (
+                                <div className="absolute bottom-2 left-2 z-20 w-32 md:w-40 lg:w-48 transition-transform duration-500 hover:scale-110">
+                                    <Image
+                                        src="/images/badempirelogotpneon.png"
+                                        alt="Empire State Bulldogs Badge"
+                                        width={200}
+                                        height={200}
+                                        className="rotate-[-25deg] drop-shadow-[0_0_15px_rgba(0,0,0,0.8)]"
+                                    />
+                                </div>
+                            )}
                             <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
                         </div>
                     ))}

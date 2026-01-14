@@ -76,7 +76,7 @@ export function PuppiesSection() {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-2 mb-4 text-card-foreground">
             Find Your New Best Friend
           </h2>
-          <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
             Our puppies are raised in a loving home environment, ensuring they are well-socialized and ready for their forever families.
           </p>
         </div>
@@ -148,7 +148,7 @@ export function PuppiesSection() {
                 <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
                   <Check className="w-4 h-4 text-primary" />
                 </div>
-                <span className="text-base text-card-foreground">{item}</span>
+                <span className="text-lg text-card-foreground">{item}</span>
               </div>
             ))}
           </div>
