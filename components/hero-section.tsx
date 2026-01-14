@@ -29,7 +29,7 @@ export function HeroSection() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/herobg.jpg"
+          src="/images/herobg.jpg"
           alt="NYC Skyline with fireworks"
           fill
           className="object-cover object-right-top sm:object-center"
@@ -43,11 +43,11 @@ export function HeroSection() {
         {/* Logo */}
         <div className={`flex justify-center mb-3 sm:mb-4 md:mb-6 ${isVisible ? "scroll-scale-in" : "opacity-0"}`}>
           <Image
-            src="/logomain.png"
+            src="/images/logomain.png"
             alt="Empire State Bulldogs"
             width={200}
             height={200}
-            className="drop-shadow-2xl w-44 sm:w-48 md:w-56 lg:w-64 h-auto"
+            className="drop-shadow-2xl w-44 sm:w-48 md:w-56 lg:w-64 h-auto rounded-2xl"
             priority
           />
         </div>
@@ -62,7 +62,7 @@ export function HeroSection() {
         </h1>
 
         <p
-          className={`text-base sm:text-lg md:text-lg lg:text-xl text-white max-w-md sm:max-w-xl md:max-w-2xl mx-auto mb-4 sm:mb-5 md:mb-6 text-pretty px-5 sm:px-6 md:px-3 py-4 sm:py-4 md:py-2 rounded-2xl md:rounded-3xl text-stroke ${isVisible ? "scroll-fade-up delay-200" : "opacity-0"}`}
+          className={`text-base sm:text-lg md:text-lg lg:text-xl text-white max-w-md sm:max-w-xl md:max-w-2xl mx-auto mb-4 sm:mb-5 md:mb-6 text-pretty px-5 sm:px-6 md:px-3 py-4 sm:py-4 md:py-2 rounded-2xl text-stroke ${isVisible ? "scroll-fade-up delay-200" : "opacity-0"}`}
           style={{
             background: "rgba(0, 0, 0, 0.5)",
             backdropFilter: "blur(4px)",

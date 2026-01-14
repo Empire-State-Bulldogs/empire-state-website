@@ -1,9 +1,20 @@
+"use client"
+
+import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Crown, MapPin, Star, Clock } from "lucide-react"
+
+const simbaPhotos = [
+  "/images/simba1.jpg",
+  "/images/simba2.jpg",
+  "/images/simba3.jpg",
+  "/images/simba4.jpg",
+  "/images/simba5.jpg",
+]
 
 const studs = [
   {
@@ -29,6 +40,8 @@ const studs = [
 ]
 
 export function StudServicesSection() {
+  const [activeSimbaPhoto, setActiveSimbaPhoto] = useState(0)
+
   const steakEmojis = Array.from({ length: 6 }).map((_, i) => ({
     id: i,
     left: Math.random() * 100,
@@ -80,23 +93,44 @@ export function StudServicesSection() {
                 <Image
                   src={
                     stud.featured
-                      ? "/images/kingsimba2.png"
+                      ? simbaPhotos[activeSimbaPhoto]
                       : stud.comingSoon
                         ? "/images/coming_soon.jpg"
                         : `/placeholder.svg?height=400&width=400&query=handsome ${stud.color} french bulldog portrait professional photo`
                   }
                   alt={stud.name}
                   fill
-                  className="object-contain p-4"
+                  className="object-contain p-4 transition-all duration-500 rounded-2xl"
                   priority={stud.featured}
                 />
                 {stud.featured && (
-                  <div className="absolute top-4 left-4">
-                    <Badge className="bg-primary text-primary-foreground">
-                      <Crown className="w-3 h-3 mr-1" />
-                      Featured
-                    </Badge>
-                  </div>
+                  <>
+                    <div className="absolute top-4 left-4">
+                      <Badge className="bg-primary text-primary-foreground">
+                        <Crown className="w-3 h-3 mr-1" />
+                        Featured
+                      </Badge>
+                    </div>
+                    {/* Tiny Slideshow Thumbnails */}
+                    <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 bg-background/40 backdrop-blur-sm p-1.5 rounded-full z-20">
+                      {simbaPhotos.map((photo, idx) => (
+                        <button
+                          key={idx}
+                          onMouseEnter={() => setActiveSimbaPhoto(idx)}
+                          onClick={() => setActiveSimbaPhoto(idx)}
+                          className={`relative w-8 h-8 rounded-full overflow-hidden border-2 transition-all ${activeSimbaPhoto === idx ? "border-primary scale-110" : "border-transparent opacity-70 hover:opacity-100"
+                            }`}
+                        >
+                          <Image
+                            src={photo}
+                            alt={`Simba ${idx + 1}`}
+                            fill
+                            className="object-cover rounded-full"
+                          />
+                        </button>
+                      ))}
+                    </div>
+                  </>
                 )}
                 {stud.comingSoon && (
                   <div className="absolute top-4 right-4">

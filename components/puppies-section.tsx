@@ -1,21 +1,20 @@
 "use client"
 
+import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Check } from "lucide-react"
+import { Badge } from "@/components/ui/badge"
 import { useScrollAnimation } from "@/hooks/use-scroll-animation"
 
-const puppies = [
-  {
-    name: "El Jefa",
-    title: "Featured Matriarch",
-    description:
-      "The powerhouse of excellence. El Jefa carries everything with grace and strength. Perfect in every way, she represents the foundation of our breeding program and the future of Empire State Bulldogs. Built to lead, built to inspire.",
-    image: "/images/El_Jefa.jpg",
-    highlight: true,
-  },
+const puppyData = [
+  { id: 1, name: "Puppy 1", photos: ["/images/puppy1-1.jpg"], color: "Lilac Tan" },
+  { id: 2, name: "Puppy 2", photos: ["/images/puppy2-1.jpg"], color: "Blue Fawn" },
+  { id: 3, name: "Puppy 3", photos: ["/images/puppy3-1.jpg", "/images/puppy3-2.jpg"], color: "Chocolate" },
+  { id: 4, name: "Puppy 4", photos: ["/images/puppy4-1.jpg"], color: "Cream" },
+  { id: 5, name: "Puppy 5", photos: ["/images/puppy5-1.jpg"], color: "Brindle" },
 ]
 
 const includes = [
@@ -30,7 +29,10 @@ const includes = [
 ]
 
 export function PuppiesSection() {
-  const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 })
+  const { ref, isVisible } = useScrollAnimation({ threshold: 0.1 })
+  const [activePhotos, setActivePhotos] = useState<Record<number, number>>({
+    1: 0, 2: 0, 3: 0, 4: 0, 5: 0
+  })
 
   const pawEmojis = Array.from({ length: 7 }).map((_, i) => ({
     id: i,
@@ -40,6 +42,10 @@ export function PuppiesSection() {
     duration: 3.5 + Math.random() * 2,
     rotation: Math.random() * 360,
   }))
+
+  const handlePhotoChange = (puppyId: number, photoIdx: number) => {
+    setActivePhotos(prev => ({ ...prev, [puppyId]: photoIdx }))
+  }
 
   return (
     <section ref={ref} id="puppies" className="py-16 md:py-24 bg-card relative overflow-hidden">
@@ -65,43 +71,61 @@ export function PuppiesSection() {
         {/* Section Header */}
         <div className={`text-center mb-12 md:mb-16 ${isVisible ? "scroll-fade-up" : "opacity-0"}`}>
           <span className="text-primary text-sm md:text-base font-semibold uppercase tracking-wider">
-            Our Foundation
+            Available Puppies
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-2 mb-4 text-card-foreground">
-            Champion of Excellence
+            Find Your New Best Friend
           </h2>
           <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-            Meet the heart and soul of Empire State Bulldogs. El Jefa represents generations of careful breeding and
-            unwavering commitment to perfection.
+            Our puppies are raised in a loving home environment, ensuring they are well-socialized and ready for their forever families.
           </p>
         </div>
 
-        {/* Featured Dog */}
-        <div className={`max-w-2xl mx-auto mb-16 ${isVisible ? "scroll-fade-up" : "opacity-0"}`}>
-          {puppies.map((dog) => (
+        {/* Puppies Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mb-16">
+          {puppyData.map((puppy) => (
             <Card
-              key={dog.name}
-              className="bg-secondary border-border overflow-hidden hover:border-primary/50 transition-all duration-300 group"
+              key={puppy.id}
+              className={`bg-secondary border-border overflow-hidden hover:border-primary/50 transition-all duration-300 group ${isVisible ? "scroll-fade-up" : "opacity-0"}`}
             >
-              <div className="relative aspect-square bg-muted">
+              <div className="relative aspect-square bg-muted flex items-center justify-center overflow-hidden">
                 <Image
-                  src={dog.image || "/placeholder.svg"}
-                  alt={dog.name}
+                  src={puppy.photos[activePhotos[puppy.id]] || "/placeholder.svg"}
+                  alt={puppy.name}
                   fill
-                  className="object-contain p-2 md:p-4 group-hover:scale-105 transition-transform duration-300"
+                  className="object-contain p-2 rounded-2xl transition-transform duration-500 group-hover:scale-110"
                 />
-              </div>
-              <CardContent className="p-6 md:p-8">
-                <div className="mb-4">
-                  <span className="text-primary text-sm font-semibold uppercase tracking-wider">{dog.title}</span>
-                  <h3 className="text-3xl md:text-4xl font-bold text-card-foreground mt-2">{dog.name}</h3>
+
+                {/* Multi-photo indicator/dots */}
+                {puppy.photos.length > 1 && (
+                  <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1 z-20">
+                    {puppy.photos.map((_, idx) => (
+                      <button
+                        key={idx}
+                        onMouseEnter={() => handlePhotoChange(puppy.id, idx)}
+                        onClick={() => handlePhotoChange(puppy.id, idx)}
+                        className={`w-2 h-2 rounded-full transition-all ${activePhotos[puppy.id] === idx ? "bg-primary scale-125" : "bg-white/50 hover:bg-white"
+                          }`}
+                        aria-label={`View photo ${idx + 1}`}
+                      />
+                    ))}
+                  </div>
+                )}
+
+                <div className="absolute top-2 right-2">
+                  <Badge variant="secondary" className="bg-background/80 backdrop-blur-sm">
+                    {puppy.color}
+                  </Badge>
                 </div>
-                <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-6">{dog.description}</p>
+              </div>
+              <CardContent className="p-4 text-center">
+                <h3 className="text-xl font-bold text-card-foreground mb-4">{puppy.name}</h3>
                 <Button
                   asChild
-                  className="w-full bg-primary text-primary-foreground hover:bg-primary/90 text-lg md:text-xl hover-lift"
+                  size="sm"
+                  className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
                 >
-                  <Link href="#contact">Learn More</Link>
+                  <Link href="#contact">Inquire</Link>
                 </Button>
               </CardContent>
             </Card>
