@@ -1,7 +1,6 @@
 import type React from "react"
 import type { Metadata, Viewport } from "next"
 import { Geist_Mono, Bebas_Neue } from "next/font/google"
-import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
 const _bebasNeue = Bebas_Neue({
@@ -256,7 +255,6 @@ export default function RootLayout({
       </head>
       <body className="font-sans antialiased">
         {children}
-        <Analytics />
       </body>
     </html>
   )
