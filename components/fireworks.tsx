@@ -14,13 +14,73 @@ export function Fireworks() {
 
         let animationFrameId: number
         let particles: Particle[] = []
+        let rockets: Rocket[] = []
 
-        // Brand Colors
+        // Brand Colors (Boosted for better visibility while remaining elegant)
         const colors = [
-            "hsla(250, 70%, 60%, 0.2)", // Subtle Purple
-            "hsla(45, 90%, 60%, 0.2)",  // Subtle Gold
-            "hsla(280, 80%, 70%, 0.15)", // Lighter Lavender
+            "hsla(250, 70%, 65%, 0.4)", // Purple
+            "hsla(45, 95%, 65%, 0.4)",  // Gold
+            "hsla(280, 80%, 75%, 0.3)", // Lavender
         ]
+
+        class Rocket {
+            x: number
+            y: number
+            vy: number
+            targetY: number
+            color: string
+            trail: { x: number; y: number; alpha: number }[]
+            exploded: boolean
+
+            constructor(x: number, targetY: number, color: string) {
+                this.x = x
+                this.y = canvas.height + 10
+                this.vy = -(Math.random() * 3 + 4) // Speed of launch
+                this.targetY = targetY
+                this.color = color
+                this.trail = []
+                this.exploded = false
+            }
+
+            update() {
+                this.trail.push({ x: this.x, y: this.y, alpha: 0.4 })
+                if (this.trail.length > 10) this.trail.shift()
+                this.trail.forEach(t => t.alpha -= 0.04)
+
+                this.y += this.vy
+                this.vy *= 0.99 // Air resistance
+
+                if (this.y <= this.targetY || this.vy >= -0.5) {
+                    this.exploded = true
+                    this.explode()
+                }
+            }
+
+            explode() {
+                const particleCount = 40 + Math.floor(Math.random() * 20)
+                for (let i = 0; i < particleCount; i++) {
+                    particles.push(new Particle(this.x, this.y, this.color))
+                }
+            }
+
+            draw() {
+                if (!ctx) return
+
+                // Draw Trail
+                this.trail.forEach((t) => {
+                    ctx.beginPath()
+                    ctx.arc(t.x, t.y, 1.5, 0, Math.PI * 2)
+                    ctx.fillStyle = this.color.replace("0.4", t.alpha.toString())
+                    ctx.fill()
+                })
+
+                // Draw Head
+                ctx.beginPath()
+                ctx.arc(this.x, this.y, 2, 0, Math.PI * 2)
+                ctx.fillStyle = this.color
+                ctx.fill()
+            }
+        }
 
         class Particle {
             x: number
@@ -31,24 +91,30 @@ export function Fireworks() {
             color: string
             size: number
             decay: number
+            friction: number
+            gravity: number
 
             constructor(x: number, y: number, color: string) {
                 this.x = x
                 this.y = y
                 const angle = Math.random() * Math.PI * 2
-                const speed = Math.random() * 2 + 0.5
+                const speed = Math.random() * 3 + 1
                 this.vx = Math.cos(angle) * speed
                 this.vy = Math.sin(angle) * speed
-                this.alpha = 0.6
+                this.alpha = 1.0
                 this.color = color
-                this.size = Math.random() * 2 + 1
-                this.decay = Math.random() * 0.01 + 0.005
+                this.size = Math.random() * 2 + 0.5
+                this.decay = Math.random() * 0.02 + 0.015
+                this.friction = 0.96
+                this.gravity = 0.08
             }
 
             update() {
+                this.vx *= this.friction
+                this.vy *= this.friction
+                this.vy += this.gravity
                 this.x += this.vx
                 this.y += this.vy
-                this.vy += 0.02 // Subtle gravity
                 this.alpha -= this.decay
             }
 
@@ -64,24 +130,25 @@ export function Fireworks() {
             }
         }
 
-        const createFirework = () => {
-            const x = Math.random() * canvas.width
-            const y = canvas.height - (Math.random() * canvas.height * 0.4) // Random launch height
-            const targetY = Math.random() * (canvas.height * 0.6)
-            const color = colors[Math.floor(Math.random() * colors.length)]
-
-            // Create burst
-            for (let i = 0; i < 30; i++) {
-                particles.push(new Particle(x, targetY, color))
-            }
-        }
-
         const render = () => {
-            ctx.clearRect(0, 0, canvas.width, canvas.height)
+            // Subtle trail effect on canvas (clears but leaves a faint ghost)
+            ctx.fillStyle = "rgba(0, 0, 0, 0.15)"
+            ctx.globalCompositeOperation = "destination-out"
+            ctx.fillRect(0, 0, canvas.width, canvas.height)
+            ctx.globalCompositeOperation = "lighter"
 
-            if (Math.random() < 0.01) { // Low frequency for subtlety
-                createFirework()
+            if (Math.random() < 0.015) { // Adjusted frequency
+                const x = Math.random() * canvas.width
+                const targetY = canvas.height * (0.1 + Math.random() * 0.4)
+                const color = colors[Math.floor(Math.random() * colors.length)]
+                rockets.push(new Rocket(x, targetY, color))
             }
+
+            rockets = rockets.filter(r => !r.exploded)
+            rockets.forEach(r => {
+                r.update()
+                r.draw()
+            })
 
             particles = particles.filter((p) => p.alpha > 0)
             particles.forEach((p) => {
@@ -111,7 +178,7 @@ export function Fireworks() {
         <canvas
             ref={canvasRef}
             className="absolute inset-0 pointer-events-none z-[5]"
-            style={{ mixBlendMode: "screen" }}
+            style={{ opacity: 0.8 }}
         />
     )
 }
