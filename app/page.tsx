@@ -11,6 +11,7 @@ import { Footer } from "@/components/footer"
 export default function Home() {
   return (
     <main className="min-h-screen">
+      {/* Build Verification: 2026-01-14-V1 */}
       <Header />
       <HeroSection />
       <AboutSection />
