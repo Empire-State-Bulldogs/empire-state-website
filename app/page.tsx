@@ -12,7 +12,7 @@ import { Footer } from "@/components/footer"
 export default function Home() {
   return (
     <main className="min-h-screen">
-      {/* Build Verification: 2026-01-14-V2 - Cache Fix Applied */}
+      {/* Build Verification: 2026-01-18-V3 - Manual Sync Check */}
       <Header />
       <HeroSection />
       <SocialFollowSection />
