@@ -6,11 +6,11 @@ import { Menu, XIcon, Facebook, Instagram, Play, Pause, SkipForward, SkipBack, P
 import { Button } from "@/components/ui/button"
 
 const navLinks = [
-  { href: "#about", label: "About" },
-  { href: "#studs", label: "Stud Services" },
-  { href: "#puppies", label: "Puppies" },
-  { href: "#gallery", label: "Gallery" },
-  { href: "#contact", label: "Contact" },
+  { href: "/#about", label: "About" },
+  { href: "/#studs", label: "Stud Services" },
+  { href: "/#puppies", label: "Puppies" },
+  { href: "/#gallery", label: "Gallery" },
+  { href: "/#contact", label: "Contact" },
 ]
 
 const socialLinks = [

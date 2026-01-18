@@ -4,13 +4,13 @@ import { Instagram } from "lucide-react"
 
 const footerLinks = {
   explore: [
-    { label: "About Us", href: "#about" },
-    { label: "Stud Services", href: "#studs" },
-    { label: "Available Puppies", href: "#puppies" },
-    { label: "Gallery", href: "#gallery" },
+    { label: "About Us", href: "/#about" },
+    { label: "Stud Services", href: "/#studs" },
+    { label: "Available Puppies", href: "/#puppies" },
+    { label: "Gallery", href: "/#gallery" },
   ],
   support: [
-    { label: "Contact Us", href: "#contact" },
+    { label: "Contact Us", href: "/#contact" },
     { label: "FAQ", href: "/faq" },
     { label: "Health Guarantee", href: "/health-guarantee" },
     { label: "Shipping Info", href: "/shipping" },

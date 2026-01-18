@@ -123,11 +123,11 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
         <meta name="msapplication-TileColor" content="#1a1035" />
-        <meta name="msapplication-config" content="/images/browserconfig.xml" />
+        <meta name="msapplication-config" content="/browserconfig.xml" />
         <meta name="apple-mobile-web-app-title" content="Empire State Bulldogs" />
 
         {/* Anti-cache meta tags */}
@@ -143,7 +143,7 @@ export default function RootLayout({
               "@type": "Organization",
               name: "Empire State Bulldogs",
               url: "https://www.empirestatebulldogs.com",
-              logo: "https://www.empirestatebulldogs.com/images/logomain.png",
+              logo: "https://www.empirestatebulldogs.com/logomain.png",
               description:
                 "Premier French Bulldog breeder and lifestyle brand offering quality puppies, stud services, and community in Albany, NY.",
               sameAs: [
