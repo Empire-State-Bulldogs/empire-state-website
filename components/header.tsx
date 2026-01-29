@@ -16,7 +16,7 @@ const navLinks = [
 const socialLinks = [
   { href: "https://www.instagram.com/bankroll_bop93/", icon: Instagram, label: "Instagram" },
   {
-    href: "https://www.tiktok.com/@bankrollbop?is_from_webapp=1&sender_device=pc", icon: (props: any) => (
+    href: "https://www.tiktok.com/@bankrollbop", icon: (props: any) => (
       <svg
         role="img"
         viewBox="0 0 24 24"

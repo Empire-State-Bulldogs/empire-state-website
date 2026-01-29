@@ -100,7 +100,7 @@ export function EventsSection() {
               variant="outline"
               className="border-primary text-primary hover:bg-primary/10 bg-transparent text-base md:text-lg"
             >
-              <Link href="https://www.tiktok.com/@bankrollbop?is_from_webapp=1&sender_device=pc" target="_blank">
+              <Link href="https://www.tiktok.com/@bankrollbop" target="_blank">
                 Follow on TikTok
               </Link>
             </Button>

@@ -68,7 +68,7 @@ export function SocialFollowSection() {
                             </p>
 
                             <Button asChild size="lg" className="bg-black hover:bg-zinc-800 text-white border-0 py-6 px-8 text-lg rounded-xl shadow-lg shadow-black/10">
-                                <a href="https://www.tiktok.com/@bankrollbop?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer">
+                                <a href="https://www.tiktok.com/@bankrollbop" target="_blank" rel="noopener noreferrer">
                                     Follow @bankrollbop
                                 </a>
                             </Button>

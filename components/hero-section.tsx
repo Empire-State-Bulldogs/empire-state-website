@@ -30,7 +30,7 @@ export function HeroSection() {
           <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
         </svg>
       ),
-      href: "https://www.tiktok.com/@bankrollbop?is_from_webapp=1&sender_device=pc",
+      href: "https://www.tiktok.com/@bankrollbop",
       label: "TikTok",
     },
   ]

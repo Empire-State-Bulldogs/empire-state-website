@@ -148,7 +148,7 @@ export default function RootLayout({
                 "Premier French Bulldog breeder and lifestyle brand offering quality puppies, stud services, and community in Albany, NY.",
               sameAs: [
                 "https://www.instagram.com/bankroll_bop93/",
-                "https://www.tiktok.com/@bankrollbop?is_from_webapp=1&sender_device=pc",
+                "https://www.tiktok.com/@bankrollbop",
               ],
               contactPoint: {
                 "@type": "ContactPoint",
