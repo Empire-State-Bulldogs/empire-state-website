@@ -265,23 +265,6 @@ export function Header() {
           </div>
         </div>
 
-        {/* Desktop tab handle */}
-        <div className="hidden lg:flex absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-full items-center justify-center">
-          <button
-            onClick={() => setIsExpanded(!isExpanded)}
-            className="bg-background/95 backdrop-blur-md border border-t-0 border-primary/20 rounded-b-xl px-5 py-1 hover:bg-primary/8 transition-all flex items-center gap-2.5 shadow-lg border-x border-b"
-            aria-label="Toggle radio player"
-          >
-            <div className="flex gap-0.5 items-end h-3 w-3.5">
-              <div className={cn("w-0.5 bg-primary/50 rounded-full", isPlaying ? "animate-music-bar-1 h-3" : "h-1")} />
-              <div className={cn("w-0.5 bg-primary/70 rounded-full", isPlaying ? "animate-music-bar-2 h-4" : "h-1.5")} />
-              <div className={cn("w-0.5 bg-primary/50 rounded-full", isPlaying ? "animate-music-bar-3 h-2" : "h-1")} />
-            </div>
-            <span className="text-[9px] font-black text-primary uppercase tracking-[0.25em]">ESB Radio</span>
-            {isExpanded ? <ChevronUp size={12} className="text-primary" /> : <ChevronDown size={12} className="text-primary" />}
-          </button>
-        </div>
-
         <ExpandedPlayer />
       </header>
     </>
