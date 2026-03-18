@@ -34,15 +34,15 @@ export function AboutSection() {
     <section ref={ref} id="about" className="py-16 md:py-24 bg-card">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className={`text-center mb-12 md:mb-16 ${isVisible ? "scroll-fade-up" : "opacity-0"}`}>
-          <span className="text-primary text-base md:text-xl font-semibold uppercase tracking-wider">About Us</span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-2 mb-4 text-card-foreground">
-            More Than a Breeder — A Lifestyle Brand
+        <div className={`text-center mb-16 md:mb-24 ${isVisible ? "scroll-fade-up" : "opacity-0"}`}>
+          <span className="text-primary text-lg md:text-2xl font-black uppercase tracking-[0.2em] mb-4 block">About Us</span>
+          <h2 className="text-5xl md:text-7xl lg:text-8xl font-black mt-2 mb-8 text-card-foreground leading-[1.15] tracking-tight">
+            More Than a Breeder — <span className="text-primary italic">A Lifestyle</span>
           </h2>
-          <p className="text-lg md:text-2xl text-muted-foreground max-w-3xl mx-auto text-pretty">
+          <p className="text-2xl md:text-3xl lg:text-4xl text-muted-foreground max-w-5xl mx-auto text-pretty font-medium leading-relaxed">
             Empire State Bulldogs is dedicated to the highest standards of dog care, breeding excellence, and community
             engagement. Based in Albany, NY, we serve dog lovers{" "}
-            <span className="text-primary font-semibold">nationwide</span>.
+            <span className="text-primary font-black">nationwide</span>.
           </p>
         </div>
 
@@ -51,18 +51,18 @@ export function AboutSection() {
           className={`grid lg:grid-cols-2 gap-8 md:gap-12 items-center mb-16 md:mb-20 ${isVisible ? "scroll-fade-up delay-100" : "opacity-0"}`}
         >
           <div className="text-center lg:text-left">
-            <h3 className="text-2xl md:text-3xl font-bold mb-4 text-card-foreground">Our Story</h3>
-            <p className="text-lg md:text-2xl text-muted-foreground mb-4 leading-relaxed">
+            <h3 className="text-4xl md:text-5xl font-black mb-8 text-card-foreground uppercase tracking-tight">Our Story</h3>
+            <p className="text-xl md:text-2xl lg:text-3xl text-muted-foreground mb-8 leading-relaxed font-medium">
               What started as a passion for French Bulldogs has grown into New York State&apos;s premier breeding
               program. We believe every puppy deserves the best start in life, which is why we invest in professional
               veterinary care, nutrition, and early socialization.
             </p>
-            <p className="text-lg md:text-2xl text-muted-foreground mb-4 leading-relaxed">
+            <p className="text-xl md:text-2xl lg:text-3xl text-muted-foreground mb-8 leading-relaxed font-medium">
               Our commitment goes beyond breeding — we&apos;re building a community. From dog shows and breeder events
               to community meetups, Empire State Bulldogs brings together people who share our love for these incredible
               companions.
             </p>
-            <p className="text-lg md:text-2xl text-muted-foreground leading-relaxed">
+            <p className="text-xl md:text-2xl lg:text-3xl text-muted-foreground leading-relaxed font-medium">
               Whether you&apos;re looking for your next family member, seeking stud services, or want to connect with
               fellow enthusiasts, you&apos;ve found your home.
             </p>
@@ -79,8 +79,8 @@ export function AboutSection() {
                 className={`bg-secondary rounded-lg md:rounded-xl p-4 md:p-6 text-center hover-lift ${isVisible ? `scroll-scale-in delay-${(i + 1) * 100}` : "opacity-0"
                   }`}
               >
-                <div className="text-3xl md:text-5xl font-bold text-primary mb-2">{stat.value}</div>
-                <div className="text-lg md:text-xl text-muted-foreground">{stat.label}</div>
+                <div className="text-5xl md:text-7xl lg:text-8xl font-black text-primary mb-3 leading-tight">{stat.value}</div>
+                <div className="text-lg md:text-xl lg:text-2xl font-black uppercase tracking-widest text-muted-foreground">{stat.label}</div>
               </div>
             ))}
           </div>

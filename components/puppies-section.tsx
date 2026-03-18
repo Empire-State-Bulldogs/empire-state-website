@@ -69,14 +69,14 @@ export function PuppiesSection() {
       </div>
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
-        <div className={`text-center mb-12 md:mb-16 ${isVisible ? "scroll-fade-up" : "opacity-0"}`}>
-          <span className="text-primary text-sm md:text-base font-semibold uppercase tracking-wider">
-            Available Puppies
+        <div className={`text-center mb-20 md:mb-32 ${isVisible ? "scroll-fade-up" : "opacity-0"}`}>
+          <span className="text-primary text-xl md:text-2xl font-black tracking-widest mb-6 block">
+            Our Available Puppies
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-2 mb-4 text-card-foreground">
-            Find Your New Best Friend
+          <h2 className="text-6xl md:text-8xl lg:text-[9rem] font-black mt-4 mb-10 text-card-foreground leading-[1.1] tracking-tight">
+            Find Your New <br className="hidden md:block" /> <span className="text-primary italic">Best Friend</span>
           </h2>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
+          <p className="text-2xl md:text-3xl lg:text-4xl text-muted-foreground max-w-5xl mx-auto text-pretty font-medium leading-relaxed">
             Our puppies are raised in a loving home environment, ensuring they are well-socialized and ready for their forever families.
           </p>
         </div>
@@ -93,18 +93,18 @@ export function PuppiesSection() {
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
                 />
               </div>
-              <div className="text-center md:text-left">
-                <Badge variant="secondary" className="bg-primary text-primary-foreground mb-4 px-4 py-1 text-lg">
+              <div className="text-center md:text-left py-6">
+                <Badge variant="secondary" className="bg-primary text-white mb-6 px-6 py-2 text-xl md:text-2xl font-black rounded-xl italic">
                   Dropping Soon!
                 </Badge>
-                <h3 className="text-2xl md:text-4xl font-bold text-card-foreground mb-4">Official New Puppies</h3>
-                <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
-                  We have official new puppies which are dropping soon! Check back soon to find your new best friend.
+                <h3 className="text-5xl md:text-7xl font-black text-card-foreground mb-8 tracking-tight leading-tight">New Puppies Coming Soon</h3>
+                <p className="text-2xl md:text-3xl lg:text-4xl text-muted-foreground mb-12 leading-relaxed font-medium">
+                  We have an incredible new litter in preparation. These purebred Frenchies will be dropping soon—check back to find your perfect match.
                 </p>
                 <Button
                   asChild
                   size="lg"
-                  className="w-full md:w-auto bg-primary text-primary-foreground hover:bg-primary/90 px-12 py-6 text-xl rounded-xl"
+                  className="w-full md:w-auto bg-primary text-white hover:bg-primary/90 px-16 py-10 text-2xl font-black rounded-[2rem] shadow-2xl shadow-primary/40"
                 >
                   <Link href="#contact">Inquire Early</Link>
                 </Button>
@@ -117,19 +117,19 @@ export function PuppiesSection() {
         <div
           className={`bg-secondary rounded-xl md:rounded-2xl p-6 md:p-12 border border-border ${isVisible ? "scroll-fade-up delay-200" : "opacity-0"}`}
         >
-          <h3 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8 text-center text-card-foreground">
+          <h3 className="text-4xl md:text-6xl font-black mb-12 text-center text-card-foreground tracking-tight leading-tight">
             Every Puppy Includes
           </h3>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
             {includes.map((item, i) => (
               <div
                 key={item}
-                className={`flex items-center gap-3 p-4 bg-card rounded-lg hover:bg-card/90 hover:scale-105 transition-all duration-300 ${isVisible ? `scroll-slide-right delay-${i * 50}` : "opacity-0"}`}
+                className={`flex items-center gap-5 p-6 md:p-8 bg-card rounded-2xl hover:bg-card/90 hover:scale-[1.03] transition-all duration-300 border border-border shadow-lg ${isVisible ? `scroll-slide-right delay-${i * 50}` : "opacity-0"}`}
               >
-                <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
-                  <Check className="w-4 h-4 text-primary" />
+                <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
+                  <Check className="w-6 h-6 text-primary stroke-[3px]" />
                 </div>
-                <span className="text-lg text-card-foreground">{item}</span>
+                <span className="text-xl md:text-2xl font-black text-card-foreground">{item}</span>
               </div>
             ))}
           </div>

@@ -22,10 +22,14 @@ export function ContactSection() {
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <span className="text-primary text-base md:text-xl font-semibold uppercase tracking-wider">Contact Us</span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-2 mb-4 text-foreground">Let&apos;s Connect</h2>
-          <p className="text-lg md:text-2xl text-muted-foreground max-w-3xl mx-auto text-pretty">
+        <div className="text-center mb-20 md:mb-32">
+          <span className="text-primary text-xl md:text-2xl font-black tracking-widest mb-6 block font-black">
+            Get in Touch
+          </span>
+          <h2 className="text-6xl md:text-8xl lg:text-[9rem] font-black mt-4 mb-10 text-foreground leading-[1.1] tracking-tight italic">
+            Let&apos;s Connect
+          </h2>
+          <p className="text-2xl md:text-3xl lg:text-4xl text-muted-foreground max-w-5xl mx-auto text-pretty font-medium leading-[1.4]">
             Whether you&apos;re interested in a puppy, stud services, or just want to learn more about Empire State
             Bulldogs, we&apos;d love to hear from you.
           </p>
@@ -34,34 +38,34 @@ export function ContactSection() {
         <div className="max-w-3xl mx-auto">
           <Card className="bg-card border-border overflow-hidden rounded-2xl shadow-2xl shadow-primary/10">
             <CardContent className="p-8 md:p-12 text-center">
-              <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-8">
-                <Mail className="w-10 h-10 text-primary" />
+              <div className="w-24 h-24 bg-primary/10 rounded-[2rem] flex items-center justify-center mx-auto mb-10 border border-primary/20 shadow-xl shadow-primary/10">
+                <Mail className="w-12 h-12 text-primary" />
               </div>
 
-              <h3 className="text-2xl md:text-4xl font-bold mb-4 text-foreground">Send Us an Email</h3>
-              <p className="text-muted-foreground mb-8 text-xl">
+              <h3 className="text-4xl md:text-6xl lg:text-7xl font-black mb-6 text-foreground tracking-tight leading-tight">Send us an Email</h3>
+              <p className="text-muted-foreground mb-12 text-2xl font-medium leading-relaxed max-w-2xl mx-auto">
                 The fastest way to get in touch with our team for inquiries and support.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
                 {/* Email Column */}
                 <div className="flex-1 w-full space-y-4">
-                  <div className="flex items-center gap-3 bg-secondary px-6 py-4 rounded-xl border border-border overflow-hidden">
-                    <Mail className="w-5 h-5 text-primary shrink-0" />
-                    <span className="text-foreground font-medium truncate">{email}</span>
+                  <div className="flex items-center gap-4 bg-secondary px-8 py-6 rounded-2xl border border-border overflow-hidden">
+                    <Mail className="w-6 h-6 text-primary shrink-0" />
+                    <span className="text-foreground font-black text-xl truncate">{email}</span>
                   </div>
-                  <div className="flex gap-4">
+                  <div className="flex gap-6">
                     <Button
                       onClick={copyToClipboard}
-                      className="flex-1 bg-secondary hover:bg-secondary/80 text-foreground border border-border h-12 rounded-xl transition-all"
+                      className="flex-1 bg-secondary hover:bg-secondary/80 text-foreground border border-border h-16 rounded-2xl transition-all font-black text-lg"
                     >
                       {copied ? (
-                        <><Check className="w-4 h-4 mr-2 text-green-500" />Copied</>
+                        <><Check className="w-5 h-5 mr-3 text-green-500" />Copied</>
                       ) : (
-                        <><Copy className="w-4 h-4 mr-2" />Copy</>
+                        <><Copy className="w-5 h-5 mr-3" />Copy</>
                       )}
                     </Button>
-                    <Button asChild className="flex-1 bg-primary text-primary-foreground hover:bg-primary/90 h-12 rounded-xl">
+                    <Button asChild className="flex-1 bg-primary text-white hover:bg-primary/90 h-16 rounded-2xl font-black text-lg">
                       <a href={`mailto:${email}`}>Email Now</a>
                     </Button>
                   </div>
@@ -69,13 +73,13 @@ export function ContactSection() {
 
                 {/* Phone Column */}
                 <div className="flex-1 w-full space-y-4">
-                  <div className="flex items-center gap-3 bg-secondary px-6 py-4 rounded-xl border border-border overflow-hidden">
-                    <Phone className="w-5 h-5 text-primary shrink-0" />
-                    <span className="text-foreground font-medium truncate">518-917-3429</span>
+                  <div className="flex items-center gap-4 bg-secondary px-8 py-6 rounded-2xl border border-border overflow-hidden">
+                    <Phone className="w-6 h-6 text-primary shrink-0" />
+                    <span className="text-foreground font-black text-xl truncate">518-917-3429</span>
                   </div>
-                  <Button asChild size="lg" className="w-full bg-primary text-primary-foreground hover:bg-primary/90 h-12 rounded-xl shadow-lg shadow-primary/20">
-                    <a href="tel:5189173429" className="flex items-center justify-center gap-2">
-                      <Phone className="w-4 h-4" />
+                  <Button asChild size="lg" className="w-full bg-primary text-white hover:bg-primary/90 h-16 rounded-2xl shadow-xl shadow-primary/30 font-black text-xl">
+                    <a href="tel:5189173429" className="flex items-center justify-center gap-3">
+                      <Phone className="w-5 h-5 fill-white" />
                       Call Now
                     </a>
                   </Button>

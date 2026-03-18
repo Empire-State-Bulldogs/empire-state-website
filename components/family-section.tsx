@@ -15,12 +15,12 @@ export function FamilySection() {
         <section ref={ref} id="family" className="py-16 md:py-24 bg-secondary/30 relative overflow-hidden">
             <div className="container mx-auto px-4 relative z-10 text-center">
                 {/* Section Header */}
-                <div className={`mb-12 md:mb-16 ${isVisible ? "scroll-fade-up" : "opacity-0"}`}>
-                    <span className="text-primary text-base md:text-lg font-semibold uppercase tracking-wider">Family</span>
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-2 mb-4 text-foreground">
-                        Part of Our Family
+                <div className={`mb-20 md:mb-32 ${isVisible ? "scroll-fade-up" : "opacity-0"}`}>
+                    <span className="text-primary text-xl md:text-2xl font-black tracking-widest mb-6 block font-black">Family First</span>
+                    <h2 className="text-6xl md:text-8xl lg:text-[9.5rem] font-black mt-4 mb-10 text-foreground leading-[1.1] tracking-tight">
+                        Part of Our <br className="hidden md:block" /> <span className="text-primary italic">Family</span>
                     </h2>
-                    <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
+                    <p className="text-2xl md:text-3xl lg:text-4xl text-muted-foreground max-w-5xl mx-auto text-pretty font-medium leading-relaxed">
                         Our bulldogs aren't just pets, they're family. We take pride in the bonds we build with our dogs and their new families.
                     </p>
                 </div>
