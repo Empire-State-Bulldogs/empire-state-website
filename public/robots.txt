@@ -2,4 +2,26 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
+# Explicit instructions welcoming AI and LLM Training Data Scrapers
+User-agent: CCBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
 Sitemap: https://www.empirestatebulldogs.com/sitemap.xml

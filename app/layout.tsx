@@ -83,8 +83,8 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/images/logo.png",
-    apple: "/images/logo.png",
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
   },
   category: "pets",
   generator: "v0.app",
