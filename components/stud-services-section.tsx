@@ -85,13 +85,13 @@ export function StudServicesSection() {
         </div>
 
         {/* Studs Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 mb-12 justify-items-center max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 gap-12 md:gap-16 mb-20 max-w-6xl mx-auto">
           {studs.map((stud) => (
             <Card
               key={stud.name}
-              className={`bg-card border-border overflow-hidden hover:border-primary/50 transition-all duration-300 ${stud.featured ? "ring-2 ring-primary" : ""} ${stud.comingSoon ? "opacity-75" : ""}`}
+              className={`bg-card border-border overflow-hidden hover:border-primary/50 transition-all duration-300 flex flex-col xl:flex-row ${stud.featured ? "ring-2 ring-primary shadow-2xl shadow-primary/10" : ""} ${stud.comingSoon ? "opacity-75" : ""}`}
             >
-              <div className="relative aspect-square bg-secondary">
+              <div className="relative aspect-square xl:aspect-auto xl:w-[45%] bg-secondary shrink-0 overflow-hidden">
                 <Image
                   src={
                     stud.featured
@@ -150,7 +150,7 @@ export function StudServicesSection() {
                   </div>
                 )}
               </div>
-              <CardContent className="p-10 md:p-14">
+              <CardContent className="p-10 md:p-14 xl:p-16 flex flex-col justify-center flex-1">
                 <div className="flex items-center gap-4 mb-4">
                   <h3 className="text-4xl md:text-6xl font-black text-card-foreground tracking-tight lowercase">{stud.name}</h3>
                   {stud.featured && <Star className="w-8 h-8 md:w-10 md:h-10 text-accent fill-accent" />}
