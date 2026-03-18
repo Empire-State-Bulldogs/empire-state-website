@@ -2,7 +2,7 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
-import { Instagram, Phone, Camera, ArrowRight } from "lucide-react"
+import { Instagram, Phone, Camera, Sparkles } from "lucide-react"
 import Link from "next/link"
 import type { Metadata } from "next"
 
@@ -11,29 +11,31 @@ export const metadata: Metadata = {
   description: "Browse our gallery of stunning French Bulldog photos. See King Simba, our puppies, and the Empire State Bulldogs lifestyle in Albany, NY.",
 }
 
-const freshPhotos = [
-  "/images/fresh1.jpg",
-  "/images/fresh2.jpg",
-  "/images/fresh3.jpg",
-  "/images/fresh4.jpg",
-  "/images/fresh5.jpg",
-  "/images/fresh7.jpg",
+// Define specific spans for a "hip" asymmetrical look
+const galleryItems = [
+  { src: "/images/simba1.jpg", label: "King Simba", span: "md:col-span-2 md:row-span-2" }, // Large square
+  { src: "/images/puppy1-1.jpg", label: "Puppy Life", span: "col-span-1 row-span-1" },
+  { src: Fresh7_PATH, label: "Fresh Drops", span: "col-span-1 row-span-1" },
+  { src: "/images/simba2.jpg", label: "The Legend", span: "md:col-span-1 md:row-span-2" }, // Tall
+  { src: "/images/puppy2-1.jpg", label: "New Litters", span: "col-span-1 row-span-1" },
+  { src: "/images/fam1.jpg", label: "ESB Family", span: "md:col-span-2 md:row-span-1" }, // Wide
+  { src: "/images/puppy3-1.jpg", label: "Adorable", span: "col-span-1 row-span-1" },
+  { src: "/images/simba3.jpg", label: "King Simba", span: "col-span-1 row-span-1" },
+  { src: "/images/fresh1.jpg", label: "Lifestyle", span: "md:col-span-2 md:row-span-2" }, // Large square
+  { src: "/images/puppy4-1.jpg", label: "Puppy Dreams", span: "col-span-1 row-span-1" },
+  { src: "/images/simba4.jpg", label: "Blue Fawn", span: "col-span-1 row-span-1" },
+  { src: "/images/fresh2.jpg", label: "Vibe", span: "md:col-span-1 md:row-span-2" }, // Tall
+  { src: "/images/puppy5-1.jpg", label: "Playtime", span: "col-span-1 row-span-1" },
+  { src: "/images/fam2.jpg", label: "Tradition", span: "md:col-span-2 md:row-span-1" }, // Wide
+  { src: "/images/simba5.jpg", label: "Champion", span: "col-span-1 row-span-1" },
+  { src: "/images/fresh3.jpg", label: "Albany NY", span: "col-span-1 row-span-1" },
+  { src: "/images/fresh4.jpg", label: "Behind Scenes", span: "md:col-span-2 md:row-span-2" },
+  { src: "/images/fresh5.jpg", label: "Details", span: "col-span-1 row-span-1" },
+  { src: "/images/coming_soon.jpg", label: "Next Drop", span: "md:col-span-1 md:row-span-1" },
 ]
 
-const sectionPhotos = [
-  { src: "/images/simba1.jpg", label: "King Simba" },
-  { src: "/images/simba2.jpg", label: "King Simba" },
-  { src: "/images/puppy1-1.jpg", label: "Puppies" },
-  { src: "/images/puppy2-1.jpg", label: "Puppies" },
-  { src: "/images/simba3.jpg", label: "King Simba" },
-  { src: "/images/puppy3-1.jpg", label: "Puppies" },
-  { src: "/images/simba4.jpg", label: "King Simba" },
-  { src: "/images/puppy4-1.jpg", label: "Puppies" },
-  { src: "/images/simba5.jpg", label: "King Simba" },
-  { src: "/images/puppy5-1.jpg", label: "Puppies" },
-  { src: "/images/fam1.jpg", label: "Family" },
-  { src: "/images/fam2.jpg", label: "Family" },
-]
+// Add a placeholder for Fresh7 if it's not defined
+const Fresh7_PATH = "/images/fresh7.jpg"
 
 export default function GalleryPage() {
   return (
@@ -41,41 +43,58 @@ export default function GalleryPage() {
       <Header />
 
       {/* HERO */}
-      <section className="relative pt-32 pb-16 bg-background overflow-hidden">
-        <div className="container mx-auto px-4 text-center">
-          <div className="inline-flex items-center gap-2 bg-primary/10 text-primary border border-primary/20 rounded-full px-4 py-1.5 text-sm font-bold uppercase tracking-widest mb-6">
-            <Camera className="w-4 h-4" />
-            Photo Gallery
+      <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 bg-background overflow-hidden border-b border-border/50">
+        <div className="absolute inset-0 opacity-5 pointer-events-none" style={{backgroundImage: 'radial-gradient(circle at 20% 50%, hsl(var(--primary)) 0%, transparent 50%), radial-gradient(circle at 80% 20%, hsl(var(--accent)) 0%, transparent 50%)'}} />
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <div className="inline-flex items-center gap-2 bg-primary/10 text-primary border border-primary/20 rounded-full px-5 py-2 text-sm font-black uppercase tracking-widest mb-8">
+            <Sparkles className="w-4 h-4" />
+            Vibe Check
           </div>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black mb-6 text-foreground">
-            The Empire State<br />
-            <span className="text-primary">Bulldog Life</span>
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 text-foreground leading-[0.95] tracking-tighter">
+            BIG EMPIRE<br />
+            <span className="text-primary text-stroke-primary text-transparent md:text-white md:text-stroke-0">VIBRATIONS</span>
           </h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-10">
-            A visual journey through our world — champion studs, adorable puppies, and the lifestyle we've built around the finest French Bulldogs in New York.
+          <p className="text-lg md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-12 font-medium leading-relaxed">
+            Not just dogs — a legacy. Check out the latest heat from the Empire State Bulldogs vault. Roots in Albany, reaching nationwide.
           </p>
-          <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-4 shadow-xl shadow-primary/30">
-            <Link href="https://www.instagram.com/bankroll_bop93/" target="_blank" className="flex items-center gap-2">
-              <Instagram className="w-5 h-5" /> Follow on Instagram
-            </Link>
-          </Button>
+          <div className="flex flex-wrap gap-4 justify-center">
+             <Button asChild size="lg" className="bg-primary text-white hover:bg-primary/90 px-8 py-7 text-xl font-black shadow-2xl shadow-primary/40 rounded-2xl">
+              <Link href="https://www.instagram.com/bankroll_bop93/" target="_blank" className="flex items-center gap-3">
+                <Instagram className="w-6 h-6" /> FOLLOW THE HYPE
+              </Link>
+            </Button>
+            <Button asChild size="lg" variant="outline" className="border-2 border-foreground text-foreground hover:bg-foreground hover:text-background px-8 py-7 text-xl font-black rounded-2xl transition-all">
+              <Link href="/contact">GET IN TOUCH</Link>
+            </Button>
+          </div>
         </div>
       </section>
 
-      {/* HERO MOSAIC */}
-      <section className="pb-16 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 max-w-6xl mx-auto">
-            {sectionPhotos.map((p, i) => (
-              <div key={i} className={`relative rounded-2xl overflow-hidden group ${i === 0 || i === 4 ? "row-span-2 aspect-[3/4]" : "aspect-square"}`}>
+      {/* BIG COLLAGE GRID */}
+      <section className="py-8 md:py-16 bg-background">
+        <div className="container mx-auto px-2 md:px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 auto-rows-[200px] md:auto-rows-[300px] gap-2 md:gap-4 max-w-[1600px] mx-auto">
+            {galleryItems.map((item, i) => (
+              <div 
+                key={i} 
+                className={`group relative overflow-hidden rounded-2xl md:rounded-[2rem] bg-card border border-border/50 hover:border-primary/50 transition-all duration-500 shadow-xl hover:shadow-primary/20 ${item.span}`}
+              >
                 <Image
-                  src={p.src}
-                  alt={p.label}
+                  src={item.src}
+                  alt={item.label}
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="object-cover transition-transform duration-700 group-hover:scale-110 grayscale-[30%] group-hover:grayscale-0"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-3">
-                  <span className="text-white text-xs font-bold uppercase tracking-wider">{p.label}</span>
+                
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-6 md:p-10 translate-y-4 group-hover:translate-y-0 text-white">
+                    <span className="text-primary font-black uppercase tracking-[0.2em] text-xs mb-1">ESB Archive</span>
+                    <h3 className="text-xl md:text-3xl font-black leading-none uppercase tracking-tighter">{item.label}</h3>
+                </div>
+
+                {/* Counter Badge */}
+                <div className="absolute top-4 right-4 bg-black/40 backdrop-blur-md px-2 py-1 rounded-md text-[10px] font-bold text-white/70 border border-white/10 group-hover:border-primary/40 transition-colors">
+                    {i + 1 < 10 ? `0${i + 1}` : i + 1}
                 </div>
               </div>
             ))}
@@ -83,54 +102,22 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      {/* LIFESTYLE GRID */}
-      <section className="py-16 bg-card border-t border-border">
+      {/* BOTTOM BANNER */}
+      <section className="py-20 bg-card border-t border-border">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <span className="text-primary font-bold uppercase tracking-widest text-sm">Fresh Content</span>
-            <h2 className="text-3xl md:text-5xl font-black mt-2 text-foreground">Fresh Photo Drops</h2>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-5xl mx-auto">
-            {freshPhotos.map((src, i) => (
-              <div key={i} className="aspect-square rounded-2xl overflow-hidden group relative">
-                <Image
-                  src={src}
-                  alt={`Empire State Bulldogs Photo ${i + 1}`}
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors" />
+          <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
+              <div className="text-center md:text-left">
+                  <h2 className="text-4xl md:text-6xl font-black text-foreground mb-4 uppercase tracking-tighter">Stay Connected</h2>
+                  <p className="text-xl text-muted-foreground max-w-lg font-medium">We drop fresh content daily. Don't miss the next lineage update or puppy reveal.</p>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* INSTAGRAM CTA */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto bg-gradient-to-br from-purple-600/20 via-pink-500/10 to-orange-400/5 rounded-3xl border border-purple-500/20 p-10 md:p-16 text-center">
-            <div className="w-20 h-20 bg-gradient-to-br from-purple-600 via-pink-500 to-orange-400 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-xl">
-              <Instagram className="w-10 h-10 text-white" />
-            </div>
-            <h2 className="text-3xl md:text-5xl font-black text-foreground mb-4">
-              Follow the Empire
-            </h2>
-            <p className="text-muted-foreground text-lg mb-8 max-w-xl mx-auto">
-              Get daily updates, behind-the-scenes content, and exclusive first looks at new puppies on our Instagram.
-            </p>
-            <div className="flex flex-wrap gap-4 justify-center">
-              <Button asChild size="lg" className="bg-gradient-to-r from-purple-600 via-pink-500 to-orange-400 text-white hover:opacity-90 px-8 py-6 text-lg shadow-xl border-0">
-                <Link href="https://www.instagram.com/bankroll_bop93/" target="_blank" className="flex items-center gap-2">
-                  <Instagram className="w-5 h-5" /> @bankroll_bop93
-                </Link>
-              </Button>
-              <Button asChild size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/10 px-8 py-6 text-lg">
-                <a href="tel:5189173429" className="flex items-center gap-2">
-                  <Phone className="w-5 h-5" /> Contact Us
-                </a>
-              </Button>
-            </div>
+              <div className="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
+                  <Button asChild size="lg" className="bg-gradient-to-r from-purple-600 to-pink-500 text-white font-black px-10 py-8 text-xl rounded-2xl">
+                      <Link href="https://www.instagram.com/bankroll_bop93/" target="_blank">INSTAGRAM FEED</Link>
+                  </Button>
+                  <Button asChild size="lg" variant="outline" className="border-2 border-primary text-primary font-black px-10 py-8 text-xl rounded-2xl">
+                      <a href="tel:5189173429">CALL THE BOPS</a>
+                  </Button>
+              </div>
           </div>
         </div>
       </section>
