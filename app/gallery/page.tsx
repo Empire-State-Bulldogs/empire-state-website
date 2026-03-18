@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   description: "Browse our gallery of stunning French Bulldog photos. See King Simba, our puppies, and the Empire State Bulldogs lifestyle in Albany, NY.",
 }
 
+// Add a placeholder for Fresh7
+const Fresh7_PATH = "/images/fresh7.jpg"
+
 // Define specific spans for a "hip" asymmetrical look
 const galleryItems = [
   { src: "/images/simba1.jpg", label: "King Simba", span: "md:col-span-2 md:row-span-2" }, // Large square
@@ -33,9 +36,6 @@ const galleryItems = [
   { src: "/images/fresh5.jpg", label: "Details", span: "col-span-1 row-span-1" },
   { src: "/images/coming_soon.jpg", label: "Next Drop", span: "md:col-span-1 md:row-span-1" },
 ]
-
-// Add a placeholder for Fresh7 if it's not defined
-const Fresh7_PATH = "/images/fresh7.jpg"
 
 export default function GalleryPage() {
   return (
