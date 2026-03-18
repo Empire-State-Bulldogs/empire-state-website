@@ -59,7 +59,7 @@ export function HeroSection() {
         {/* Logo */}
         <div className={`flex justify-center mb-3 sm:mb-4 md:mb-6 ${isVisible ? "scroll-scale-in" : "opacity-0"}`}>
           <Image
-            src="/logomain.png"
+            src="/images/logo.png"
             alt="Empire State Bulldogs"
             width={200}
             height={200}

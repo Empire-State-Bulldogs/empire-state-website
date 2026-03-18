@@ -1,7 +1,8 @@
 import type React from "react"
 import type { Metadata, Viewport } from "next"
-import { Geist_Mono, Bebas_Neue } from "next/font/google"
+import { Bebas_Neue, Geist_Mono } from "next/font/google"
 import "./globals.css"
+import { MusicProvider } from "@/context/music-context"
 
 const _bebasNeue = Bebas_Neue({
   weight: "400",
@@ -74,40 +75,8 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: [
-      {
-        url: "/favicon.ico",
-        sizes: "any",
-      },
-      {
-        url: "/favicon.svg",
-        type: "image/svg+xml",
-      },
-      {
-        url: "/favicon-96x96.png",
-        sizes: "96x96",
-        type: "image/png",
-      },
-      {
-        url: "/logomain.png",
-        sizes: "any",
-        type: "image/png",
-      },
-    ],
-    shortcut: "/favicon.ico",
-    apple: [
-      {
-        url: "/apple-touch-icon.png",
-        sizes: "180x180",
-        type: "image/png"
-      }
-    ],
-    other: [
-      {
-        rel: "manifest",
-        url: "/site.webmanifest",
-      },
-    ],
+    icon: "/images/logo.png",
+    apple: "/images/logo.png",
   },
   category: "pets",
   generator: "v0.app",
@@ -147,7 +116,7 @@ export default function RootLayout({
               "@type": "Organization",
               name: "Empire State Bulldogs",
               url: "https://www.empirestatebulldogs.com",
-              logo: "https://www.empirestatebulldogs.com/logomain.png",
+              logo: "https://www.empirestatebulldogs.com/images/logo.png",
               description:
                 "Premier French Bulldog breeder and lifestyle brand offering quality puppies, stud services, and community in Albany, NY.",
               sameAs: [
@@ -260,7 +229,9 @@ export default function RootLayout({
         />
       </head>
       <body className="font-sans antialiased">
-        {children}
+        <MusicProvider>
+          {children}
+        </MusicProvider>
       </body>
     </html>
   )

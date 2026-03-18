@@ -14,11 +14,11 @@ const buttonVariants = cva(
         destructive:
           "bg-destructive text-white shadow-[0_8px_0_0_rgba(0,0,0,0.4)] hover:shadow-[0_12px_0_0_rgba(0,0,0,0.5)] hover:-translate-y-1 active:shadow-[0_2px_0_0_rgba(0,0,0,0.3)] active:translate-y-1 border-b-0",
         outline:
-          "bg-primary text-white shadow-[0_8px_0_0_rgba(0,0,0,0.4)] hover:shadow-[0_12px_0_0_rgba(0,0,0,0.5)] hover:-translate-y-1 border-b-0 active:shadow-[0_2px_0_0_rgba(0,0,0,0.3)] active:translate-y-1",
+          "bg-transparent text-foreground border-2 border-border hover:bg-card hover:-translate-y-1 active:translate-y-0.5",
         secondary:
           "bg-secondary text-secondary-foreground shadow-[0_8px_0_0_rgba(0,0,0,0.4)] hover:shadow-[0_12px_0_0_rgba(0,0,0,0.5)] hover:-translate-y-1 active:shadow-[0_2px_0_0_rgba(0,0,0,0.3)] active:translate-y-1 border-b-0",
         ghost:
-          "bg-accent text-accent-foreground shadow-[0_8px_0_0_rgba(0,0,0,0.4)] hover:shadow-[0_12px_0_0_rgba(0,0,0,0.5)] hover:-translate-y-1 active:shadow-[0_2px_0_0_rgba(0,0,0,0.3)] active:translate-y-1",
+          "bg-transparent text-foreground hover:bg-card hover:-translate-y-0.5",
         link: "bg-primary text-white shadow-[0_8px_0_0_rgba(0,0,0,0.4)] hover:shadow-[0_12px_0_0_rgba(0,0,0,0.5)] hover:-translate-y-1 active:shadow-[0_2px_0_0_rgba(0,0,0,0.3)] active:translate-y-1",
       },
       size: {
