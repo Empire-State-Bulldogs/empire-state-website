@@ -74,9 +74,9 @@ export function StudServicesSection() {
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-24 md:mb-32">
-          <span className="text-primary text-xl md:text-2xl font-black tracking-[0.1em] mb-6 block">Our Stud Services</span>
-          <h2 className="text-6xl md:text-8xl lg:text-9xl font-black mt-4 mb-10 text-foreground leading-[1.1] tracking-tight">
-            Meet the New York <br className="hidden md:block" /> <span className="text-primary italic">Champions</span>
+          <span className="text-primary text-xl md:text-2xl font-black tracking-tight mb-6 block lowercase">our stud services</span>
+          <h2 className="text-6xl md:text-8xl lg:text-9xl font-black mt-4 mb-10 text-foreground leading-[1.1] tracking-tight lowercase">
+            Meet the New York <br className="hidden md:block" /> <span className="text-primary italic">champions</span>
           </h2>
           <p className="text-2xl md:text-3xl lg:text-4xl text-muted-foreground max-w-5xl mx-auto text-pretty font-medium leading-[1.4]">
             Our carefully selected studs represent the finest in French Bulldog breeding. Each male is health tested,
@@ -152,10 +152,10 @@ export function StudServicesSection() {
               </div>
               <CardContent className="p-10 md:p-14">
                 <div className="flex items-center gap-4 mb-4">
-                  <h3 className="text-4xl md:text-6xl font-black text-card-foreground tracking-tight">{stud.name}</h3>
+                  <h3 className="text-4xl md:text-6xl font-black text-card-foreground tracking-tight lowercase">{stud.name}</h3>
                   {stud.featured && <Star className="w-8 h-8 md:w-10 md:h-10 text-accent fill-accent" />}
                 </div>
-                <p className="text-primary text-2xl md:text-3xl font-black mb-6 italic">{stud.title}</p>
+                <p className="text-primary text-2xl md:text-3xl font-black mb-6 italic lowercase">{stud.title}</p>
                 <p className="text-xl md:text-2xl lg:text-3xl text-muted-foreground mb-8 leading-relaxed font-medium">{stud.description}</p>
                 <div className="flex flex-wrap gap-3 mb-8">
                   {stud.traits.map((trait) => (
@@ -177,7 +177,7 @@ export function StudServicesSection() {
         <div className="bg-card rounded-2xl p-8 md:p-12 border border-border">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
-              <h3 className="text-4xl md:text-6xl lg:text-7xl font-black mb-10 text-card-foreground tracking-tight leading-tight">The Stud Service Process</h3>
+              <h3 className="text-4xl md:text-6xl lg:text-7xl font-black mb-10 text-card-foreground tracking-tight leading-tight lowercase">the stud service process</h3>
               <ul className="space-y-6 text-muted-foreground">
                 <li className="flex items-start gap-5">
                   <span className="w-10 h-10 rounded-2xl bg-primary text-white text-xl font-black flex items-center justify-center shrink-0 mt-1 shadow-lg shadow-primary/20">

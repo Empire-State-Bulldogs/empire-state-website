@@ -50,9 +50,9 @@ export default function GalleryPage() {
             <Sparkles className="w-4 h-4" />
             Vibe Check
           </div>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 text-foreground leading-[1.2] tracking-normal">
-            Big Empire<br />
-            <span className="text-primary md:text-white italic">Vibrations</span>
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 text-foreground leading-[1.2] tracking-tight lowercase">
+            big empire<br />
+            <span className="text-primary">vibrations</span>
           </h1>
           <p className="text-lg md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-12 font-medium leading-relaxed">
             Not just dogs — a legacy. Check out the latest heat from the Empire State Bulldogs vault. Roots in Albany, reaching nationwide.

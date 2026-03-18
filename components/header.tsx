@@ -90,8 +90,8 @@ export function Header() {
                 aria-label="Open player"
               >
                 <div className="flex flex-col items-start overflow-hidden">
-                  <span className="text-[11px] font-black uppercase tracking-widest text-primary leading-none">Now Playing</span>
-                  <span className="text-[15px] font-bold text-foreground truncate w-full leading-snug">{currentTrack.title}</span>
+                  <span className="text-[11px] font-black uppercase tracking-widest text-primary leading-none">now playing</span>
+                  <span className="text-[15px] font-bold text-foreground truncate w-full leading-snug lowercase tracking-tight">{currentTrack.title}</span>
                 </div>
                 <div className={cn("flex gap-0.5 items-end h-4 shrink-0 ml-1", !isPlaying && "opacity-30")}>
                   <div className={cn("w-0.5 h-1.5 bg-primary rounded-full", isPlaying && "animate-music-bar-1")} />
@@ -127,7 +127,7 @@ export function Header() {
                   key={link.href}
                   href={link.href}
                   className={cn(
-                    "px-4 py-2 text-lg font-bold rounded-lg transition-all hover:text-primary hover:bg-primary/8 whitespace-nowrap",
+                    "px-4 py-2 text-xl font-black rounded-lg transition-all hover:text-primary hover:bg-primary/8 whitespace-nowrap lowercase tracking-tight",
                     pathname === link.href ? "text-primary bg-primary/10" : "text-muted-foreground"
                   )}
                 >
@@ -155,8 +155,8 @@ export function Header() {
                 </button>
               </div>
 
-              <Button asChild className="bg-primary text-white hover:bg-primary/90 rounded-xl text-sm font-black shadow-lg shadow-primary/20">
-                <Link href="/contact">Contact Us</Link>
+              <Button asChild className="bg-primary text-white hover:bg-primary/90 rounded-xl text-lg font-black shadow-lg shadow-primary/20 lowercase tracking-tight">
+                <Link href="/contact">contact us</Link>
               </Button>
               <Button asChild variant="outline" className="border-primary text-primary hover:bg-primary/10 rounded-xl text-sm font-bold hidden xl:flex">
                 <a href="tel:5189173429" className="flex items-center gap-1.5">
@@ -192,35 +192,35 @@ export function Header() {
                     "w-10 h-10 rounded-xl flex items-center justify-center transition-colors",
                     pathname === link.href ? "bg-primary text-white" : "bg-card text-primary group-hover:bg-primary/20"
                   )}>
-                    <link.icon size={22} />
+                    <link.icon size={24} />
                   </div>
-                  <span className="text-2xl font-black">{link.label}</span>
-                  {pathname === link.href && <div className="ml-auto w-2.5 h-2.5 rounded-full bg-primary" />}
+                  <span className="text-3xl font-black lowercase tracking-tight">{link.label}</span>
+                  {pathname === link.href && <div className="ml-auto w-3 h-3 rounded-full bg-primary" />}
                 </Link>
               ))}
             </div>
 
             {/* More links */}
-            <div className="border-t border-border pt-6 mb-8">
-              <p className="text-xs font-black uppercase tracking-[0.2em] text-muted-foreground mb-4 px-4">More Info</p>
+            <div className="border-t border-border pt-8 mb-10">
+              <p className="text-sm font-black text-muted-foreground mb-6 px-4 lowercase tracking-tight">more info</p>
               <div className="grid grid-cols-3 gap-3">
                 {extraLinks.map((link) => (
                   <Link
                     key={link.href}
                     href={link.href}
                     onClick={closeMenu}
-                    className="flex flex-col items-center gap-3 p-4 rounded-xl bg-card border border-border hover:border-primary/30 hover:bg-primary/5 transition-all text-center group"
+                    className="flex flex-col items-center gap-4 p-5 rounded-xl bg-card border border-border hover:border-primary/30 hover:bg-primary/5 transition-all text-center group"
                   >
-                    <link.icon size={24} className="text-primary" />
-                    <span className="text-sm font-black text-foreground group-hover:text-primary leading-tight">{link.label}</span>
+                    <link.icon size={28} className="text-primary" />
+                    <span className="text-base font-black text-foreground group-hover:text-primary leading-tight lowercase tracking-tight">{link.label}</span>
                   </Link>
                 ))}
               </div>
             </div>
 
             {/* Social + contact */}
-            <div className="border-t border-border pt-6 mb-8">
-              <p className="text-xs font-black uppercase tracking-[0.2em] text-muted-foreground mb-4 px-4">Connect</p>
+            <div className="border-t border-border pt-8 mb-10">
+              <p className="text-sm font-black text-muted-foreground mb-6 px-4 lowercase tracking-tight">connect</p>
               <div className="grid grid-cols-2 gap-3">
                 <Link
                   href="https://www.instagram.com/bankroll_bop93/"

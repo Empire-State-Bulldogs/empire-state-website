@@ -70,11 +70,11 @@ export function PuppiesSection() {
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className={`text-center mb-20 md:mb-32 ${isVisible ? "scroll-fade-up" : "opacity-0"}`}>
-          <span className="text-primary text-xl md:text-2xl font-black tracking-widest mb-6 block">
-            Our Available Puppies
+          <span className="text-primary text-xl md:text-2xl font-black tracking-widest mb-6 block lowercase">
+            our available puppies
           </span>
-          <h2 className="text-6xl md:text-8xl lg:text-[9rem] font-black mt-4 mb-10 text-card-foreground leading-[1.1] tracking-tight">
-            Find Your New <br className="hidden md:block" /> <span className="text-primary italic">Best Friend</span>
+          <h2 className="text-6xl md:text-8xl lg:text-[9rem] font-black mt-4 mb-10 text-card-foreground leading-[1.1] tracking-tight lowercase">
+            find your new <br className="hidden md:block" /> <span className="text-primary italic">best friend</span>
           </h2>
           <p className="text-2xl md:text-3xl lg:text-4xl text-muted-foreground max-w-5xl mx-auto text-pretty font-medium leading-relaxed">
             Our puppies are raised in a loving home environment, ensuring they are well-socialized and ready for their forever families.
@@ -94,10 +94,10 @@ export function PuppiesSection() {
                 />
               </div>
               <div className="text-center md:text-left py-6">
-                <Badge variant="secondary" className="bg-primary text-white mb-6 px-6 py-2 text-xl md:text-2xl font-black rounded-xl italic">
-                  Dropping Soon!
+                <Badge variant="secondary" className="bg-primary text-white mb-6 px-6 py-2 text-xl md:text-2xl font-black rounded-xl italic lowercase">
+                  dropping soon!
                 </Badge>
-                <h3 className="text-5xl md:text-7xl font-black text-card-foreground mb-8 tracking-tight leading-tight">New Puppies Coming Soon</h3>
+                <h3 className="text-5xl md:text-7xl font-black text-card-foreground mb-8 tracking-tight leading-tight lowercase">new puppies coming soon</h3>
                 <p className="text-2xl md:text-3xl lg:text-4xl text-muted-foreground mb-12 leading-relaxed font-medium">
                   We have an incredible new litter in preparation. These purebred Frenchies will be dropping soon—check back to find your perfect match.
                 </p>
@@ -117,8 +117,8 @@ export function PuppiesSection() {
         <div
           className={`bg-secondary rounded-xl md:rounded-2xl p-6 md:p-12 border border-border ${isVisible ? "scroll-fade-up delay-200" : "opacity-0"}`}
         >
-          <h3 className="text-4xl md:text-6xl font-black mb-12 text-center text-card-foreground tracking-tight leading-tight">
-            Every Puppy Includes
+          <h3 className="text-4xl md:text-6xl font-black mb-12 text-center text-card-foreground tracking-tight leading-tight lowercase">
+            every puppy includes
           </h3>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
             {includes.map((item, i) => (
