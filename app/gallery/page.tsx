@@ -70,30 +70,31 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      {/* BIG COLLAGE GRID */}
+      {/* BIG MASONRY GALLERY */}
       <section className="py-8 md:py-16 bg-background">
-        <div className="container mx-auto px-2 md:px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 auto-rows-[200px] md:auto-rows-[300px] gap-2 md:gap-4 max-w-[1600px] mx-auto">
+        <div className="container mx-auto px-4">
+          <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4 max-w-[1600px] mx-auto">
             {galleryItems.map((item, i) => (
               <div 
                 key={i} 
-                className={`group relative overflow-hidden rounded-2xl md:rounded-[2rem] bg-card border border-border/50 hover:border-primary/50 transition-all duration-500 shadow-xl hover:shadow-primary/20 ${item.span}`}
+                className="group relative overflow-hidden rounded-2xl md:rounded-[2rem] bg-card border border-border/50 hover:border-primary/50 transition-all duration-500 shadow-xl hover:shadow-primary/20 break-inside-avoid shadow-black/30"
               >
-                <Image
+                {/* Standard img tag allows intrinsic aspect ratio mapping perfectly for masonry */}
+                <img
                   src={item.src}
                   alt={item.label}
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-110 grayscale-[30%] group-hover:grayscale-0"
+                  className="w-full h-auto block transition-transform duration-700 group-hover:scale-110 grayscale-[15%] group-hover:grayscale-0"
+                  loading="lazy"
                 />
                 
                 {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-6 md:p-10 translate-y-4 group-hover:translate-y-0 text-white">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-6 md:p-8 translate-y-4 group-hover:translate-y-0 text-white pointer-events-none">
                     <span className="text-primary font-black uppercase tracking-[0.2em] text-xs mb-1">ESB Archive</span>
-                    <h3 className="text-xl md:text-3xl font-black leading-none uppercase tracking-tighter">{item.label}</h3>
+                    <h3 className="text-xl md:text-2xl font-black leading-none uppercase tracking-tighter">{item.label}</h3>
                 </div>
 
                 {/* Counter Badge */}
-                <div className="absolute top-4 right-4 bg-black/40 backdrop-blur-md px-2 py-1 rounded-md text-[10px] font-bold text-white/70 border border-white/10 group-hover:border-primary/40 transition-colors">
+                <div className="absolute top-4 right-4 bg-black/40 backdrop-blur-md px-2 py-1 rounded-md text-[10px] font-bold text-white/70 border border-white/10 group-hover:border-primary/40 transition-colors pointer-events-none z-10">
                     {i + 1 < 10 ? `0${i + 1}` : i + 1}
                 </div>
               </div>
