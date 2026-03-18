@@ -82,31 +82,33 @@ export function PuppiesSection() {
         </div>
 
         {/* Puppies Grid - Coming Soon */}
-        <div className="max-w-4xl mx-auto mb-16 px-4">
-          <Card className={`bg-secondary border-border overflow-hidden hover:border-primary/50 transition-all duration-300 group ${isVisible ? "scroll-fade-up" : "opacity-0"}`}>
-            <div className="grid md:grid-cols-2 gap-8 items-center p-6 md:p-8">
-              <div className="relative aspect-square bg-muted flex items-center justify-center overflow-hidden rounded-2xl">
-                <Image
-                  src="/images/coming_soon.jpg"
-                  alt="New Puppies Coming Soon"
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-              </div>
-              <div className="text-center md:text-left py-6">
+        <div className="max-w-6xl mx-auto mb-20">
+          <Card className={`bg-secondary border-border overflow-hidden hover:border-primary/50 transition-all duration-300 group flex flex-col xl:flex-row shadow-2xl shadow-primary/5 ${isVisible ? "scroll-fade-up" : "opacity-0"}`}>
+            <div className="relative aspect-square xl:aspect-auto xl:w-[45%] bg-muted flex items-center justify-center overflow-hidden shrink-0">
+              <Image
+                src="/images/coming_soon.jpg"
+                alt="New Puppies Coming Soon"
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+            </div>
+            <div className="text-center md:text-left p-10 md:p-14 xl:p-16 flex flex-col justify-center flex-1">
+              <div className="md:inline-block">
                 <Badge variant="secondary" className="bg-primary text-white mb-6 px-6 py-2 text-xl md:text-2xl font-black rounded-xl italic lowercase">
                   dropping soon!
                 </Badge>
-                <h3 className="text-5xl md:text-7xl font-black text-card-foreground mb-8 tracking-tight leading-tight lowercase">new puppies coming soon</h3>
-                <p className="text-2xl md:text-3xl lg:text-4xl text-muted-foreground mb-12 leading-relaxed font-medium">
-                  We have an incredible new litter in preparation. These purebred Frenchies will be dropping soon—check back to find your perfect match.
-                </p>
+              </div>
+              <h3 className="text-5xl md:text-7xl font-black text-card-foreground mb-8 tracking-tight leading-tight lowercase">new puppies coming soon</h3>
+              <p className="text-2xl md:text-3xl lg:text-4xl text-muted-foreground mb-12 leading-relaxed font-medium">
+                We have an incredible new litter in preparation. These purebred Frenchies will be dropping soon—check back to find your perfect match.
+              </p>
+              <div>
                 <Button
                   asChild
                   size="lg"
-                  className="w-full md:w-auto bg-primary text-white hover:bg-primary/90 px-16 py-10 text-2xl font-black rounded-[2rem] shadow-2xl shadow-primary/40"
+                  className="w-full md:w-auto bg-primary text-white hover:bg-primary/90 px-16 py-8 text-2xl font-black rounded-[2rem] shadow-2xl shadow-primary/40 lowercase tracking-tight"
                 >
-                  <Link href="#contact">Inquire Early</Link>
+                  <Link href="#contact">inquire early</Link>
                 </Button>
               </div>
             </div>
