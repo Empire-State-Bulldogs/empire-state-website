@@ -115,17 +115,19 @@ export function Header() {
             </button>
 
             {/* ── DESKTOP ── */}
-            <Link href="/" className="hidden lg:flex items-center gap-2">
-              <img src="/images/logo.png" alt="Empire State Bulldogs" className="h-12 w-auto" />
-            </Link>
+            <div className="hidden lg:flex flex-1 items-center">
+              <Link href="/" className="flex items-center gap-2">
+                <img src="/images/logo.png" alt="Empire State Bulldogs" className="h-12 w-auto" />
+              </Link>
+            </div>
 
-            <nav className="hidden lg:flex items-center gap-2">
-              {navLinks.filter(l => l.href !== "/").map((link) => (
+            <nav className="hidden lg:flex items-center gap-1 justify-center flex-[2]">
+              {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
                   className={cn(
-                    "px-4 py-2 text-lg font-bold rounded-lg transition-all hover:text-primary hover:bg-primary/8",
+                    "px-4 py-2 text-lg font-bold rounded-lg transition-all hover:text-primary hover:bg-primary/8 whitespace-nowrap",
                     pathname === link.href ? "text-primary bg-primary/10" : "text-muted-foreground"
                   )}
                 >
@@ -134,14 +136,14 @@ export function Header() {
               ))}
             </nav>
 
-            <div className="hidden lg:flex items-center gap-3">
+            <div className="hidden lg:flex flex-1 items-center justify-end gap-3">
               {/* Mini radio */}
               <div className="flex items-center gap-1.5 bg-primary/5 rounded-full px-3 py-1.5 border border-primary/10">
                 <button onClick={prevTrack} className="p-1 hover:bg-primary/20 rounded-full transition-all hover:scale-110">
                   <SkipBack size={14} className="text-primary" />
                 </button>
                 <button onClick={togglePlay} className="w-7 h-7 bg-primary hover:bg-primary/90 rounded-full flex items-center justify-center shadow-md shadow-primary/30 hover:scale-110 transition-all">
-                  {isPlaying ? <Pause size={12} className="text-white fill-white" /> : <Play size={12} className="text-white fill-white" />}
+                  {isPlaying ? <Pause size={12} className="text-white fill-white" /> : <Play size={12} className="text-white fill-white ml-0.5" />}
                 </button>
                 <button onClick={nextTrack} className="p-1 hover:bg-primary/20 rounded-full transition-all hover:scale-110">
                   <SkipForward size={14} className="text-primary" />
@@ -153,10 +155,10 @@ export function Header() {
                 </button>
               </div>
 
-              <Button asChild className="bg-primary text-white hover:bg-primary/90 rounded-xl text-sm">
+              <Button asChild className="bg-primary text-white hover:bg-primary/90 rounded-xl text-sm font-black shadow-lg shadow-primary/20">
                 <Link href="/contact">Contact Us</Link>
               </Button>
-              <Button asChild variant="outline" className="border-primary text-primary hover:bg-primary/10 rounded-xl text-sm hidden xl:flex">
+              <Button asChild variant="outline" className="border-primary text-primary hover:bg-primary/10 rounded-xl text-sm font-bold hidden xl:flex">
                 <a href="tel:5189173429" className="flex items-center gap-1.5">
                   <Phone size={14} /> 518-917-3429
                 </a>
