@@ -1,11 +1,10 @@
 import type React from "react"
 import type { Metadata, Viewport } from "next"
-import { Bebas_Neue, Geist_Mono } from "next/font/google"
+import { Outfit, Geist_Mono } from "next/font/google"
 import "./globals.css"
 import { MusicProvider } from "@/context/music-context"
 
-const _bebasNeue = Bebas_Neue({
-  weight: "400",
+const _outfit = Outfit({
   subsets: ["latin"],
   variable: "--font-display",
 })
@@ -228,7 +227,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="font-sans antialiased">
+      <body className={`${_outfit.variable} font-sans antialiased`}>
         <MusicProvider>
           {children}
         </MusicProvider>
