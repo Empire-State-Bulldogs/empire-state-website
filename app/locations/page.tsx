@@ -84,7 +84,7 @@ export default function LocationsPage() {
             <MapPin className="w-4 h-4" />
             Nationwide Reach
           </div>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 text-foreground leading-[1.2] tracking-tight lowercase">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 text-foreground leading-[1.2] tracking-tight capitalize">
             locations we <br className="md:hidden" />
             <span className="text-primary italic">serve</span>
           </h1>
@@ -98,7 +98,7 @@ export default function LocationsPage() {
       <section className="py-20 bg-secondary border-b border-border/50">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-4xl md:text-6xl font-black text-foreground mb-6 tracking-tight lowercase">the 500-mile network</h2>
+            <h2 className="text-4xl md:text-6xl font-black text-foreground mb-6 tracking-tight capitalize">the 500-mile network</h2>
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed font-medium">
               We frequently hand-deliver and arrange meetups throughout New York, New Jersey, Pennsylvania, Connecticut, and Massachusetts. Our stud services are also highly active in these regions.
             </p>
@@ -111,7 +111,7 @@ export default function LocationsPage() {
                   <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
                     <MapPin className="w-5 h-5 text-primary" />
                   </div>
-                  <h3 className="text-3xl font-black text-foreground lowercase tracking-tight">{area.state}</h3>
+                  <h3 className="text-3xl font-black text-foreground capitalize tracking-tight">{area.state}</h3>
                 </div>
                 <ul className="space-y-3">
                   {area.cities.map((city) => (
@@ -119,7 +119,7 @@ export default function LocationsPage() {
                        {city}
                      </li>
                   ))}
-                  <li className="text-primary font-bold italic pt-2 lowercase">and surrounding areas</li>
+                  <li className="text-primary font-bold italic pt-2 capitalize">and surrounding areas</li>
                 </ul>
               </div>
             ))}
@@ -136,7 +136,7 @@ export default function LocationsPage() {
                  <Plane className="w-4 h-4" />
                  Flight Nanny Delivery
                </div>
-               <h2 className="text-4xl md:text-6xl font-black text-foreground mb-6 tracking-tight lowercase">coast to coast <br />delivery</h2>
+               <h2 className="text-4xl md:text-6xl font-black text-foreground mb-6 tracking-tight capitalize">coast to coast <br />delivery</h2>
                <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed font-medium mb-8">
                  Don't let distance stop you from finding your absolute dream Frenchie. Our trusted flight nannies fly exclusively in-cabin with your puppy, providing VIP one-on-one care from our arms in Albany directly into yours at your nearest major airport. 
                </p>
@@ -151,7 +151,7 @@ export default function LocationsPage() {
                 <div className="grid md:grid-cols-2 gap-6">
                   {nationalAreas.map((area) => (
                     <div key={area.state} className="bg-secondary border border-border rounded-xl p-6 hover:border-accent/50 transition-all">
-                      <h3 className="text-2xl font-black text-foreground mb-3 lowercase tracking-tight">{area.state}</h3>
+                      <h3 className="text-2xl font-black text-foreground mb-3 capitalize tracking-tight">{area.state}</h3>
                       <p className="text-lg text-muted-foreground font-medium leading-relaxed">
                         {area.cities.join(", ")}
                       </p>
@@ -166,15 +166,15 @@ export default function LocationsPage() {
       {/* CTA */}
       <section className="py-20 bg-secondary">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-6xl font-black text-foreground mb-6 tracking-tight lowercase">ready for your puppy?</h2>
+          <h2 className="text-4xl md:text-6xl font-black text-foreground mb-6 tracking-tight capitalize">ready for your puppy?</h2>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-10 font-medium leading-relaxed">
             No matter where you live in the United States, we can make it happen. Reach out to discuss logistics, shipping costs, or meetup availability.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-             <Button asChild size="lg" className="bg-primary text-white hover:bg-primary/90 px-10 py-8 text-xl font-black rounded-[1.5rem] lowercase tracking-tight shadow-xl shadow-primary/20">
+             <Button asChild size="lg" className="bg-primary text-white hover:bg-primary/90 px-10 py-8 text-xl font-black rounded-[1.5rem] capitalize tracking-tight shadow-xl shadow-primary/20">
                <Link href="/contact">get in touch</Link>
              </Button>
-             <Button asChild variant="outline" size="lg" className="border-primary text-primary hover:bg-primary/10 px-10 py-8 text-xl font-black rounded-[1.5rem] lowercase tracking-tight">
+             <Button asChild variant="outline" size="lg" className="border-primary text-primary hover:bg-primary/10 px-10 py-8 text-xl font-black rounded-[1.5rem] capitalize tracking-tight">
                <a href="mailto:info@empirestatebulldogs.com" className="flex items-center gap-2">
                  <Mail className="w-5 h-5" /> email us
                </a>

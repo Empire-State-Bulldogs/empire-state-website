@@ -63,7 +63,7 @@ export function Footer() {
                 className="rounded-[2.5rem] shadow-2xl shadow-primary/20 bg-background p-2 border border-primary/10"
               />
             </Link>
-            <h3 className="text-3xl md:text-5xl font-black mb-6 text-foreground lowercase tracking-tight">empire state bulldogs</h3>
+            <h3 className="text-3xl md:text-5xl font-black mb-6 text-foreground capitalize tracking-tight">empire state bulldogs</h3>
             <p className="text-xl md:text-2xl text-muted-foreground mb-10 font-medium leading-relaxed">
               New York&apos;s premier French Bulldog breeder and lifestyle brand, based in Albany, NY.
             </p>
@@ -96,11 +96,11 @@ export function Footer() {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-12 md:gap-24 w-full max-w-5xl">
             {/* Explore */}
             <div className="col-span-1">
-              <h4 className="text-xl md:text-2xl font-black text-foreground mb-6 lowercase tracking-tight">explore</h4>
+              <h4 className="text-xl md:text-2xl font-black text-foreground mb-6 capitalize tracking-tight">explore</h4>
               <ul className="space-y-4">
                 {footerLinks.explore.map((link) => (
                   <li key={link.label}>
-                    <Link href={link.href} className="text-lg md:text-xl text-muted-foreground hover:text-primary transition-colors font-medium lowercase">
+                    <Link href={link.href} className="text-lg md:text-xl text-muted-foreground hover:text-primary transition-colors font-medium capitalize">
                       {link.label}
                     </Link>
                   </li>
@@ -110,11 +110,11 @@ export function Footer() {
 
             {/* Support */}
             <div className="col-span-1">
-              <h4 className="text-xl md:text-2xl font-black text-foreground mb-6 lowercase tracking-tight">support</h4>
+              <h4 className="text-xl md:text-2xl font-black text-foreground mb-6 capitalize tracking-tight">support</h4>
               <ul className="space-y-4">
                 {footerLinks.support.map((link) => (
                   <li key={link.label}>
-                    <Link href={link.href} className="text-lg md:text-xl text-muted-foreground hover:text-primary transition-colors font-medium lowercase">
+                    <Link href={link.href} className="text-lg md:text-xl text-muted-foreground hover:text-primary transition-colors font-medium capitalize">
                       {link.label}
                     </Link>
                   </li>
@@ -124,11 +124,11 @@ export function Footer() {
 
             {/* Legal */}
             <div className="col-span-2 md:col-span-1">
-              <h4 className="text-xl md:text-2xl font-black text-foreground mb-6 lowercase tracking-tight">legal</h4>
+              <h4 className="text-xl md:text-2xl font-black text-foreground mb-6 capitalize tracking-tight">legal</h4>
               <ul className="space-y-4">
                 {footerLinks.legal.map((link) => (
                   <li key={link.label}>
-                    <Link href={link.href} className="text-lg md:text-xl text-muted-foreground hover:text-primary transition-colors font-medium lowercase">
+                    <Link href={link.href} className="text-lg md:text-xl text-muted-foreground hover:text-primary transition-colors font-medium capitalize">
                       {link.label}
                     </Link>
                   </li>
@@ -141,10 +141,10 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-border mt-20 pt-10">
           <div className="flex flex-col md:flex-row justify-between items-center text-center gap-6">
-            <p className="text-lg md:text-xl text-muted-foreground font-medium lowercase tracking-tight">
+            <p className="text-lg md:text-xl text-muted-foreground font-medium capitalize tracking-tight">
               © {year} empire state bulldogs. <br className="md:hidden" /> all rights reserved.
             </p>
-            <p className="text-lg md:text-xl text-muted-foreground font-medium lowercase tracking-tight italic">proudly serving new york state and beyond</p>
+            <p className="text-lg md:text-xl text-muted-foreground font-medium capitalize tracking-tight italic">proudly serving new york state and beyond</p>
           </div>
         </div>
       </div>

@@ -50,7 +50,7 @@ export default function GalleryPage() {
             <Sparkles className="w-4 h-4" />
             Vibe Check
           </div>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 text-foreground leading-[1.2] tracking-tight lowercase">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 text-foreground leading-[1.2] tracking-tight capitalize">
             big empire<br />
             <span className="text-primary">vibrations</span>
           </h1>

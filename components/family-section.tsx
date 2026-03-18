@@ -16,8 +16,8 @@ export function FamilySection() {
             <div className="container mx-auto px-4 relative z-10 text-center">
                 {/* Section Header */}
                 <div className={`mb-20 md:mb-32 ${isVisible ? "scroll-fade-up" : "opacity-0"}`}>
-                    <span className="text-primary text-xl md:text-2xl font-black tracking-widest mb-6 block font-black lowercase">family first</span>
-                    <h2 className="text-6xl md:text-8xl lg:text-[9.5rem] font-black mt-4 mb-10 text-foreground leading-[1.1] tracking-tight lowercase">
+                    <span className="text-primary text-xl md:text-2xl font-black tracking-widest mb-6 block font-black capitalize">family first</span>
+                    <h2 className="text-6xl md:text-8xl lg:text-[9.5rem] font-black mt-4 mb-10 text-foreground leading-[1.1] tracking-tight capitalize">
                         part of our <br className="hidden md:block" /> <span className="text-primary italic">family</span>
                     </h2>
                     <p className="text-2xl md:text-3xl lg:text-4xl text-muted-foreground max-w-5xl mx-auto text-pretty font-medium leading-relaxed">

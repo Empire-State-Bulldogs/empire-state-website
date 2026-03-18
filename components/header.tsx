@@ -92,7 +92,7 @@ export function Header() {
               >
                 <div className="flex flex-col items-start overflow-hidden">
                   <span className="text-[11px] font-black uppercase tracking-widest text-primary leading-none">now playing</span>
-                  <span className="text-[15px] font-bold text-foreground truncate w-full leading-snug lowercase tracking-tight">{currentTrack.title}</span>
+                  <span className="text-[15px] font-bold text-foreground truncate w-full leading-snug capitalize tracking-tight">{currentTrack.title}</span>
                 </div>
                 <div className={cn("flex gap-0.5 items-end h-4 shrink-0 ml-1", !isPlaying && "opacity-30")}>
                   <div className={cn("w-0.5 h-1.5 bg-primary rounded-full", isPlaying && "animate-music-bar-1")} />
@@ -139,7 +139,7 @@ export function Header() {
                     key={link.href}
                     href={link.href}
                     className={cn(
-                      "px-2 py-2 text-lg xl:text-xl font-black rounded-lg transition-all hover:text-primary whitespace-nowrap lowercase tracking-tight",
+                      "px-2 py-2 text-lg xl:text-xl font-black rounded-lg transition-all hover:text-primary whitespace-nowrap capitalize tracking-tight",
                       pathname === link.href ? "text-primary bg-primary/10" : "text-muted-foreground"
                     )}
                   >
@@ -174,7 +174,7 @@ export function Header() {
                     <Phone size={18} />
                   </a>
                 </Button>
-                <Button asChild className="bg-primary text-white hover:bg-primary/90 rounded-xl h-10 px-6 text-lg font-black shadow-lg shadow-primary/20 lowercase tracking-tight">
+                <Button asChild className="bg-primary text-white hover:bg-primary/90 rounded-xl h-10 px-6 text-lg font-black shadow-lg shadow-primary/20 capitalize tracking-tight">
                   <Link href="/contact">contact</Link>
                 </Button>
               </div>
@@ -210,7 +210,7 @@ export function Header() {
                   )}>
                     <link.icon size={24} />
                   </div>
-                  <span className="text-3xl font-black lowercase tracking-tight">{link.label}</span>
+                  <span className="text-3xl font-black capitalize tracking-tight">{link.label}</span>
                   {pathname === link.href && <div className="ml-auto w-3 h-3 rounded-full bg-primary" />}
                 </Link>
               ))}
@@ -218,7 +218,7 @@ export function Header() {
 
             {/* More links */}
             <div className="border-t border-border pt-8 mb-10">
-              <p className="text-sm font-black text-muted-foreground mb-6 px-4 lowercase tracking-tight">more info</p>
+              <p className="text-sm font-black text-muted-foreground mb-6 px-4 capitalize tracking-tight">more info</p>
               <div className="grid grid-cols-3 gap-3">
                 {extraLinks.map((link) => (
                   <Link
@@ -228,7 +228,7 @@ export function Header() {
                     className="flex flex-col items-center gap-4 p-5 rounded-xl bg-card border border-border hover:border-primary/30 hover:bg-primary/5 transition-all text-center group"
                   >
                     <link.icon size={28} className="text-primary" />
-                    <span className="text-base font-black text-foreground group-hover:text-primary leading-tight lowercase tracking-tight">{link.label}</span>
+                    <span className="text-base font-black text-foreground group-hover:text-primary leading-tight capitalize tracking-tight">{link.label}</span>
                   </Link>
                 ))}
               </div>
@@ -236,7 +236,7 @@ export function Header() {
 
             {/* Social + contact */}
             <div className="border-t border-border pt-8 mb-10">
-              <p className="text-sm font-black text-muted-foreground mb-6 px-4 lowercase tracking-tight">connect</p>
+              <p className="text-sm font-black text-muted-foreground mb-6 px-4 capitalize tracking-tight">connect</p>
               <div className="grid grid-cols-2 gap-3">
                 <Link
                   href="https://www.instagram.com/bankroll_bop93/"
