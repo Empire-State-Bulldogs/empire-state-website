@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation"
 import {
   Menu, X, Play, Pause, SkipForward, SkipBack,
   Phone, ChevronDown, ChevronUp, Home, Info,
-  Crown, Heart, Camera, Mail, BookOpen, Shield, HelpCircle, Instagram
+  Crown, Heart, Camera, Mail, BookOpen, Shield, HelpCircle, Instagram, MapPin
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useMusic, songs as musicSongs } from "@/context/music-context"
@@ -20,6 +20,7 @@ const navLinks = [
   { href: "/studs", label: "Stud Services", icon: Crown },
   { href: "/puppies", label: "Puppies", icon: Heart },
   { href: "/gallery", label: "Gallery", icon: Camera },
+  { href: "/locations", label: "Locations", icon: MapPin },
   { href: "/contact", label: "Contact", icon: Mail },
 ]
 

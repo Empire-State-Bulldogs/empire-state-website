@@ -7,6 +7,7 @@ const footerLinks = {
     { label: "about us", href: "/#about" },
     { label: "stud services", href: "/#studs" },
     { label: "available puppies", href: "/#puppies" },
+    { label: "nationwide locations", href: "/locations" },
     { label: "gallery", href: "/#gallery" },
   ],
   support: [

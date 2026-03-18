@@ -16,12 +16,21 @@ export const metadata: Metadata = {
     template: "%s | Empire State Bulldogs",
   },
   description:
-    "Empire State Bulldogs is New York's premier French Bulldog breeder. Quality AKC Frenchie puppies for sale, world-class stud services featuring King Simba, and a passionate community of exotic Frenchie lovers.",
+    "Empire State Bulldogs is your premier nationwide French Bulldog breeder based in Albany, NY. Specializing in healthy, AKC-registered Frenchies: Fluffy, Isabella, Rojo, Merle, Lilac, Big Rope, New Shade, and Testable Chocolate. World-class stud services, thick bone structure, perfect genetics, and flight nanny shipping available across the US.",
   keywords: [
+    // Core terms
     "french bulldog puppies", "frenchie puppies for sale", "french bulldog breeder", "french bulldog stud service",
-    "blue french bulldog", "lilac french bulldog", "isabella frenchie", "fluffy french bulldog", "merle french bulldog",
-    "french bulldog breeder NY", "french bulldog puppies Albany", "AKC french bulldog", "exotic frenchie breeder",
-    "premium french bulldog studs", "Empire State Bulldogs", "King Simba stud", "quality french bulldog genetics"
+    // Colors & DNA Lingo
+    "blue french bulldog", "lilac french bulldog", "isabella frenchie", "fluffy french bulldog", "merle french bulldog", 
+    "rojo french bulldog", "new shade french bulldog", "testable chocolate frenchie", "big rope french bulldog", "platinum french bulldog", "blue fawn frenchie",
+    // Quality & Genetics
+    "thick bone french bulldog", "AKC french bulldog", "exotic frenchie breeder", "quality french bulldog genetics", "health tested french bulldogs", "champion bloodline frenchie", "short back frenchie", "compact french bulldog",
+    // Locations - Tight Radius
+    "french bulldog breeder NY", "french bulldog puppies Albany", "french bulldogs NYC", "french bulldog breeder New Jersey", "french bulldogs Pennsylvania", "french bulldogs Connecticut", "french bulldogs Massachusetts", "french bulldogs tristate",
+    // Nationwide Services
+    "nationwide french bulldog breeder", "flight nanny frenchie puppies", "french bulldogs shipped", "frenchie puppies Los Angeles", "frenchie puppies Miami", "frenchie puppies Texas", "frenchie puppies Atlanta",
+    // Brand
+    "premium french bulldog studs", "Empire State Bulldogs", "King Simba stud"
   ],
   authors: [{ name: "Empire State Bulldogs" }],
   creator: "Empire State Bulldogs",
@@ -153,20 +162,21 @@ export default function RootLayout({
                 latitude: 42.6526,
                 longitude: -73.7562,
               },
-              areaServed: {
-                "@type": "GeoShape",
-                box: "40.5795 -76.2592 45.0152 -71.0801",
-              },
-              priceRange: "$$",
-              serviceArea: {
-                "@type": "GeoCircle",
-                geoMidpoint: {
-                  "@type": "GeoCoordinates",
-                  latitude: 42.6526,
-                  longitude: -73.7562,
+              areaServed: [
+                {
+                  "@type": "GeoCircle",
+                  geoMidpoint: {
+                    "@type": "GeoCoordinates",
+                    latitude: 42.6526,
+                    longitude: -73.7562,
+                  },
+                  geoRadius: "500 miles",
                 },
-                geoRadius: "500 miles",
-              },
+                {
+                  "@type": "Country",
+                  name: "United States"
+                }
+              ],
               openingHoursSpecification: {
                 "@type": "OpeningHoursSpecification",
                 dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
@@ -192,15 +202,21 @@ export default function RootLayout({
               },
               description:
                 "Professional French Bulldog breeding services offering healthy puppies with health guarantees and premium stud services including King Simba.",
-              areaServed: {
-                "@type": "GeoCircle",
-                geoMidpoint: {
-                  "@type": "GeoCoordinates",
-                  latitude: 42.6526,
-                  longitude: -73.7562,
+              areaServed: [
+                {
+                  "@type": "GeoCircle",
+                  geoMidpoint: {
+                    "@type": "GeoCoordinates",
+                    latitude: 42.6526,
+                    longitude: -73.7562,
+                  },
+                  geoRadius: "500 miles",
                 },
-                geoRadius: "500 miles",
-              },
+                {
+                  "@type": "Country",
+                  name: "United States"
+                }
+              ],
               hasOfferCatalog: {
                 "@type": "OfferCatalog",
                 name: "Empire State Bulldogs Catalog",
