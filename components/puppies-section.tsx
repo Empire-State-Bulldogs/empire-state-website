@@ -84,7 +84,7 @@ export function PuppiesSection() {
         {/* Puppies Grid - Coming Soon */}
         <div className="max-w-6xl mx-auto mb-20">
           <Card className={`bg-secondary border-border overflow-hidden hover:border-primary/50 transition-all duration-300 group flex flex-col xl:flex-row shadow-2xl shadow-primary/5 ${isVisible ? "scroll-fade-up" : "opacity-0"}`}>
-            <div className="relative aspect-video xl:aspect-auto min-h-[300px] xl:w-[40%] bg-muted flex items-center justify-center overflow-hidden shrink-0">
+            <div className="relative aspect-square xl:aspect-square xl:w-[40%] bg-muted flex items-center justify-center overflow-hidden shrink-0">
               <Image
                 src="/images/coming_soon.jpg"
                 alt="New Puppies Coming Soon"
@@ -98,7 +98,9 @@ export function PuppiesSection() {
                   dropping soon!
                 </Badge>
               </div>
-              <h3 className="text-4xl md:text-5xl xl:text-6xl font-black text-card-foreground mb-6 tracking-tight leading-tight lowercase">new puppies coming soon</h3>
+              <h3 className="text-4xl md:text-5xl xl:text-6xl font-black text-card-foreground mb-6 tracking-tight leading-tight lowercase">
+                new puppies <br /> coming soon
+              </h3>
               <p className="text-lg md:text-xl xl:text-2xl text-muted-foreground mb-10 leading-relaxed font-medium">
                 We have an incredible new litter in preparation. These purebred Frenchies will be dropping soon—check back to find your perfect match.
               </p>
