@@ -115,37 +115,40 @@ export function Header() {
             </button>
 
             {/* ── DESKTOP ── */}
-            <div className="hidden lg:flex flex-1 items-center gap-6">
-              <Link href="/" className="flex items-center gap-2">
-                <img src="/images/logo.png" alt="Empire State Bulldogs" className="h-12 w-auto" />
-              </Link>
-              <div className="hidden xl:flex items-center gap-2">
-                <Link href="https://www.instagram.com/bankroll_bop93/" target="_blank" className="w-9 h-9 flex items-center justify-center rounded-full bg-primary/10 text-primary hover:bg-primary/20 hover:scale-110 transition-all">
-                  <Instagram size={18} />
+            <div className="hidden lg:flex w-full justify-between items-center gap-4">
+              {/* Left Side: Logo & Socials */}
+              <div className="flex shrink-0 items-center gap-4">
+                <Link href="/" className="flex items-center gap-2">
+                  <img src="/images/logo.png" alt="Empire State Bulldogs" className="h-[2.75rem] w-auto" />
                 </Link>
-                <Link href="https://www.tiktok.com/@bankrollbop" target="_blank" className="w-9 h-9 flex items-center justify-center rounded-full bg-primary/10 text-primary hover:bg-primary/20 hover:scale-110 transition-all">
-                  <TikTokIcon className="w-[18px] h-[18px]" />
-                </Link>
+                <div className="hidden xl:flex items-center gap-2">
+                  <Link href="https://www.instagram.com/bankroll_bop93/" target="_blank" className="w-8 h-8 flex items-center justify-center rounded-full bg-primary/10 text-primary hover:bg-primary/20 hover:scale-110 transition-all">
+                    <Instagram size={16} />
+                  </Link>
+                  <Link href="https://www.tiktok.com/@bankrollbop" target="_blank" className="w-8 h-8 flex items-center justify-center rounded-full bg-primary/10 text-primary hover:bg-primary/20 hover:scale-110 transition-all">
+                    <TikTokIcon className="w-4 h-4" />
+                  </Link>
+                </div>
               </div>
-            </div>
 
-            {/* Exactly centered items via absolute positioning */}
-            <nav className="hidden lg:flex absolute left-1/2 -translate-x-1/2 items-center justify-center gap-2 xl:gap-4">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className={cn(
-                    "px-3 py-2 text-xl font-black rounded-lg transition-all hover:text-primary hover:bg-primary/8 whitespace-nowrap lowercase tracking-tight",
-                    pathname === link.href ? "text-primary bg-primary/10" : "text-muted-foreground"
-                  )}
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </nav>
+              {/* Center: Evenly Spaced Nav Links */}
+              <nav className="flex-1 flex items-center justify-evenly max-w-3xl mx-auto px-4">
+                {navLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className={cn(
+                      "px-2 py-2 text-lg xl:text-xl font-black rounded-lg transition-all hover:text-primary whitespace-nowrap lowercase tracking-tight",
+                      pathname === link.href ? "text-primary bg-primary/10" : "text-muted-foreground"
+                    )}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </nav>
 
-            <div className="hidden lg:flex flex-1 items-center justify-end gap-3 z-10 bg-background/0">
+              {/* Right Side: Radio & Contact */}
+              <div className="flex shrink-0 items-center justify-end gap-3 z-10">
               {/* Mini radio */}
               <div className="flex items-center gap-1.5 bg-primary/5 rounded-full px-3 py-1.5 border border-primary/10">
                 <button onClick={prevTrack} className="p-1 hover:bg-primary/20 rounded-full transition-all hover:scale-110">
@@ -173,6 +176,7 @@ export function Header() {
                 <Button asChild className="bg-primary text-white hover:bg-primary/90 rounded-xl h-10 px-6 text-lg font-black shadow-lg shadow-primary/20 lowercase tracking-tight">
                   <Link href="/contact">contact</Link>
                 </Button>
+              </div>
               </div>
             </div>
           </div>

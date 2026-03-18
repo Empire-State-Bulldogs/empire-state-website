@@ -75,10 +75,10 @@ export function StudServicesSection() {
         {/* Section Header */}
         <div className="text-center mb-24 md:mb-32">
           <span className="text-primary text-xl md:text-2xl font-black tracking-tight mb-6 block lowercase">our stud services</span>
-          <h2 className="text-6xl md:text-8xl lg:text-9xl font-black mt-4 mb-10 text-foreground leading-[1.1] tracking-tight lowercase">
+          <h2 className="text-5xl md:text-7xl lg:text-8xl font-black mt-4 mb-8 text-foreground leading-[1.1] tracking-tight lowercase">
             Meet the New York <br className="hidden md:block" /> <span className="text-primary italic">champions</span>
           </h2>
-          <p className="text-2xl md:text-3xl lg:text-4xl text-muted-foreground max-w-5xl mx-auto text-pretty font-medium leading-[1.4]">
+          <p className="text-xl md:text-2xl lg:text-3xl text-muted-foreground max-w-4xl mx-auto text-pretty font-medium leading-[1.4]">
             Our carefully selected studs represent the finest in French Bulldog breeding. Each male is health tested,
             AKC registered, and selected for exceptional genetics and temperament.
           </p>
@@ -91,7 +91,7 @@ export function StudServicesSection() {
               key={stud.name}
               className={`bg-card border-border overflow-hidden hover:border-primary/50 transition-all duration-300 flex flex-col xl:flex-row ${stud.featured ? "ring-2 ring-primary shadow-2xl shadow-primary/10" : ""} ${stud.comingSoon ? "opacity-75" : ""}`}
             >
-              <div className="relative aspect-square xl:aspect-auto xl:w-[45%] bg-secondary shrink-0 overflow-hidden">
+              <div className="relative aspect-square xl:aspect-auto xl:w-[40%] bg-secondary shrink-0 overflow-hidden">
                 <Image
                   src={
                     stud.featured
@@ -120,7 +120,7 @@ export function StudServicesSection() {
                           key={idx}
                           onMouseEnter={() => setActiveSimbaPhoto(idx)}
                           onClick={() => setActiveSimbaPhoto(idx)}
-                          className={`relative w-8 h-8 rounded-full overflow-hidden border-2 transition-all ${activeSimbaPhoto === idx ? "border-primary scale-110" : "border-transparent opacity-70 hover:opacity-100"
+                          className={`relative w-6 h-6 rounded-full overflow-hidden border-2 transition-all ${activeSimbaPhoto === idx ? "border-primary scale-110" : "border-transparent opacity-70 hover:opacity-100"
                             }`}
                         >
                           <Image
@@ -150,13 +150,13 @@ export function StudServicesSection() {
                   </div>
                 )}
               </div>
-              <CardContent className="p-10 md:p-14 xl:p-16 flex flex-col justify-center flex-1">
-                <div className="flex items-center gap-4 mb-4">
-                  <h3 className="text-4xl md:text-6xl font-black text-card-foreground tracking-tight lowercase">{stud.name}</h3>
-                  {stud.featured && <Star className="w-8 h-8 md:w-10 md:h-10 text-accent fill-accent" />}
+              <CardContent className="p-8 md:p-10 xl:p-12 flex flex-col justify-center flex-1">
+                <div className="flex items-center gap-4 mb-3">
+                  <h3 className="text-4xl lg:text-5xl font-black text-card-foreground tracking-tight lowercase">{stud.name}</h3>
+                  {stud.featured && <Star className="w-6 h-6 md:w-8 md:h-8 text-accent fill-accent" />}
                 </div>
-                <p className="text-primary text-2xl md:text-3xl font-black mb-6 italic lowercase">{stud.title}</p>
-                <p className="text-xl md:text-2xl lg:text-3xl text-muted-foreground mb-8 leading-relaxed font-medium">{stud.description}</p>
+                <p className="text-primary text-xl md:text-2xl font-black mb-4 italic lowercase">{stud.title}</p>
+                <p className="text-lg lg:text-xl text-muted-foreground mb-6 leading-relaxed font-medium">{stud.description}</p>
                 <div className="flex flex-wrap gap-3 mb-8">
                   {stud.traits.map((trait) => (
                     <Badge key={trait} variant="secondary" className="text-sm md:text-lg px-4 py-2 font-bold rounded-xl">
