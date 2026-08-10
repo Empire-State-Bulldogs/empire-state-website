@@ -123,6 +123,10 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               name: "Empire State Bulldogs",
+              founder: {
+                "@type": "Person",
+                name: "Vaughn"
+              },
               url: "https://www.empirestatebulldogs.com",
               logo: "https://www.empirestatebulldogs.com/images/logo.png",
               description:
@@ -148,6 +152,10 @@ export default function RootLayout({
               "@type": "LocalBusiness",
               "@id": "https://www.empirestatebulldogs.com",
               name: "Empire State Bulldogs",
+              founder: {
+                "@type": "Person",
+                name: "Vaughn"
+              },
               image: "https://www.empirestatebulldogs.com/images/socialsharing.jpg",
               description:
                 "Premier French Bulldog breeder and lifestyle brand in Albany, NY. Quality puppies, professional stud services, and a passionate community.",

@@ -50,9 +50,9 @@ export function ContactSection() {
               <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
                 {/* Email Column */}
                 <div className="flex-1 w-full space-y-4">
-                  <div className="flex items-center gap-4 bg-secondary px-8 py-6 rounded-2xl border border-border overflow-hidden">
+                  <div className="flex items-center gap-4 bg-secondary px-4 md:px-8 py-6 rounded-2xl border border-border overflow-hidden">
                     <Mail className="w-6 h-6 text-primary shrink-0" />
-                    <span className="text-foreground font-black text-xl truncate">{email}</span>
+                    <span className="text-foreground font-black text-sm sm:text-base md:text-xl break-all">{email}</span>
                   </div>
                   <div className="flex gap-6">
                     <Button
@@ -73,9 +73,9 @@ export function ContactSection() {
 
                 {/* Phone Column */}
                 <div className="flex-1 w-full space-y-4">
-                  <div className="flex items-center gap-4 bg-secondary px-8 py-6 rounded-2xl border border-border overflow-hidden">
+                  <div className="flex items-center gap-4 bg-secondary px-4 md:px-8 py-6 rounded-2xl border border-border overflow-hidden">
                     <Phone className="w-6 h-6 text-primary shrink-0" />
-                    <span className="text-foreground font-black text-xl truncate">518-917-3429</span>
+                    <span className="text-foreground font-black text-sm sm:text-base md:text-xl truncate">518-917-3429</span>
                   </div>
                   <Button asChild size="lg" className="w-full bg-primary text-white hover:bg-primary/90 h-16 rounded-2xl shadow-xl shadow-primary/30 font-black text-xl">
                     <a href="tel:5189173429" className="flex items-center justify-center gap-3">
