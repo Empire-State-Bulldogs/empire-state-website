@@ -1,2 +1,9 @@
-# Canonical host: force apex -> www (301) so Google indexes one hostname only.
-https://empirestatebulldogs.com/*  https://www.empirestatebulldogs.com/:splat  301!
+# Canonical host: send the apex to www with a 301.
+#
+# Cloudflare Pages only matches path-only sources in _redirects, so an absolute
+# "https://empirestatebulldogs.com/*" source is silently ignored and both hostnames
+# serve the same deployment. The apex->www redirect is therefore configured as a
+# Cloudflare Redirect Rule on the zone instead (Rules > Redirect Rules), not here.
+#
+# Keep this file for genuine path redirects. Example:
+# /old-path  /new-path  301
