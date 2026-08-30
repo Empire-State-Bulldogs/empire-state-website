@@ -15,11 +15,6 @@
       "purpose": "maskable"
     },
     {
-      "src": "/favicon-96x96.png",
-      "sizes": "96x96",
-      "type": "image/png"
-    },
-    {
       "src": "/favicon.ico",
       "sizes": "48x48",
       "type": "image/x-icon"
@@ -29,5 +24,12 @@
   "background_color": "#ffffff",
   "display": "standalone",
   "start_url": "/",
-  "scope": "/"
+  "scope": "/",
+  "description": "Premier French Bulldog breeder in Albany, NY. Health-tested puppies, stud services, and nationwide delivery.",
+  "lang": "en-US",
+  "categories": [
+    "pets",
+    "shopping",
+    "lifestyle"
+  ]
 }

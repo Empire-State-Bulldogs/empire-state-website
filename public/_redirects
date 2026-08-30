@@ -1,0 +1,2 @@
+# Canonical host: force apex -> www (301) so Google indexes one hostname only.
+https://empirestatebulldogs.com/*  https://www.empirestatebulldogs.com/:splat  301!

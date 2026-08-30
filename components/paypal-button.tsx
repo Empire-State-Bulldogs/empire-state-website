@@ -12,8 +12,11 @@ interface PayPalDepositButtonProps {
   variant?: "stud" | "puppy"
 }
 
-// Set your PayPal.me URL here — or swap for a PayPal hosted button link
+// Set your PayPal.me URL here — or swap for a PayPal hosted button link.
+// While this is left as the placeholder, the buttons deliberately send people to the
+// contact page instead of an unowned PayPal handle, so nobody can pay the wrong account.
 const PAYPAL_ME_URL = "https://www.paypal.com/paypalme/YourPayPalUsername"
+const PAYPAL_CONFIGURED = !PAYPAL_ME_URL.includes("YourPayPalUsername")
 
 export function PayPalDepositButton({
   label,
@@ -22,6 +25,10 @@ export function PayPalDepositButton({
   noteMessage,
   variant = "puppy",
 }: PayPalDepositButtonProps) {
+  // No real PayPal account wired up yet: send the enquiry to us rather than to PayPal.
+  const href = PAYPAL_CONFIGURED ? paypalLink : "/contact/"
+  const ctaLabel = PAYPAL_CONFIGURED ? "Pay with PayPal" : "Request Deposit Details"
+
   const gradientClasses = variant === "stud"
     ? "from-primary to-primary/70"
     : "from-accent to-accent/60"
@@ -59,11 +66,15 @@ export function PayPalDepositButton({
           asChild
           className={`w-full bg-gradient-to-r ${gradientClasses} !text-white font-black py-6 text-base sm:text-lg rounded-xl hover:opacity-90 transition-all shadow-xl ${shadowClasses} border-0 mb-4`}
         >
-          <Link href={paypalLink} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
+          <Link
+            href={href}
+            {...(PAYPAL_CONFIGURED ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+            className="flex items-center justify-center gap-2"
+          >
             <svg viewBox="0 0 24 24" fill="white" className="w-5 h-5 shrink-0">
               <path d="M7.076 21.337H2.47a.641.641 0 0 1-.633-.74L4.944.901C5.026.382 5.474 0 5.998 0h7.46c2.57 0 4.578.543 5.69 1.81 1.01 1.15 1.312 2.42 1.073 4.248-.061.547-.185 1.104-.373 1.67v.046c-.727 2.338-2.397 3.824-4.92 4.382-.808.178-1.677.25-2.556.25H9.77c-.694 0-1.276.594-1.386 1.275l-.023.142-.568 3.605-.021.124a.645.645 0 0 1-.636.584z" />
             </svg>
-            Pay with PayPal
+            {ctaLabel}
             <ArrowRight className="w-4 h-4" />
           </Link>
         </Button>

@@ -15,6 +15,10 @@ export const TARGET_CITIES = [
     { name: "Syracuse", state: "NY", slug: "syracuse-ny" },
     { name: "Yonkers", state: "NY", slug: "yonkers-ny" },
     { name: "Saratoga Springs", state: "NY", slug: "saratoga-springs-ny" },
+    // Added from Search Console demand: recurring impressions with no matching page
+    { name: "Scarsdale", state: "NY", slug: "scarsdale-ny" },
+    { name: "White Plains", state: "NY", slug: "white-plains-ny" },
+    { name: "New Rochelle", state: "NY", slug: "new-rochelle-ny" },
 
     // Northeast / ~500 Mile Radius
     { name: "Boston", state: "MA", slug: "boston-ma" },

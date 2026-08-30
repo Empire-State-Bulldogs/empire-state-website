@@ -1,10 +1,15 @@
-"use client"
-
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { Card, CardContent } from "@/components/ui/card"
-import { ChevronDown } from "lucide-react"
-import { useState } from "react"
+import { FaqAccordion } from "@/components/faq-accordion"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+    title: "French Bulldog Puppy FAQ",
+    description: "Answers about Empire State Bulldogs puppies, AKC registration, health guarantees, shipping, meeting parents, and King Simba stud services.",
+    alternates: {
+        canonical: "/faq/",
+    },
+}
 
 const faqs = [
     {
@@ -30,10 +35,25 @@ const faqs = [
 ]
 
 export default function FAQPage() {
-    const [openIndex, setOpenIndex] = useState<number | null>(0)
-
     return (
         <main className="min-h-screen bg-background text-foreground">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "FAQPage",
+                        mainEntity: faqs.map((faq) => ({
+                            "@type": "Question",
+                            name: faq.question,
+                            acceptedAnswer: {
+                                "@type": "Answer",
+                                text: faq.answer,
+                            },
+                        })),
+                    }),
+                }}
+            />
             <Header />
             <div className="container mx-auto px-4 py-32 md:py-40">
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-8">Frequently Asked Questions</h1>
@@ -42,34 +62,7 @@ export default function FAQPage() {
                 </p>
 
                 <div className="max-w-3xl mx-auto">
-                    <Card className="bg-card border-border rounded-2xl overflow-hidden shadow-xl">
-                        <CardContent className="p-0">
-                            <div className="divide-y divide-border/50">
-                                {faqs.map((faq, index) => (
-                                    <div key={index} className="group">
-                                        <button
-                                            onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                                            className="w-full flex items-center justify-between p-6 text-left hover:bg-primary/5 transition-all outline-none"
-                                        >
-                                            <span className="text-lg font-semibold group-hover:text-primary transition-colors">
-                                                {faq.question}
-                                            </span>
-                                            <ChevronDown
-                                                className={`w-5 h-5 text-muted-foreground transition-transform duration-300 ${openIndex === index ? 'rotate-180 text-primary' : ''}`}
-                                            />
-                                        </button>
-                                        <div
-                                            className={`overflow-hidden transition-all duration-300 ease-in-out ${openIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}
-                                        >
-                                            <div className="p-6 pt-0 text-muted-foreground text-base leading-relaxed">
-                                                {faq.answer}
-                                            </div>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </CardContent>
-                    </Card>
+                    <FaqAccordion faqs={faqs} />
                 </div>
             </div>
             <Footer />

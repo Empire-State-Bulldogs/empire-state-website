@@ -1,7 +1,16 @@
+# Empire State Bulldogs — https://www.empirestatebulldogs.com
+
 User-agent: *
 Allow: /
 Disallow: /api/
 
+# Static export has no server-rendered query routes; block junk params
+# so crawl budget goes to real pages.
+Disallow: /*?*utm_
+Disallow: /*?*fbclid=
+Disallow: /*?*gclid=
+
+# AI search crawlers — explicitly allowed for discovery.
 User-agent: GPTBot
 Allow: /
 
@@ -17,13 +26,25 @@ Allow: /
 User-agent: ClaudeBot
 Allow: /
 
+User-agent: Claude-Web
+Allow: /
+
 User-agent: anthropic-ai
 Allow: /
 
 User-agent: Applebot
 Allow: /
 
+User-agent: Applebot-Extended
+Allow: /
+
 User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
 Allow: /
 
 Sitemap: https://www.empirestatebulldogs.com/sitemap.xml

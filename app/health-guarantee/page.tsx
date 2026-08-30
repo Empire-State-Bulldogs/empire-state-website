@@ -2,6 +2,15 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Card, CardContent } from "@/components/ui/card"
 import { ShieldCheck } from "lucide-react"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+    alternates: {
+        canonical: "/health-guarantee/",
+    },
+    title: "Puppy Health Guarantee",
+    description: "Review the Empire State Bulldogs puppy health guarantee, veterinary examination requirements, coverage, and buyer responsibilities.",
+}
 
 export default function HealthGuaranteePage() {
     return (

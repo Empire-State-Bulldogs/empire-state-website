@@ -2,6 +2,15 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Card, CardContent } from "@/components/ui/card"
 import { Heart, Award, FileText } from "lucide-react"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+    alternates: {
+        canonical: "/breeding-policies/",
+    },
+    title: "Breeding Policies & Ethics",
+    description: "Learn how Empire State Bulldogs approaches health testing, responsible breeding, approved stud services, and family placement in Albany, NY.",
+}
 
 export default function BreedingPoliciesPage() {
     return (
@@ -58,7 +67,7 @@ export default function BreedingPoliciesPage() {
                                 Our stud services featuring King Simba are available to approved females only. We require a recent negative Brucellosis test and current vaccination records. We provide detailed contracts for all breeding services.
                             </p>
                             <div className="bg-primary/5 rounded-xl p-6 border border-primary/10">
-                                <h4 className="font-bold mb-2">Notice to Other Breeders</h4>
+                                <h3 className="font-bold mb-2">Notice to Other Breeders</h3>
                                 <p className="text-sm text-muted-foreground italic">
                                     We are committed to the preservation and improvement of the French Bulldog breed. We reserve the right to refuse service to any program that does not meet our ethical standards.
                                 </p>

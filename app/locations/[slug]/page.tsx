@@ -15,13 +15,19 @@ export async function generateStaticParams() {
     }))
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-    const city = TARGET_CITIES.find((c) => c.slug === params.slug)
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+    const { slug } = await params
+    const city = TARGET_CITIES.find((c) => c.slug === slug)
     const cityName = city ? `${city.name}, ${city.state}` : "your area"
 
     return {
-        title: `French Bulldog Breeder & Stud Services in ${cityName} | Empire State Bulldogs`,
-        description: `Looking for French Bulldog puppies or stud services in ${cityName}? Empire State Bulldogs offers top-quality AKC Frenchies, exotic colors, and world-class genetics near you.`,
+        title: {
+            absolute: `French Bulldog Breeder in ${cityName} | ESB`,
+        },
+        description: `AKC-registered French Bulldog puppies and stud services for ${cityName}. Health-tested parents, rare colors, and delivery from our Albany, NY program.`,
+        alternates: {
+            canonical: `/locations/${slug}/`,
+        },
         keywords: [
             `french bulldog breeder ${cityName}`,
             `french bulldog puppies for sale in ${cityName}`,
@@ -32,12 +38,43 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     }
 }
 
-export default function CityPage({ params }: { params: { slug: string } }) {
-    const city = TARGET_CITIES.find((c) => c.slug === params.slug)
+export default async function CityPage({ params }: { params: Promise<{ slug: string }> }) {
+    const { slug } = await params
+    const city = TARGET_CITIES.find((c) => c.slug === slug)
     const cityName = city ? `${city.name}, ${city.state}` : "your area"
 
     return (
         <main className="min-h-screen bg-background">
+            {/* Breadcrumb schema: these pages sit two levels deep, so give Google the trail. */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "BreadcrumbList",
+                        itemListElement: [
+                            {
+                                "@type": "ListItem",
+                                position: 1,
+                                name: "Home",
+                                item: "https://www.empirestatebulldogs.com/",
+                            },
+                            {
+                                "@type": "ListItem",
+                                position: 2,
+                                name: "Service Areas",
+                                item: "https://www.empirestatebulldogs.com/locations/",
+                            },
+                            {
+                                "@type": "ListItem",
+                                position: 3,
+                                name: cityName,
+                                item: `https://www.empirestatebulldogs.com/locations/${slug}/`,
+                            },
+                        ],
+                    }),
+                }}
+            />
             <Header />
 
             {/* City Specific SEO Content Overlay / Notice */}
@@ -52,7 +89,7 @@ export default function CityPage({ params }: { params: { slug: string } }) {
                 </div>
             </div>
 
-            <HeroSection />
+            <HeroSection as="p" />
 
             <div id="about" className="py-16 md:py-24 bg-background">
                 <div className="container mx-auto px-4">

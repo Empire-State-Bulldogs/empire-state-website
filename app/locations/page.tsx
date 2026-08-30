@@ -4,9 +4,13 @@ import { Button } from "@/components/ui/button"
 import { MapPin, Plane, ShieldCheck, Mail } from "lucide-react"
 import Link from "next/link"
 import type { Metadata } from "next"
+import { TARGET_CITIES } from "@/lib/cities"
 
 export const metadata: Metadata = {
-  title: "Service Areas | Empire State Bulldogs Nationwide Delivery",
+    alternates: {
+        canonical: "/locations/",
+    },
+  title: "Service Areas & Delivery",
   description: "Empire State Bulldogs serves a 500-mile radius around Albany NY including NYC, NJ, PA, CT, and MA, plus nationwide flight nanny service to CA, TX, FL, and more.",
   keywords: [
     "french bulldog breeder locations", 
@@ -163,6 +167,31 @@ export default function LocationsPage() {
         </div>
       </section>
 
+
+      {/* CITY PAGE INDEX - internal links so every city page is crawlable from the hub */}
+      <section className="py-20 bg-background border-b border-border/50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-black text-foreground mb-4 tracking-tight capitalize">browse by city</h2>
+            <p className="text-lg md:text-xl text-muted-foreground font-medium">
+              See details on our French Bulldog puppies, stud services, and delivery options for your area.
+            </p>
+          </div>
+          <div className="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+            {TARGET_CITIES.map((city) => (
+              <Link
+                key={city.slug}
+                href={`/locations/${city.slug}/`}
+                className="flex items-center gap-2 rounded-xl border border-border bg-card px-4 py-3 text-base font-semibold text-foreground transition-all hover:border-primary/50 hover:text-primary"
+              >
+                <MapPin className="w-4 h-4 text-primary shrink-0" />
+                <span>{city.name}, {city.state}</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-20 bg-secondary">
         <div className="container mx-auto px-4 text-center">
@@ -175,7 +204,7 @@ export default function LocationsPage() {
                <Link href="/contact">get in touch</Link>
              </Button>
              <Button asChild variant="outline" size="lg" className="border-primary text-primary hover:bg-primary/10 px-10 py-8 text-xl font-black rounded-[1.5rem] capitalize tracking-tight">
-               <a href="mailto:info@empirestatebulldogs.com" className="flex items-center gap-2">
+               <a href="mailto:hello@empirestatebulldogs.com" className="flex items-center gap-2">
                  <Mail className="w-5 h-5" /> email us
                </a>
              </Button>

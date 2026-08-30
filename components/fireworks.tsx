@@ -12,6 +12,9 @@ export function Fireworks() {
         const ctx = canvas.getContext("2d")
         if (!ctx) return
 
+        // Non-null bindings so the closures below (Rocket/Particle) keep the narrowed type.
+        const cv = canvas
+
         let animationFrameId: number
         let particles: Particle[] = []
         let rockets: Rocket[] = []
@@ -36,7 +39,7 @@ export function Fireworks() {
 
             constructor(x: number, targetY: number, color: string) {
                 this.x = x
-                this.y = canvas.height + 10
+                this.y = cv.height + 10
 
                 // ADDED: Randomized launch angles
                 const angle = (Math.random() * 0.2 - 0.1) * Math.PI // Slight tilt range

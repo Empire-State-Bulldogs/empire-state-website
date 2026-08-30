@@ -6,7 +6,10 @@ import { Instagram, Heart, Award, MapPin, Phone } from "lucide-react"
 import { useScrollAnimation } from "@/hooks/use-scroll-animation"
 import { Fireworks } from "@/components/fireworks"
 
-export function HeroSection() {
+// `as` lets a page that already has its own <h1> (e.g. the city pages) render this
+// headline as a <p> instead, so each page keeps exactly one h1.
+export function HeroSection({ as = "h1" }: { as?: "h1" | "p" } = {}) {
+  const Headline = as
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.3 })
 
   const socialLinks = [
@@ -69,13 +72,13 @@ export function HeroSection() {
         </div>
 
         {/* Headline */}
-        <h1
+        <Headline
           className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-3 sm:mb-4 md:mb-4 text-balance px-2 ${isVisible ? "scroll-fade-up delay-100" : "opacity-0"}`}
         >
           <span className="text-foreground">New York's Premier</span>
           <br />
           <span className="text-primary text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">French Bulldogs</span>
-        </h1>
+        </Headline>
 
         <p
           className={`text-base sm:text-lg md:text-lg lg:text-xl text-white max-w-md sm:max-w-xl md:max-w-2xl mx-auto mb-4 sm:mb-5 md:mb-6 text-pretty px-5 sm:px-6 md:px-3 py-4 sm:py-4 md:py-2 rounded-2xl text-stroke ${isVisible ? "scroll-fade-up delay-200" : "opacity-0"}`}

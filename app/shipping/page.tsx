@@ -2,6 +2,15 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Card, CardContent } from "@/components/ui/card"
 import { Plane, Truck, Globe } from "lucide-react"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+    title: "Puppy Shipping & Delivery",
+    description: "How we deliver French Bulldog puppies nationwide: flight nanny service, climate-controlled ground transport, and what to expect on delivery day.",
+    alternates: {
+        canonical: "/shipping/",
+    },
+}
 
 export default function ShippingPage() {
     return (

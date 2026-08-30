@@ -1,6 +1,15 @@
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Card, CardContent } from "@/components/ui/card"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+    alternates: {
+        canonical: "/privacy/",
+    },
+    title: "Privacy Policy",
+    description: "Read the Empire State Bulldogs privacy policy and learn how contact information is collected, used, and protected.",
+}
 
 export default function PrivacyPage() {
     return (

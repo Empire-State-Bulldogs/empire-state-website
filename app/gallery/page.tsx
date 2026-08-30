@@ -7,7 +7,10 @@ import Link from "next/link"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Gallery | Empire State Bulldogs Photos & Videos",
+    alternates: {
+        canonical: "/gallery/",
+    },
+  title: "Frenchie Photo & Video Gallery",
   description: "Browse our gallery of stunning French Bulldog photos. See King Simba, our puppies, and the Empire State Bulldogs lifestyle in Albany, NY.",
 }
 
@@ -90,7 +93,7 @@ export default function GalleryPage() {
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-6 md:p-8 translate-y-4 group-hover:translate-y-0 text-white pointer-events-none">
                     <span className="text-primary font-black uppercase tracking-[0.2em] text-xs mb-1">ESB Archive</span>
-                    <h3 className="text-xl md:text-2xl font-black leading-none uppercase tracking-tighter">{item.label}</h3>
+                    <h2 className="text-xl md:text-2xl font-black leading-none uppercase tracking-tighter">{item.label}</h2>
                 </div>
 
                 {/* Counter Badge */}

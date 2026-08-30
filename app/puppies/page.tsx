@@ -9,7 +9,10 @@ import { PayPalDepositButton } from "@/components/paypal-button"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Available Puppies | French Bulldog Puppies For Sale — Empire State Bulldogs",
+    alternates: {
+        canonical: "/puppies/",
+    },
+  title: "French Bulldog Puppies For Sale",
   description: "Fluffy French Bulldog puppies from champion bloodlines. Health tested, vaccinated, AKC registered. Albany, NY — nationwide shipping available.",
 }
 
@@ -17,7 +20,7 @@ const includes = [
   "Up-to-date vaccinations",
   "Full deworming protocol",
   "Licensed vet health check",
-  "2-year health guarantee",
+  "1-year health guarantee",
   "Microchipped & registered",
   "Puppy starter pack",
   "Lifetime breeder support",
@@ -34,7 +37,7 @@ const puppyPhotos = [
 ]
 
 const guarantees = [
-  { icon: Shield, title: "2-Year Health Guarantee", desc: "Written guarantee covering genetic health defects for 2 full years." },
+  { icon: Shield, title: "1-Year Health Guarantee", desc: "Written guarantee covering life-threatening congenital and hereditary defects." },
   { icon: Users, title: "Family Raised", desc: "Every puppy is raised in our home with daily socialization, enrichment, and love." },
   { icon: Truck, title: "Nationwide Delivery", desc: "Safe nanny delivery service or cargo shipping available to any US state." },
   { icon: Heart, title: "Lifetime Support", desc: "We're here for the life of your dog — from puppy questions to senior care advice." },
@@ -84,7 +87,7 @@ export default function PuppiesPage() {
             </Button>
           </div>
           <div className="flex flex-wrap justify-center gap-6 mt-10 text-sm text-muted-foreground">
-            {["AKC Registered", "2-Year Health Guarantee", "Family Raised", "Nationwide Shipping", "Vet Checked"].map((t) => (
+            {["AKC Registered", "1-Year Health Guarantee", "Family Raised", "Nationwide Shipping", "Vet Checked"].map((t) => (
               <div key={t} className="flex items-center gap-1.5"><Check className="w-4 h-4 text-primary" />{t}</div>
             ))}
           </div>
@@ -219,7 +222,8 @@ export default function PuppiesPage() {
             />
           </div>
           <p className="text-center text-xs text-muted-foreground mt-5 max-w-lg mx-auto">
-            Deposits are non-refundable but fully transferable to a future litter within 18 months. All sales include our written health guarantee.
+            Deposits are non-refundable but fully transferable to a future litter within 12 months. All sales include our written health guarantee.{" "}
+            <Link href="/terms/#deposits" className="underline hover:text-primary">Read the full deposit terms</Link>.
           </p>
         </div>
       </section>

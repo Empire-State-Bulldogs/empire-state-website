@@ -9,7 +9,10 @@ import { PayPalDepositButton } from "@/components/paypal-button"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Stud Services | Champion French Bulldog Studs — Empire State Bulldogs",
+    alternates: {
+        canonical: "/studs/",
+    },
+  title: "French Bulldog Stud Services",
   description: "Book a stud service with King Simba. Health tested, AKC registered, champion bloodline French Bulldog stud. Serving NY, CT, MA, and nationwide.",
 }
 
@@ -249,7 +252,8 @@ export default function StudsPage() {
             />
           </div>
           <p className="text-center text-xs text-muted-foreground mt-5">
-            All deposits are non-refundable but transferable within 12 months. Full stud service agreement provided upon booking.
+            All deposits are non-refundable but transferable within 12 months. Full stud service agreement provided upon booking.{" "}
+            <Link href="/terms/#deposits" className="underline hover:text-primary">Read the full deposit terms</Link>.
           </p>
         </div>
       </section>

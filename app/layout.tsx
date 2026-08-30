@@ -12,11 +12,11 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: {
-    default: "Empire State Bulldogs | Premier French Bulldog Breeder & Lifestyle Brand in Albany, NY",
+    default: "French Bulldog Breeder in Albany, NY | Empire State Bulldogs",
     template: "%s | Empire State Bulldogs",
   },
   description:
-    "Empire State Bulldogs is your premier nationwide French Bulldog breeder based in Albany, NY. Specializing in healthy, AKC-registered Frenchies: Fluffy, Isabella, Rojo, Merle, Lilac, Big Rope, New Shade, and Testable Chocolate. World-class stud services, thick bone structure, perfect genetics, and flight nanny shipping available across the US.",
+    "AKC-registered French Bulldog puppies and stud services from Albany, NY. Health-tested parents, rare colors, 1-year guarantee, nationwide delivery.",
   keywords: [
     // Core terms
     "french bulldog puppies", "frenchie puppies for sale", "french bulldog breeder", "french bulldog stud service",
@@ -41,9 +41,6 @@ export const metadata: Metadata = {
     telephone: true,
   },
   metadataBase: new URL("https://www.empirestatebulldogs.com"),
-  alternates: {
-    canonical: "/",
-  },
   openGraph: {
     title: "Empire State Bulldogs | Premier French Bulldog Breeder & Lifestyle Brand",
     description:
@@ -68,8 +65,6 @@ export const metadata: Metadata = {
     description:
       "World-class French Bulldog puppies and stud services. AKC registered, health tested, and family raised.",
     images: ["/images/socialsharing.jpg"],
-    creator: "@Empire_State_Bulldogs",
-    site: "@Empire_State_Bulldogs",
   },
   robots: {
     index: true,
@@ -86,6 +81,7 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
     apple: "/apple-touch-icon.png",
   },
+  manifest: "/site.webmanifest",
   category: "pets",
   generator: "v0.app",
   referrer: "strict-origin-when-cross-origin",
@@ -110,11 +106,6 @@ export default function RootLayout({
         <meta name="msapplication-TileColor" content="#1a1035" />
         <meta name="msapplication-config" content="/browserconfig.xml" />
         <meta name="apple-mobile-web-app-title" content="Empire State Bulldogs" />
-
-        {/* Anti-cache meta tags */}
-        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-        <meta http-equiv="Pragma" content="no-cache" />
-        <meta http-equiv="Expires" content="0" />
 
         <script
           type="application/ld+json"
@@ -149,8 +140,9 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
+              "@context": "https://schema.org",
               "@type": "LocalBusiness",
-              "@id": "https://www.empirestatebulldogs.com",
+              "@id": "https://www.empirestatebulldogs.com/#business",
               name: "Empire State Bulldogs",
               founder: {
                 "@type": "Person",
@@ -159,6 +151,7 @@ export default function RootLayout({
               image: "https://www.empirestatebulldogs.com/images/socialsharing.jpg",
               description:
                 "Premier French Bulldog breeder and lifestyle brand in Albany, NY. Quality puppies, professional stud services, and a passionate community.",
+              email: "hello@empirestatebulldogs.com",
               address: {
                 "@type": "PostalAddress",
                 addressLocality: "Albany",
@@ -185,12 +178,6 @@ export default function RootLayout({
                   name: "United States"
                 }
               ],
-              openingHoursSpecification: {
-                "@type": "OpeningHoursSpecification",
-                dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-                opens: "09:00",
-                closes: "18:00",
-              },
               knowsAbout: ["French Bulldog Breeder", "Stud Services", "Dog Shows", "Pet Lifestyle"],
             }),
           }}
@@ -234,7 +221,7 @@ export default function RootLayout({
                     itemOffered: {
                       "@type": "Service",
                       name: "French Bulldog Puppies for Sale",
-                      description: "Healthy, vaccinated French Bulldog puppies with health guarantees",
+                      description: "Healthy, vaccinated French Bulldog puppies with a 1-year health guarantee against life-threatening congenital and hereditary defects",
                     },
                   },
                   {

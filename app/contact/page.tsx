@@ -6,7 +6,10 @@ import Link from "next/link"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Contact Us | Empire State Bulldogs",
+    alternates: {
+        canonical: "/contact/",
+    },
+  title: "Contact Us",
   description: "Get in touch with Empire State Bulldogs. Inquire about puppies, stud services, or just say hello. Based in Albany, NY — serving pet lovers nationwide.",
 }
 
@@ -88,7 +91,7 @@ export default function ContactPage() {
                 <div className={`w-14 h-14 ${m.iconBg} rounded-2xl flex items-center justify-center mb-5 shadow-lg`}>
                   <m.icon className="w-7 h-7 text-white" />
                 </div>
-                <h3 className="text-xl font-black text-foreground mb-1">{m.title}</h3>
+                <h2 className="text-xl font-black text-foreground mb-1">{m.title}</h2>
                 <p className="text-primary font-bold text-lg mb-1 break-all">{m.value}</p>
                 <p className="text-muted-foreground text-sm mb-6">{m.desc}</p>
                 <Button asChild className={`w-full ${m.btnClass} py-5 text-base font-bold rounded-xl`}>

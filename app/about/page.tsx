@@ -7,7 +7,10 @@ import { Shield, Heart, Trophy, Users, MapPin, Phone, ArrowRight, Star, Crown } 
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "About Us | Empire State Bulldogs — Albany, NY French Bulldog Breeders",
+    alternates: {
+        canonical: "/about/",
+    },
+  title: "About Our Breeding Program",
   description: "Learn about Empire State Bulldogs — NY's premier French Bulldog breeding program. Our story, mission, and commitment to excellence in Albany, NY.",
 }
 
