@@ -2,106 +2,145 @@
 
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Mail, Copy, Check, Phone } from "lucide-react"
-import { BackgroundElements } from "@/components/background-elements"
+import { Mail, Copy, Check, Phone, MapPin, Clock, Plane } from "lucide-react"
+import { CapitalPattern } from "@/components/capital-pattern"
 
+// Contact block.
+//
+// The card had an email pill and a phone pill of different heights, three
+// buttons at three different widths under them, and `break-all` on the
+// address, which split it mid-word as
+// "hello@empirestatebull / dogs.com". The headings also ran to 9rem, which
+// pushed the actual contact details most of a screen down.
+//
+// It is now two symmetric columns: each has a label, a value, and one primary
+// action, so the two halves mirror each other and every control lines up.
 export function ContactSection() {
   const email = "hello@empirestatebulldogs.com"
+  const phoneDisplay = "518-917-3429"
   const [copied, setCopied] = useState(false)
 
-  const copyToClipboard = () => {
-    navigator.clipboard.writeText(email)
-    setCopied(true)
-    setTimeout(() => setCopied(false), 2000)
+  const copyToClipboard = async () => {
+    try {
+      await navigator.clipboard.writeText(email)
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    } catch {
+      /* clipboard can be blocked; the address is selectable either way */
+    }
   }
 
   return (
-    <section id="contact" className="py-24 bg-background scattered-background">
-      <BackgroundElements />
+    <section id="contact" className="relative overflow-hidden bg-background py-16 md:py-24">
+      <CapitalPattern variant="skyline" />
 
-      <div className="container mx-auto px-4 relative z-10">
-        {/* Section Header */}
-        <div className="text-center mb-20 md:mb-32">
-          <span className="text-primary text-xl md:text-2xl font-black tracking-tight mb-6 block capitalize">
-            get in touch
-          </span>
-          <h2 className="text-6xl md:text-8xl lg:text-[9rem] font-black mt-4 mb-10 text-foreground leading-[1.1] tracking-tight italic capitalize">
-            let&apos;s connect
-          </h2>
-          <p className="text-2xl md:text-3xl lg:text-4xl text-muted-foreground max-w-5xl mx-auto text-pretty font-medium leading-[1.4]">
-            Whether you&apos;re interested in a puppy, stud services, or just want to learn more about Empire State
-            Bulldogs, we&apos;d love to hear from you.
-          </p>
-        </div>
+      <div className="container relative z-10 mx-auto px-4">
+        <div className="mx-auto max-w-4xl">
+          <div className="mb-10 text-center md:mb-14">
+            <span className="text-xs font-black uppercase tracking-[0.22em] text-primary">
+              Get in touch
+            </span>
+            <h2 className="mt-3 text-4xl font-black capitalize leading-[1.05] tracking-tight text-foreground md:text-6xl">
+              Let&apos;s connect
+            </h2>
+            <p className="mx-auto mt-5 max-w-xl text-lg leading-relaxed text-muted-foreground">
+              Interested in a puppy, stud services, or just want to learn more?
+              We&apos;d love to hear from you.
+            </p>
+          </div>
 
-        <div className="max-w-3xl mx-auto">
-          <Card className="bg-card border-border overflow-hidden rounded-2xl shadow-2xl shadow-primary/10">
-            <CardContent className="p-8 md:p-12 text-center">
-              <div className="w-24 h-24 bg-primary/10 rounded-[2rem] flex items-center justify-center mx-auto mb-10 border border-primary/20 shadow-xl shadow-primary/10">
-                <Mail className="w-12 h-12 text-primary" />
-              </div>
-
-              <h3 className="text-4xl md:text-6xl lg:text-7xl font-black mb-6 text-foreground tracking-tight leading-tight capitalize">send us an email</h3>
-              <p className="text-muted-foreground mb-12 text-2xl font-medium leading-relaxed max-w-2xl mx-auto">
-                The fastest way to get in touch with our team for inquiries and support.
-              </p>
-
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-                {/* Email Column */}
-                <div className="flex-1 w-full space-y-4">
-                  <div className="flex items-center gap-4 bg-secondary px-4 md:px-8 py-6 rounded-2xl border border-border overflow-hidden">
-                    <Mail className="w-6 h-6 text-primary shrink-0" />
-                    <span className="text-foreground font-black text-sm sm:text-base md:text-xl break-all">{email}</span>
-                  </div>
-                  <div className="flex gap-6">
-                    <Button
-                      onClick={copyToClipboard}
-                      className="flex-1 bg-secondary hover:bg-secondary/80 text-foreground border border-border h-16 rounded-2xl transition-all font-black text-lg"
-                    >
-                      {copied ? (
-                        <><Check className="w-5 h-5 mr-3 text-green-500" />Copied</>
-                      ) : (
-                        <><Copy className="w-5 h-5 mr-3" />Copy</>
-                      )}
-                    </Button>
-                    <Button asChild className="flex-1 bg-primary text-white hover:bg-primary/90 h-16 rounded-2xl font-black text-lg">
-                      <a href={`mailto:${email}`}>Email Now</a>
-                    </Button>
-                  </div>
+          <div className="overflow-hidden rounded-2xl border border-border bg-card">
+            {/* Two mirrored columns: label, value, action. */}
+            <div className="grid gap-px bg-border md:grid-cols-2">
+              {/* Email */}
+              <div className="flex flex-col bg-card p-6 md:p-8">
+                <div className="flex items-center gap-2.5">
+                  <Mail className="h-4 w-4 shrink-0 text-primary" aria-hidden="true" />
+                  <span className="text-xs font-black uppercase tracking-[0.18em] text-primary">
+                    Email
+                  </span>
                 </div>
 
-                {/* Phone Column */}
-                <div className="flex-1 w-full space-y-4">
-                  <div className="flex items-center gap-4 bg-secondary px-4 md:px-8 py-6 rounded-2xl border border-border overflow-hidden">
-                    <Phone className="w-6 h-6 text-primary shrink-0" />
-                    <span className="text-foreground font-black text-sm sm:text-base md:text-xl truncate">518-917-3429</span>
-                  </div>
-                  <Button asChild size="lg" className="w-full bg-primary text-white hover:bg-primary/90 h-16 rounded-2xl shadow-xl shadow-primary/30 font-black text-xl">
-                    <a href="tel:5189173429" className="flex items-center justify-center gap-3">
-                      <Phone className="w-5 h-5 fill-white" />
+                {/* break-words, not break-all: the address wraps at the @ or a
+                    dot rather than through the middle of a word. */}
+                <a
+                  href={`mailto:${email}`}
+                  className="mt-4 block break-words text-lg font-black leading-snug text-foreground transition-colors hover:text-primary sm:text-xl"
+                >
+                  {email}
+                </a>
+
+                <div className="mt-auto flex gap-3 pt-6">
+                  <Button
+                    asChild
+                    className="h-12 flex-1 rounded-xl bg-primary text-base font-black text-white hover:bg-primary/90"
+                  >
+                    <a href={`mailto:${email}`}>Email Now</a>
+                  </Button>
+                  <Button
+                    onClick={copyToClipboard}
+                    variant="outline"
+                    aria-label={copied ? "Address copied" : "Copy email address"}
+                    className="h-12 w-12 shrink-0 rounded-xl border-border bg-secondary p-0 text-foreground hover:bg-secondary/80"
+                  >
+                    {copied ? (
+                      <Check className="h-5 w-5 text-primary" aria-hidden="true" />
+                    ) : (
+                      <Copy className="h-5 w-5" aria-hidden="true" />
+                    )}
+                  </Button>
+                </div>
+              </div>
+
+              {/* Phone */}
+              <div className="flex flex-col bg-card p-6 md:p-8">
+                <div className="flex items-center gap-2.5">
+                  <Phone className="h-4 w-4 shrink-0 text-primary" aria-hidden="true" />
+                  <span className="text-xs font-black uppercase tracking-[0.18em] text-primary">
+                    Phone
+                  </span>
+                </div>
+
+                <a
+                  href="tel:5189173429"
+                  className="mt-4 block text-2xl font-black tabular-nums leading-snug text-foreground transition-colors hover:text-primary sm:text-3xl"
+                >
+                  {phoneDisplay}
+                </a>
+
+                <div className="mt-auto pt-6">
+                  <Button
+                    asChild
+                    className="h-12 w-full rounded-xl bg-primary text-base font-black text-white hover:bg-primary/90"
+                  >
+                    <a href="tel:5189173429" className="flex items-center justify-center gap-2">
+                      <Phone className="h-4 w-4 fill-white" aria-hidden="true" />
                       Call Now
                     </a>
                   </Button>
                 </div>
               </div>
+            </div>
 
-              <div className="mt-12 pt-12 border-t border-border/50 grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div>
-                  <h4 className="font-bold text-foreground mb-2">Location</h4>
-                  <p className="text-muted-foreground">Albany, NY & Beyond</p>
+            {/* Detail rail */}
+            <div className="grid gap-px border-t border-border bg-border sm:grid-cols-3">
+              {[
+                { Icon: MapPin, label: "Location", value: "Albany, NY & beyond" },
+                { Icon: Clock, label: "Response time", value: "Usually within 24 hours" },
+                { Icon: Plane, label: "Service area", value: "Nationwide shipping" },
+              ].map(({ Icon, label, value }) => (
+                <div key={label} className="bg-card px-6 py-5">
+                  <div className="flex items-center gap-2">
+                    <Icon className="h-3.5 w-3.5 shrink-0 text-primary" aria-hidden="true" />
+                    <span className="text-[11px] font-black uppercase tracking-[0.16em] text-muted-foreground">
+                      {label}
+                    </span>
+                  </div>
+                  <p className="mt-1.5 text-[15px] font-semibold text-foreground">{value}</p>
                 </div>
-                <div>
-                  <h4 className="font-bold text-foreground mb-2">Response Time</h4>
-                  <p className="text-muted-foreground">Usually within 24 hours</p>
-                </div>
-                <div>
-                  <h4 className="font-bold text-foreground mb-2">Service Area</h4>
-                  <p className="text-muted-foreground">Nationwide Shipping Available</p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>

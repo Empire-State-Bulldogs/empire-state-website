@@ -10,6 +10,7 @@ import { Badge } from "@/components/ui/badge"
 import { useScrollAnimation } from "@/hooks/use-scroll-animation"
 import { PuppyCard } from "@/components/puppy-card"
 import { availablePuppies } from "@/lib/puppy-data"
+import { CapitalPattern } from "@/components/capital-pattern"
 
 const includes = [
   "Up-to-date vaccinations",
@@ -25,35 +26,10 @@ const includes = [
 export function PuppiesSection() {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.1 })
 
-  const pawEmojis = Array.from({ length: 7 }).map((_, i) => ({
-    id: i,
-    left: Math.random() * 100,
-    top: Math.random() * 100,
-    delay: Math.random() * 2,
-    duration: 3.5 + Math.random() * 2,
-    rotation: Math.random() * 360,
-  }))
 
   return (
     <section ref={ref} id="puppies" className="py-16 md:py-24 bg-card relative overflow-hidden">
-      <div className="absolute inset-0 pointer-events-none">
-        {pawEmojis.map((emoji) => (
-          <div
-            key={emoji.id}
-            className="float-emoji spin-slow"
-            style={{
-              left: `${emoji.left}%`,
-              top: `${emoji.top}%`,
-              animationDelay: `${emoji.delay}s`,
-              animationDuration: `${emoji.duration}s`,
-              transform: `rotate(${emoji.rotation}deg)`,
-              fontSize: "2rem",
-            }}
-          >
-            🐾
-          </div>
-        ))}
-      </div>
+      <CapitalPattern variant="grid" />
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className={`text-center mb-20 md:mb-32 ${isVisible ? "scroll-fade-up" : "opacity-0"}`}>

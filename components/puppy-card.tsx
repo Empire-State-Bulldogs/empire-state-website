@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useRef } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { Badge } from "@/components/ui/badge"
@@ -13,10 +13,34 @@ import type { Puppy } from "@/lib/puppy-data"
 export function PuppyCard({ puppy }: { puppy: Puppy }) {
   const [active, setActive] = useState(0)
   const photo = puppy.photos[active]
+  const touchStart = useRef<{ x: number; y: number } | null>(null)
+  const count = puppy.photos.length
+
+  // The dots were 10px targets, which is a hard thing to hit on a phone. The
+  // photo itself is now swipeable, and the dots get 44px buttons around them.
+  function onTouchStart(e: React.TouchEvent) {
+    const t = e.touches[0]
+    touchStart.current = { x: t.clientX, y: t.clientY }
+  }
+  function onTouchEnd(e: React.TouchEvent) {
+    const start = touchStart.current
+    if (!start || count < 2) return
+    touchStart.current = null
+    const t = e.changedTouches[0]
+    const dx = t.clientX - start.x
+    const dy = t.clientY - start.y
+    // Horizontal intent only, so a vertical scroll still scrolls the page.
+    if (Math.abs(dx) < 40 || Math.abs(dx) < Math.abs(dy)) return
+    setActive((i) => (i + (dx < 0 ? 1 : -1) + count) % count)
+  }
 
   return (
     <article className="bg-card rounded-2xl border border-border overflow-hidden hover:border-primary/50 transition-all duration-300 group flex flex-col">
-      <div className="relative aspect-square overflow-hidden bg-muted">
+      <div
+        className="relative aspect-square overflow-hidden bg-muted touch-pan-y select-none"
+        onTouchStart={onTouchStart}
+        onTouchEnd={onTouchEnd}
+      >
         <Image
           src={photo.src}
           alt={photo.alt}
@@ -30,19 +54,22 @@ export function PuppyCard({ puppy }: { puppy: Puppy }) {
         </Badge>
 
         {puppy.photos.length > 1 && (
-          <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 bg-background/60 backdrop-blur-sm p-1.5 rounded-full">
+          <div className="absolute bottom-1 left-1/2 -translate-x-1/2 flex items-center rounded-full bg-background/60 px-1 backdrop-blur-sm">
             {puppy.photos.map((p, i) => (
               <button
                 key={p.src}
                 onClick={() => setActive(i)}
-                onMouseEnter={() => setActive(i)}
                 aria-label={`View photo ${i + 1} of ${puppy.name}`}
                 aria-current={active === i}
-                className={cn(
-                  "w-2.5 h-2.5 rounded-full transition-all",
-                  active === i ? "bg-primary scale-125" : "bg-white/50 hover:bg-white/80",
-                )}
-              />
+                className="grid h-11 w-6 place-items-center focus-visible:outline-none"
+              >
+                <span
+                  className={cn(
+                    "block h-2 rounded-full transition-all",
+                    active === i ? "w-5 bg-primary" : "w-2 bg-white/50",
+                  )}
+                />
+              </button>
             ))}
           </div>
         )}

@@ -8,6 +8,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Crown, MapPin, Star, Clock, ArrowRight } from "lucide-react"
 import { stud } from "@/lib/stud-data"
+import { CapitalPattern } from "@/components/capital-pattern"
 
 const simbaPhotos = stud.photos
 
@@ -38,35 +39,10 @@ const studs = [
 export function StudServicesSection() {
   const [activeSimbaPhoto, setActiveSimbaPhoto] = useState(0)
 
-  const steakEmojis = Array.from({ length: 6 }).map((_, i) => ({
-    id: i,
-    left: Math.random() * 100,
-    top: Math.random() * 100,
-    delay: Math.random() * 2,
-    duration: 3 + Math.random() * 2,
-    rotation: Math.random() * 360,
-  }))
 
   return (
     <section id="studs" className="py-24 bg-background relative overflow-hidden">
-      <div className="absolute inset-0 pointer-events-none">
-        {steakEmojis.map((emoji) => (
-          <div
-            key={emoji.id}
-            className="float-emoji spin-slow"
-            style={{
-              left: `${emoji.left}%`,
-              top: `${emoji.top}%`,
-              animationDelay: `${emoji.delay}s`,
-              animationDuration: `${emoji.duration}s`,
-              transform: `rotate(${emoji.rotation}deg)`,
-              fontSize: "2rem",
-            }}
-          >
-            🥩
-          </div>
-        ))}
-      </div>
+      <CapitalPattern variant="grid" />
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-24 md:mb-32">

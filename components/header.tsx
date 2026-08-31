@@ -97,11 +97,16 @@ function Wordmark({ onClick }: { onClick?: () => void }) {
           than the wide uppercase letter-spacing this carried before. Same
           family and weight as the h1 on every page, so the chrome and the
           page read as one voice. */}
-      <span className="leading-[1.02]">
-        <span className="block text-[15px] sm:text-[17px] font-black tracking-tight text-foreground">
+      {/* All caps, but kept on the hero's tight tracking rather than the wide
+          letter-spacing this had before: uppercase already reads as a mark,
+          and spacing it out again is what made it feel like separate
+          lettering instead of the headline voice. Uppercase runs optically
+          large, so the size steps down slightly to sit level with the nav. */}
+      <span className="leading-[1.06]">
+        <span className="block text-[13px] sm:text-[15px] font-black uppercase tracking-[-0.01em] text-foreground">
           Empire State
         </span>
-        <span className="block text-[15px] sm:text-[17px] font-black tracking-tight text-primary">
+        <span className="block text-[13px] sm:text-[15px] font-black uppercase tracking-[-0.01em] text-primary">
           Bulldogs
         </span>
       </span>

@@ -1,0 +1,2227 @@
+   ▲ Next.js 16.0.10 (Turbopack)
+   - Local:         http://localhost:3001
+   - Network:       http://169.254.83.107:3001
+
+ ✓ Starting...
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+ ✓ Ready in 5.8s
+ ○ Compiling / ...
+ GET / 200 in 5.2s (compile: 4.9s, render: 270ms)
+ GET / 200 in 101ms (compile: 6ms, render: 96ms)
+ GET / 200 in 105ms (compile: 6ms, render: 99ms)
+ GET /gallery/ 200 in 527ms (compile: 441ms, render: 86ms)
+ ✓ Compiled in 175ms
+ ✓ Compiled in 235ms
+ ✓ Compiled in 239ms
+ ✓ Compiled in 103ms
+ ✓ Compiled in 60ms
+ GET /gallery/ 200 in 174ms (compile: 82ms, render: 92ms)
+ GET /gallery/ 200 in 63ms (compile: 6ms, render: 58ms)
+ GET / 200 in 312ms (compile: 87ms, render: 226ms)
+ GET / 200 in 126ms (compile: 5ms, render: 121ms)
+ GET / 200 in 147ms (compile: 6ms, render: 141ms)
+ GET / 200 in 149ms (compile: 5ms, render: 143ms)
+ GET / 200 in 142ms (compile: 6ms, render: 136ms)
+ GET / 200 in 133ms (compile: 5ms, render: 128ms)
+ ⨯ ./components/header.tsx:13:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 11 |[39m [36mimport[39m { [33mButton[39m } [36mfrom[39m [32m"@/components/ui/button"[39m
+ [90m 12 |[39m [36mimport[39m { useMusic[33m,[39m songs [36mas[39m musicSongs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 13 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 14 |[39m [36mimport[39m { [33mExpandedPlayer[39m } [36mfrom[39m [32m"@/components/expanded-player"[39m
+ [90m 15 |[39m [36mimport[39m { [33mMobilePlayer[39m } [36mfrom[39m [32m"@/components/mobile-player"[39m
+ [90m 16 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/header.tsx
+    ./app/gallery/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/header.tsx:13:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 11 |[39m [36mimport[39m { [33mButton[39m } [36mfrom[39m [32m"@/components/ui/button"[39m
+ [90m 12 |[39m [36mimport[39m { useMusic[33m,[39m songs [36mas[39m musicSongs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 13 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 14 |[39m [36mimport[39m { [33mExpandedPlayer[39m } [36mfrom[39m [32m"@/components/expanded-player"[39m
+ [90m 15 |[39m [36mimport[39m { [33mMobilePlayer[39m } [36mfrom[39m [32m"@/components/mobile-player"[39m
+ [90m 16 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/header.tsx
+    ./app/gallery/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/header.tsx:13:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 11 |[39m [36mimport[39m { [33mButton[39m } [36mfrom[39m [32m"@/components/ui/button"[39m
+ [90m 12 |[39m [36mimport[39m { useMusic[33m,[39m songs [36mas[39m musicSongs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 13 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 14 |[39m [36mimport[39m { [33mExpandedPlayer[39m } [36mfrom[39m [32m"@/components/expanded-player"[39m
+ [90m 15 |[39m [36mimport[39m { [33mMobilePlayer[39m } [36mfrom[39m [32m"@/components/mobile-player"[39m
+ [90m 16 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/header.tsx
+    ./app/gallery/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/header.tsx:13:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 11 |[39m [36mimport[39m { [33mButton[39m } [36mfrom[39m [32m"@/components/ui/button"[39m
+ [90m 12 |[39m [36mimport[39m { useMusic[33m,[39m songs [36mas[39m musicSongs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 13 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 14 |[39m [36mimport[39m { [33mExpandedPlayer[39m } [36mfrom[39m [32m"@/components/expanded-player"[39m
+ [90m 15 |[39m [36mimport[39m { [33mMobilePlayer[39m } [36mfrom[39m [32m"@/components/mobile-player"[39m
+ [90m 16 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/header.tsx
+    ./app/gallery/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/mobile-player.tsx:4:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useMusic[33m,[39m songs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m {
+ [90m 6 |[39m   [33mPlay[39m[33m,[39m [33mPause[39m[33m,[39m [33mSkipForward[39m[33m,[39m [33mSkipBack[39m[33m,[39m
+ [90m 7 |[39m   [33mRepeat[39m[33m,[39m [33mShuffle[39m[33m,[39m [33mVolume2[39m[33m,[39m [33mVolumeX[39m[33m,[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/mobile-player.tsx [Client Component Browser]
+    ./components/header.tsx [Client Component Browser]
+    ./components/header.tsx [Server Component]
+    ./app/gallery/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/mobile-player.tsx [Client Component SSR]
+    ./components/header.tsx [Client Component SSR]
+    ./components/header.tsx [Server Component]
+    ./app/gallery/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/mobile-player.tsx:4:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useMusic[33m,[39m songs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m {
+ [90m 6 |[39m   [33mPlay[39m[33m,[39m [33mPause[39m[33m,[39m [33mSkipForward[39m[33m,[39m [33mSkipBack[39m[33m,[39m
+ [90m 7 |[39m   [33mRepeat[39m[33m,[39m [33mShuffle[39m[33m,[39m [33mVolume2[39m[33m,[39m [33mVolumeX[39m[33m,[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/mobile-player.tsx [Client Component Browser]
+    ./components/header.tsx [Client Component Browser]
+    ./components/header.tsx [Server Component]
+    ./app/gallery/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/mobile-player.tsx [Client Component SSR]
+    ./components/header.tsx [Client Component SSR]
+    ./components/header.tsx [Server Component]
+    ./app/gallery/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/mobile-player.tsx:4:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useMusic[33m,[39m songs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m {
+ [90m 6 |[39m   [33mPlay[39m[33m,[39m [33mPause[39m[33m,[39m [33mSkipForward[39m[33m,[39m [33mSkipBack[39m[33m,[39m
+ [90m 7 |[39m   [33mRepeat[39m[33m,[39m [33mShuffle[39m[33m,[39m [33mVolume2[39m[33m,[39m [33mVolumeX[39m[33m,[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/mobile-player.tsx [Client Component Browser]
+    ./components/header.tsx [Client Component Browser]
+    ./components/header.tsx [Server Component]
+    ./app/gallery/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/mobile-player.tsx [Client Component SSR]
+    ./components/header.tsx [Client Component SSR]
+    ./components/header.tsx [Server Component]
+    ./app/gallery/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/mobile-player.tsx:4:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useMusic[33m,[39m songs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m {
+ [90m 6 |[39m   [33mPlay[39m[33m,[39m [33mPause[39m[33m,[39m [33mSkipForward[39m[33m,[39m [33mSkipBack[39m[33m,[39m
+ [90m 7 |[39m   [33mRepeat[39m[33m,[39m [33mShuffle[39m[33m,[39m [33mVolume2[39m[33m,[39m [33mVolumeX[39m[33m,[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/mobile-player.tsx [Client Component Browser]
+    ./components/header.tsx [Client Component Browser]
+    ./components/header.tsx [Server Component]
+    ./app/gallery/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/mobile-player.tsx [Client Component SSR]
+    ./components/header.tsx [Client Component SSR]
+    ./components/header.tsx [Server Component]
+    ./app/gallery/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/header.tsx:13:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 11 |[39m [36mimport[39m { [33mButton[39m } [36mfrom[39m [32m"@/components/ui/button"[39m
+ [90m 12 |[39m [36mimport[39m { useMusic[33m,[39m songs [36mas[39m musicSongs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 13 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 14 |[39m [36mimport[39m { [33mExpandedPlayer[39m } [36mfrom[39m [32m"@/components/expanded-player"[39m
+ [90m 15 |[39m [36mimport[39m { [33mMobilePlayer[39m } [36mfrom[39m [32m"@/components/mobile-player"[39m
+ [90m 16 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/header.tsx
+    ./app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/header.tsx:13:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 11 |[39m [36mimport[39m { [33mButton[39m } [36mfrom[39m [32m"@/components/ui/button"[39m
+ [90m 12 |[39m [36mimport[39m { useMusic[33m,[39m songs [36mas[39m musicSongs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 13 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 14 |[39m [36mimport[39m { [33mExpandedPlayer[39m } [36mfrom[39m [32m"@/components/expanded-player"[39m
+ [90m 15 |[39m [36mimport[39m { [33mMobilePlayer[39m } [36mfrom[39m [32m"@/components/mobile-player"[39m
+ [90m 16 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/header.tsx
+    ./app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/header.tsx:13:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 11 |[39m [36mimport[39m { [33mButton[39m } [36mfrom[39m [32m"@/components/ui/button"[39m
+ [90m 12 |[39m [36mimport[39m { useMusic[33m,[39m songs [36mas[39m musicSongs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 13 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 14 |[39m [36mimport[39m { [33mExpandedPlayer[39m } [36mfrom[39m [32m"@/components/expanded-player"[39m
+ [90m 15 |[39m [36mimport[39m { [33mMobilePlayer[39m } [36mfrom[39m [32m"@/components/mobile-player"[39m
+ [90m 16 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/header.tsx
+    ./app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/header.tsx:13:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 11 |[39m [36mimport[39m { [33mButton[39m } [36mfrom[39m [32m"@/components/ui/button"[39m
+ [90m 12 |[39m [36mimport[39m { useMusic[33m,[39m songs [36mas[39m musicSongs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 13 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 14 |[39m [36mimport[39m { [33mExpandedPlayer[39m } [36mfrom[39m [32m"@/components/expanded-player"[39m
+ [90m 15 |[39m [36mimport[39m { [33mMobilePlayer[39m } [36mfrom[39m [32m"@/components/mobile-player"[39m
+ [90m 16 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/header.tsx
+    ./app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/mobile-player.tsx:4:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useMusic[33m,[39m songs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m {
+ [90m 6 |[39m   [33mPlay[39m[33m,[39m [33mPause[39m[33m,[39m [33mSkipForward[39m[33m,[39m [33mSkipBack[39m[33m,[39m
+ [90m 7 |[39m   [33mRepeat[39m[33m,[39m [33mShuffle[39m[33m,[39m [33mVolume2[39m[33m,[39m [33mVolumeX[39m[33m,[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/mobile-player.tsx [Client Component Browser]
+    ./components/header.tsx [Client Component Browser]
+    ./components/header.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/mobile-player.tsx [Client Component SSR]
+    ./components/header.tsx [Client Component SSR]
+    ./components/header.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/mobile-player.tsx:4:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useMusic[33m,[39m songs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m {
+ [90m 6 |[39m   [33mPlay[39m[33m,[39m [33mPause[39m[33m,[39m [33mSkipForward[39m[33m,[39m [33mSkipBack[39m[33m,[39m
+ [90m 7 |[39m   [33mRepeat[39m[33m,[39m [33mShuffle[39m[33m,[39m [33mVolume2[39m[33m,[39m [33mVolumeX[39m[33m,[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/mobile-player.tsx [Client Component Browser]
+    ./components/header.tsx [Client Component Browser]
+    ./components/header.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/mobile-player.tsx [Client Component SSR]
+    ./components/header.tsx [Client Component SSR]
+    ./components/header.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/mobile-player.tsx:4:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useMusic[33m,[39m songs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m {
+ [90m 6 |[39m   [33mPlay[39m[33m,[39m [33mPause[39m[33m,[39m [33mSkipForward[39m[33m,[39m [33mSkipBack[39m[33m,[39m
+ [90m 7 |[39m   [33mRepeat[39m[33m,[39m [33mShuffle[39m[33m,[39m [33mVolume2[39m[33m,[39m [33mVolumeX[39m[33m,[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/mobile-player.tsx [Client Component Browser]
+    ./components/header.tsx [Client Component Browser]
+    ./components/header.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/mobile-player.tsx [Client Component SSR]
+    ./components/header.tsx [Client Component SSR]
+    ./components/header.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/mobile-player.tsx:4:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useMusic[33m,[39m songs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m {
+ [90m 6 |[39m   [33mPlay[39m[33m,[39m [33mPause[39m[33m,[39m [33mSkipForward[39m[33m,[39m [33mSkipBack[39m[33m,[39m
+ [90m 7 |[39m   [33mRepeat[39m[33m,[39m [33mShuffle[39m[33m,[39m [33mVolume2[39m[33m,[39m [33mVolumeX[39m[33m,[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/mobile-player.tsx [Client Component Browser]
+    ./components/header.tsx [Client Component Browser]
+    ./components/header.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/mobile-player.tsx [Client Component SSR]
+    ./components/header.tsx [Client Component SSR]
+    ./components/header.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/header.tsx:13:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 11 |[39m [36mimport[39m { [33mButton[39m } [36mfrom[39m [32m"@/components/ui/button"[39m
+ [90m 12 |[39m [36mimport[39m { useMusic[33m,[39m songs [36mas[39m musicSongs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 13 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 14 |[39m [36mimport[39m { [33mExpandedPlayer[39m } [36mfrom[39m [32m"@/components/expanded-player"[39m
+ [90m 15 |[39m [36mimport[39m { [33mMobilePlayer[39m } [36mfrom[39m [32m"@/components/mobile-player"[39m
+ [90m 16 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/header.tsx
+    ./app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/header.tsx:13:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 11 |[39m [36mimport[39m { [33mButton[39m } [36mfrom[39m [32m"@/components/ui/button"[39m
+ [90m 12 |[39m [36mimport[39m { useMusic[33m,[39m songs [36mas[39m musicSongs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 13 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 14 |[39m [36mimport[39m { [33mExpandedPlayer[39m } [36mfrom[39m [32m"@/components/expanded-player"[39m
+ [90m 15 |[39m [36mimport[39m { [33mMobilePlayer[39m } [36mfrom[39m [32m"@/components/mobile-player"[39m
+ [90m 16 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/header.tsx
+    ./app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/header.tsx:13:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 11 |[39m [36mimport[39m { [33mButton[39m } [36mfrom[39m [32m"@/components/ui/button"[39m
+ [90m 12 |[39m [36mimport[39m { useMusic[33m,[39m songs [36mas[39m musicSongs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 13 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 14 |[39m [36mimport[39m { [33mExpandedPlayer[39m } [36mfrom[39m [32m"@/components/expanded-player"[39m
+ [90m 15 |[39m [36mimport[39m { [33mMobilePlayer[39m } [36mfrom[39m [32m"@/components/mobile-player"[39m
+ [90m 16 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/header.tsx
+    ./app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/header.tsx:13:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 11 |[39m [36mimport[39m { [33mButton[39m } [36mfrom[39m [32m"@/components/ui/button"[39m
+ [90m 12 |[39m [36mimport[39m { useMusic[33m,[39m songs [36mas[39m musicSongs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 13 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 14 |[39m [36mimport[39m { [33mExpandedPlayer[39m } [36mfrom[39m [32m"@/components/expanded-player"[39m
+ [90m 15 |[39m [36mimport[39m { [33mMobilePlayer[39m } [36mfrom[39m [32m"@/components/mobile-player"[39m
+ [90m 16 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/header.tsx
+    ./app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/mobile-player.tsx:4:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useMusic[33m,[39m songs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m {
+ [90m 6 |[39m   [33mPlay[39m[33m,[39m [33mPause[39m[33m,[39m [33mSkipForward[39m[33m,[39m [33mSkipBack[39m[33m,[39m
+ [90m 7 |[39m   [33mRepeat[39m[33m,[39m [33mShuffle[39m[33m,[39m [33mVolume2[39m[33m,[39m [33mVolumeX[39m[33m,[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/mobile-player.tsx [Client Component Browser]
+    ./components/header.tsx [Client Component Browser]
+    ./components/header.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/mobile-player.tsx [Client Component SSR]
+    ./components/header.tsx [Client Component SSR]
+    ./components/header.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/mobile-player.tsx:4:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useMusic[33m,[39m songs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m {
+ [90m 6 |[39m   [33mPlay[39m[33m,[39m [33mPause[39m[33m,[39m [33mSkipForward[39m[33m,[39m [33mSkipBack[39m[33m,[39m
+ [90m 7 |[39m   [33mRepeat[39m[33m,[39m [33mShuffle[39m[33m,[39m [33mVolume2[39m[33m,[39m [33mVolumeX[39m[33m,[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/mobile-player.tsx [Client Component Browser]
+    ./components/header.tsx [Client Component Browser]
+    ./components/header.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/mobile-player.tsx [Client Component SSR]
+    ./components/header.tsx [Client Component SSR]
+    ./components/header.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/mobile-player.tsx:4:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useMusic[33m,[39m songs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m {
+ [90m 6 |[39m   [33mPlay[39m[33m,[39m [33mPause[39m[33m,[39m [33mSkipForward[39m[33m,[39m [33mSkipBack[39m[33m,[39m
+ [90m 7 |[39m   [33mRepeat[39m[33m,[39m [33mShuffle[39m[33m,[39m [33mVolume2[39m[33m,[39m [33mVolumeX[39m[33m,[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/mobile-player.tsx [Client Component Browser]
+    ./components/header.tsx [Client Component Browser]
+    ./components/header.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/mobile-player.tsx [Client Component SSR]
+    ./components/header.tsx [Client Component SSR]
+    ./components/header.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/mobile-player.tsx:4:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useMusic[33m,[39m songs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m {
+ [90m 6 |[39m   [33mPlay[39m[33m,[39m [33mPause[39m[33m,[39m [33mSkipForward[39m[33m,[39m [33mSkipBack[39m[33m,[39m
+ [90m 7 |[39m   [33mRepeat[39m[33m,[39m [33mShuffle[39m[33m,[39m [33mVolume2[39m[33m,[39m [33mVolumeX[39m[33m,[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/mobile-player.tsx [Client Component Browser]
+    ./components/header.tsx [Client Component Browser]
+    ./components/header.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/mobile-player.tsx [Client Component SSR]
+    ./components/header.tsx [Client Component SSR]
+    ./components/header.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/header.tsx:13:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 11 |[39m [36mimport[39m { [33mButton[39m } [36mfrom[39m [32m"@/components/ui/button"[39m
+ [90m 12 |[39m [36mimport[39m { useMusic[33m,[39m songs [36mas[39m musicSongs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 13 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 14 |[39m [36mimport[39m { [33mExpandedPlayer[39m } [36mfrom[39m [32m"@/components/expanded-player"[39m
+ [90m 15 |[39m [36mimport[39m { [33mMobilePlayer[39m } [36mfrom[39m [32m"@/components/mobile-player"[39m
+ [90m 16 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/header.tsx
+    ./app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/header.tsx:13:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 11 |[39m [36mimport[39m { [33mButton[39m } [36mfrom[39m [32m"@/components/ui/button"[39m
+ [90m 12 |[39m [36mimport[39m { useMusic[33m,[39m songs [36mas[39m musicSongs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 13 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 14 |[39m [36mimport[39m { [33mExpandedPlayer[39m } [36mfrom[39m [32m"@/components/expanded-player"[39m
+ [90m 15 |[39m [36mimport[39m { [33mMobilePlayer[39m } [36mfrom[39m [32m"@/components/mobile-player"[39m
+ [90m 16 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/header.tsx
+    ./app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/header.tsx:13:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 11 |[39m [36mimport[39m { [33mButton[39m } [36mfrom[39m [32m"@/components/ui/button"[39m
+ [90m 12 |[39m [36mimport[39m { useMusic[33m,[39m songs [36mas[39m musicSongs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 13 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 14 |[39m [36mimport[39m { [33mExpandedPlayer[39m } [36mfrom[39m [32m"@/components/expanded-player"[39m
+ [90m 15 |[39m [36mimport[39m { [33mMobilePlayer[39m } [36mfrom[39m [32m"@/components/mobile-player"[39m
+ [90m 16 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/header.tsx
+    ./app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/header.tsx:13:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 11 |[39m [36mimport[39m { [33mButton[39m } [36mfrom[39m [32m"@/components/ui/button"[39m
+ [90m 12 |[39m [36mimport[39m { useMusic[33m,[39m songs [36mas[39m musicSongs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 13 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 14 |[39m [36mimport[39m { [33mExpandedPlayer[39m } [36mfrom[39m [32m"@/components/expanded-player"[39m
+ [90m 15 |[39m [36mimport[39m { [33mMobilePlayer[39m } [36mfrom[39m [32m"@/components/mobile-player"[39m
+ [90m 16 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/header.tsx
+    ./app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/mobile-player.tsx:4:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useMusic[33m,[39m songs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m {
+ [90m 6 |[39m   [33mPlay[39m[33m,[39m [33mPause[39m[33m,[39m [33mSkipForward[39m[33m,[39m [33mSkipBack[39m[33m,[39m
+ [90m 7 |[39m   [33mRepeat[39m[33m,[39m [33mShuffle[39m[33m,[39m [33mVolume2[39m[33m,[39m [33mVolumeX[39m[33m,[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/mobile-player.tsx [Client Component Browser]
+    ./components/header.tsx [Client Component Browser]
+    ./components/header.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/mobile-player.tsx [Client Component SSR]
+    ./components/header.tsx [Client Component SSR]
+    ./components/header.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/mobile-player.tsx:4:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useMusic[33m,[39m songs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m {
+ [90m 6 |[39m   [33mPlay[39m[33m,[39m [33mPause[39m[33m,[39m [33mSkipForward[39m[33m,[39m [33mSkipBack[39m[33m,[39m
+ [90m 7 |[39m   [33mRepeat[39m[33m,[39m [33mShuffle[39m[33m,[39m [33mVolume2[39m[33m,[39m [33mVolumeX[39m[33m,[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/mobile-player.tsx [Client Component Browser]
+    ./components/header.tsx [Client Component Browser]
+    ./components/header.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/mobile-player.tsx [Client Component SSR]
+    ./components/header.tsx [Client Component SSR]
+    ./components/header.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/mobile-player.tsx:4:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useMusic[33m,[39m songs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m {
+ [90m 6 |[39m   [33mPlay[39m[33m,[39m [33mPause[39m[33m,[39m [33mSkipForward[39m[33m,[39m [33mSkipBack[39m[33m,[39m
+ [90m 7 |[39m   [33mRepeat[39m[33m,[39m [33mShuffle[39m[33m,[39m [33mVolume2[39m[33m,[39m [33mVolumeX[39m[33m,[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/mobile-player.tsx [Client Component Browser]
+    ./components/header.tsx [Client Component Browser]
+    ./components/header.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/mobile-player.tsx [Client Component SSR]
+    ./components/header.tsx [Client Component SSR]
+    ./components/header.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/mobile-player.tsx:4:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useMusic[33m,[39m songs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m {
+ [90m 6 |[39m   [33mPlay[39m[33m,[39m [33mPause[39m[33m,[39m [33mSkipForward[39m[33m,[39m [33mSkipBack[39m[33m,[39m
+ [90m 7 |[39m   [33mRepeat[39m[33m,[39m [33mShuffle[39m[33m,[39m [33mVolume2[39m[33m,[39m [33mVolumeX[39m[33m,[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/mobile-player.tsx [Client Component Browser]
+    ./components/header.tsx [Client Component Browser]
+    ./components/header.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/mobile-player.tsx [Client Component SSR]
+    ./components/header.tsx [Client Component SSR]
+    ./components/header.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/header.tsx:13:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 11 |[39m [36mimport[39m { [33mButton[39m } [36mfrom[39m [32m"@/components/ui/button"[39m
+ [90m 12 |[39m [36mimport[39m { useMusic[33m,[39m songs [36mas[39m musicSongs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 13 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 14 |[39m [36mimport[39m { [33mExpandedPlayer[39m } [36mfrom[39m [32m"@/components/expanded-player"[39m
+ [90m 15 |[39m [36mimport[39m { [33mMobilePlayer[39m } [36mfrom[39m [32m"@/components/mobile-player"[39m
+ [90m 16 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/header.tsx
+    ./app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/header.tsx:13:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 11 |[39m [36mimport[39m { [33mButton[39m } [36mfrom[39m [32m"@/components/ui/button"[39m
+ [90m 12 |[39m [36mimport[39m { useMusic[33m,[39m songs [36mas[39m musicSongs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 13 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 14 |[39m [36mimport[39m { [33mExpandedPlayer[39m } [36mfrom[39m [32m"@/components/expanded-player"[39m
+ [90m 15 |[39m [36mimport[39m { [33mMobilePlayer[39m } [36mfrom[39m [32m"@/components/mobile-player"[39m
+ [90m 16 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/header.tsx
+    ./app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/header.tsx:13:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 11 |[39m [36mimport[39m { [33mButton[39m } [36mfrom[39m [32m"@/components/ui/button"[39m
+ [90m 12 |[39m [36mimport[39m { useMusic[33m,[39m songs [36mas[39m musicSongs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 13 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 14 |[39m [36mimport[39m { [33mExpandedPlayer[39m } [36mfrom[39m [32m"@/components/expanded-player"[39m
+ [90m 15 |[39m [36mimport[39m { [33mMobilePlayer[39m } [36mfrom[39m [32m"@/components/mobile-player"[39m
+ [90m 16 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/header.tsx
+    ./app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/header.tsx:13:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 11 |[39m [36mimport[39m { [33mButton[39m } [36mfrom[39m [32m"@/components/ui/button"[39m
+ [90m 12 |[39m [36mimport[39m { useMusic[33m,[39m songs [36mas[39m musicSongs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 13 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 14 |[39m [36mimport[39m { [33mExpandedPlayer[39m } [36mfrom[39m [32m"@/components/expanded-player"[39m
+ [90m 15 |[39m [36mimport[39m { [33mMobilePlayer[39m } [36mfrom[39m [32m"@/components/mobile-player"[39m
+ [90m 16 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/header.tsx
+    ./app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/mobile-player.tsx:4:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useMusic[33m,[39m songs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m {
+ [90m 6 |[39m   [33mPlay[39m[33m,[39m [33mPause[39m[33m,[39m [33mSkipForward[39m[33m,[39m [33mSkipBack[39m[33m,[39m
+ [90m 7 |[39m   [33mRepeat[39m[33m,[39m [33mShuffle[39m[33m,[39m [33mVolume2[39m[33m,[39m [33mVolumeX[39m[33m,[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/mobile-player.tsx [Client Component Browser]
+    ./components/header.tsx [Client Component Browser]
+    ./components/header.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/mobile-player.tsx [Client Component SSR]
+    ./components/header.tsx [Client Component SSR]
+    ./components/header.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/mobile-player.tsx:4:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useMusic[33m,[39m songs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m {
+ [90m 6 |[39m   [33mPlay[39m[33m,[39m [33mPause[39m[33m,[39m [33mSkipForward[39m[33m,[39m [33mSkipBack[39m[33m,[39m
+ [90m 7 |[39m   [33mRepeat[39m[33m,[39m [33mShuffle[39m[33m,[39m [33mVolume2[39m[33m,[39m [33mVolumeX[39m[33m,[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/mobile-player.tsx [Client Component Browser]
+    ./components/header.tsx [Client Component Browser]
+    ./components/header.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/mobile-player.tsx [Client Component SSR]
+    ./components/header.tsx [Client Component SSR]
+    ./components/header.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/mobile-player.tsx:4:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useMusic[33m,[39m songs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m {
+ [90m 6 |[39m   [33mPlay[39m[33m,[39m [33mPause[39m[33m,[39m [33mSkipForward[39m[33m,[39m [33mSkipBack[39m[33m,[39m
+ [90m 7 |[39m   [33mRepeat[39m[33m,[39m [33mShuffle[39m[33m,[39m [33mVolume2[39m[33m,[39m [33mVolumeX[39m[33m,[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/mobile-player.tsx [Client Component Browser]
+    ./components/header.tsx [Client Component Browser]
+    ./components/header.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/mobile-player.tsx [Client Component SSR]
+    ./components/header.tsx [Client Component SSR]
+    ./components/header.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/mobile-player.tsx:4:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useMusic[33m,[39m songs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m {
+ [90m 6 |[39m   [33mPlay[39m[33m,[39m [33mPause[39m[33m,[39m [33mSkipForward[39m[33m,[39m [33mSkipBack[39m[33m,[39m
+ [90m 7 |[39m   [33mRepeat[39m[33m,[39m [33mShuffle[39m[33m,[39m [33mVolume2[39m[33m,[39m [33mVolumeX[39m[33m,[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/mobile-player.tsx [Client Component Browser]
+    ./components/header.tsx [Client Component Browser]
+    ./components/header.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/mobile-player.tsx [Client Component SSR]
+    ./components/header.tsx [Client Component SSR]
+    ./components/header.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/header.tsx:13:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 11 |[39m [36mimport[39m { [33mButton[39m } [36mfrom[39m [32m"@/components/ui/button"[39m
+ [90m 12 |[39m [36mimport[39m { useMusic[33m,[39m songs [36mas[39m musicSongs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 13 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 14 |[39m [36mimport[39m { [33mExpandedPlayer[39m } [36mfrom[39m [32m"@/components/expanded-player"[39m
+ [90m 15 |[39m [36mimport[39m { [33mMobilePlayer[39m } [36mfrom[39m [32m"@/components/mobile-player"[39m
+ [90m 16 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/header.tsx
+    ./app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/header.tsx:13:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 11 |[39m [36mimport[39m { [33mButton[39m } [36mfrom[39m [32m"@/components/ui/button"[39m
+ [90m 12 |[39m [36mimport[39m { useMusic[33m,[39m songs [36mas[39m musicSongs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 13 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 14 |[39m [36mimport[39m { [33mExpandedPlayer[39m } [36mfrom[39m [32m"@/components/expanded-player"[39m
+ [90m 15 |[39m [36mimport[39m { [33mMobilePlayer[39m } [36mfrom[39m [32m"@/components/mobile-player"[39m
+ [90m 16 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/header.tsx
+    ./app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/header.tsx:13:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 11 |[39m [36mimport[39m { [33mButton[39m } [36mfrom[39m [32m"@/components/ui/button"[39m
+ [90m 12 |[39m [36mimport[39m { useMusic[33m,[39m songs [36mas[39m musicSongs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 13 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 14 |[39m [36mimport[39m { [33mExpandedPlayer[39m } [36mfrom[39m [32m"@/components/expanded-player"[39m
+ [90m 15 |[39m [36mimport[39m { [33mMobilePlayer[39m } [36mfrom[39m [32m"@/components/mobile-player"[39m
+ [90m 16 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/header.tsx
+    ./app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/header.tsx:13:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 11 |[39m [36mimport[39m { [33mButton[39m } [36mfrom[39m [32m"@/components/ui/button"[39m
+ [90m 12 |[39m [36mimport[39m { useMusic[33m,[39m songs [36mas[39m musicSongs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 13 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 14 |[39m [36mimport[39m { [33mExpandedPlayer[39m } [36mfrom[39m [32m"@/components/expanded-player"[39m
+ [90m 15 |[39m [36mimport[39m { [33mMobilePlayer[39m } [36mfrom[39m [32m"@/components/mobile-player"[39m
+ [90m 16 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/header.tsx
+    ./app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/mobile-player.tsx:4:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useMusic[33m,[39m songs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m {
+ [90m 6 |[39m   [33mPlay[39m[33m,[39m [33mPause[39m[33m,[39m [33mSkipForward[39m[33m,[39m [33mSkipBack[39m[33m,[39m
+ [90m 7 |[39m   [33mRepeat[39m[33m,[39m [33mShuffle[39m[33m,[39m [33mVolume2[39m[33m,[39m [33mVolumeX[39m[33m,[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/mobile-player.tsx [Client Component Browser]
+    ./components/header.tsx [Client Component Browser]
+    ./components/header.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/mobile-player.tsx [Client Component SSR]
+    ./components/header.tsx [Client Component SSR]
+    ./components/header.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/mobile-player.tsx:4:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useMusic[33m,[39m songs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m {
+ [90m 6 |[39m   [33mPlay[39m[33m,[39m [33mPause[39m[33m,[39m [33mSkipForward[39m[33m,[39m [33mSkipBack[39m[33m,[39m
+ [90m 7 |[39m   [33mRepeat[39m[33m,[39m [33mShuffle[39m[33m,[39m [33mVolume2[39m[33m,[39m [33mVolumeX[39m[33m,[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/mobile-player.tsx [Client Component Browser]
+    ./components/header.tsx [Client Component Browser]
+    ./components/header.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/mobile-player.tsx [Client Component SSR]
+    ./components/header.tsx [Client Component SSR]
+    ./components/header.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/mobile-player.tsx:4:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useMusic[33m,[39m songs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m {
+ [90m 6 |[39m   [33mPlay[39m[33m,[39m [33mPause[39m[33m,[39m [33mSkipForward[39m[33m,[39m [33mSkipBack[39m[33m,[39m
+ [90m 7 |[39m   [33mRepeat[39m[33m,[39m [33mShuffle[39m[33m,[39m [33mVolume2[39m[33m,[39m [33mVolumeX[39m[33m,[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/mobile-player.tsx [Client Component Browser]
+    ./components/header.tsx [Client Component Browser]
+    ./components/header.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/mobile-player.tsx [Client Component SSR]
+    ./components/header.tsx [Client Component SSR]
+    ./components/header.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/mobile-player.tsx:4:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useMusic[33m,[39m songs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m {
+ [90m 6 |[39m   [33mPlay[39m[33m,[39m [33mPause[39m[33m,[39m [33mSkipForward[39m[33m,[39m [33mSkipBack[39m[33m,[39m
+ [90m 7 |[39m   [33mRepeat[39m[33m,[39m [33mShuffle[39m[33m,[39m [33mVolume2[39m[33m,[39m [33mVolumeX[39m[33m,[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/mobile-player.tsx [Client Component Browser]
+    ./components/header.tsx [Client Component Browser]
+    ./components/header.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/mobile-player.tsx [Client Component SSR]
+    ./components/header.tsx [Client Component SSR]
+    ./components/header.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/header.tsx:13:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 11 |[39m [36mimport[39m { [33mButton[39m } [36mfrom[39m [32m"@/components/ui/button"[39m
+ [90m 12 |[39m [36mimport[39m { useMusic[33m,[39m songs [36mas[39m musicSongs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 13 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 14 |[39m [36mimport[39m { [33mExpandedPlayer[39m } [36mfrom[39m [32m"@/components/expanded-player"[39m
+ [90m 15 |[39m [36mimport[39m { [33mMobilePlayer[39m } [36mfrom[39m [32m"@/components/mobile-player"[39m
+ [90m 16 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/header.tsx
+    ./app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/header.tsx:13:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 11 |[39m [36mimport[39m { [33mButton[39m } [36mfrom[39m [32m"@/components/ui/button"[39m
+ [90m 12 |[39m [36mimport[39m { useMusic[33m,[39m songs [36mas[39m musicSongs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 13 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 14 |[39m [36mimport[39m { [33mExpandedPlayer[39m } [36mfrom[39m [32m"@/components/expanded-player"[39m
+ [90m 15 |[39m [36mimport[39m { [33mMobilePlayer[39m } [36mfrom[39m [32m"@/components/mobile-player"[39m
+ [90m 16 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/header.tsx
+    ./app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/header.tsx:13:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 11 |[39m [36mimport[39m { [33mButton[39m } [36mfrom[39m [32m"@/components/ui/button"[39m
+ [90m 12 |[39m [36mimport[39m { useMusic[33m,[39m songs [36mas[39m musicSongs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 13 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 14 |[39m [36mimport[39m { [33mExpandedPlayer[39m } [36mfrom[39m [32m"@/components/expanded-player"[39m
+ [90m 15 |[39m [36mimport[39m { [33mMobilePlayer[39m } [36mfrom[39m [32m"@/components/mobile-player"[39m
+ [90m 16 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/header.tsx
+    ./app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/header.tsx:13:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 11 |[39m [36mimport[39m { [33mButton[39m } [36mfrom[39m [32m"@/components/ui/button"[39m
+ [90m 12 |[39m [36mimport[39m { useMusic[33m,[39m songs [36mas[39m musicSongs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 13 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 14 |[39m [36mimport[39m { [33mExpandedPlayer[39m } [36mfrom[39m [32m"@/components/expanded-player"[39m
+ [90m 15 |[39m [36mimport[39m { [33mMobilePlayer[39m } [36mfrom[39m [32m"@/components/mobile-player"[39m
+ [90m 16 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/header.tsx
+    ./app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/mobile-player.tsx:4:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useMusic[33m,[39m songs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m {
+ [90m 6 |[39m   [33mPlay[39m[33m,[39m [33mPause[39m[33m,[39m [33mSkipForward[39m[33m,[39m [33mSkipBack[39m[33m,[39m
+ [90m 7 |[39m   [33mRepeat[39m[33m,[39m [33mShuffle[39m[33m,[39m [33mVolume2[39m[33m,[39m [33mVolumeX[39m[33m,[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/mobile-player.tsx [Client Component Browser]
+    ./components/header.tsx [Client Component Browser]
+    ./components/header.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/mobile-player.tsx [Client Component SSR]
+    ./components/header.tsx [Client Component SSR]
+    ./components/header.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/mobile-player.tsx:4:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useMusic[33m,[39m songs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m {
+ [90m 6 |[39m   [33mPlay[39m[33m,[39m [33mPause[39m[33m,[39m [33mSkipForward[39m[33m,[39m [33mSkipBack[39m[33m,[39m
+ [90m 7 |[39m   [33mRepeat[39m[33m,[39m [33mShuffle[39m[33m,[39m [33mVolume2[39m[33m,[39m [33mVolumeX[39m[33m,[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/mobile-player.tsx [Client Component Browser]
+    ./components/header.tsx [Client Component Browser]
+    ./components/header.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/mobile-player.tsx [Client Component SSR]
+    ./components/header.tsx [Client Component SSR]
+    ./components/header.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/mobile-player.tsx:4:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useMusic[33m,[39m songs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m {
+ [90m 6 |[39m   [33mPlay[39m[33m,[39m [33mPause[39m[33m,[39m [33mSkipForward[39m[33m,[39m [33mSkipBack[39m[33m,[39m
+ [90m 7 |[39m   [33mRepeat[39m[33m,[39m [33mShuffle[39m[33m,[39m [33mVolume2[39m[33m,[39m [33mVolumeX[39m[33m,[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/mobile-player.tsx [Client Component Browser]
+    ./components/header.tsx [Client Component Browser]
+    ./components/header.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/mobile-player.tsx [Client Component SSR]
+    ./components/header.tsx [Client Component SSR]
+    ./components/header.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/mobile-player.tsx:4:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useMusic[33m,[39m songs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m {
+ [90m 6 |[39m   [33mPlay[39m[33m,[39m [33mPause[39m[33m,[39m [33mSkipForward[39m[33m,[39m [33mSkipBack[39m[33m,[39m
+ [90m 7 |[39m   [33mRepeat[39m[33m,[39m [33mShuffle[39m[33m,[39m [33mVolume2[39m[33m,[39m [33mVolumeX[39m[33m,[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/mobile-player.tsx [Client Component Browser]
+    ./components/header.tsx [Client Component Browser]
+    ./components/header.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/mobile-player.tsx [Client Component SSR]
+    ./components/header.tsx [Client Component SSR]
+    ./components/header.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/header.tsx:13:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 11 |[39m [36mimport[39m { [33mButton[39m } [36mfrom[39m [32m"@/components/ui/button"[39m
+ [90m 12 |[39m [36mimport[39m { useMusic[33m,[39m songs [36mas[39m musicSongs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 13 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 14 |[39m [36mimport[39m { [33mExpandedPlayer[39m } [36mfrom[39m [32m"@/components/expanded-player"[39m
+ [90m 15 |[39m [36mimport[39m { [33mMobilePlayer[39m } [36mfrom[39m [32m"@/components/mobile-player"[39m
+ [90m 16 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/header.tsx
+    ./app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/header.tsx:13:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 11 |[39m [36mimport[39m { [33mButton[39m } [36mfrom[39m [32m"@/components/ui/button"[39m
+ [90m 12 |[39m [36mimport[39m { useMusic[33m,[39m songs [36mas[39m musicSongs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 13 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 14 |[39m [36mimport[39m { [33mExpandedPlayer[39m } [36mfrom[39m [32m"@/components/expanded-player"[39m
+ [90m 15 |[39m [36mimport[39m { [33mMobilePlayer[39m } [36mfrom[39m [32m"@/components/mobile-player"[39m
+ [90m 16 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/header.tsx
+    ./app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/header.tsx:13:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 11 |[39m [36mimport[39m { [33mButton[39m } [36mfrom[39m [32m"@/components/ui/button"[39m
+ [90m 12 |[39m [36mimport[39m { useMusic[33m,[39m songs [36mas[39m musicSongs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 13 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 14 |[39m [36mimport[39m { [33mExpandedPlayer[39m } [36mfrom[39m [32m"@/components/expanded-player"[39m
+ [90m 15 |[39m [36mimport[39m { [33mMobilePlayer[39m } [36mfrom[39m [32m"@/components/mobile-player"[39m
+ [90m 16 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/header.tsx
+    ./app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/header.tsx:13:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 11 |[39m [36mimport[39m { [33mButton[39m } [36mfrom[39m [32m"@/components/ui/button"[39m
+ [90m 12 |[39m [36mimport[39m { useMusic[33m,[39m songs [36mas[39m musicSongs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 13 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 14 |[39m [36mimport[39m { [33mExpandedPlayer[39m } [36mfrom[39m [32m"@/components/expanded-player"[39m
+ [90m 15 |[39m [36mimport[39m { [33mMobilePlayer[39m } [36mfrom[39m [32m"@/components/mobile-player"[39m
+ [90m 16 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/header.tsx
+    ./app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/mobile-player.tsx:4:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useMusic[33m,[39m songs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m {
+ [90m 6 |[39m   [33mPlay[39m[33m,[39m [33mPause[39m[33m,[39m [33mSkipForward[39m[33m,[39m [33mSkipBack[39m[33m,[39m
+ [90m 7 |[39m   [33mRepeat[39m[33m,[39m [33mShuffle[39m[33m,[39m [33mVolume2[39m[33m,[39m [33mVolumeX[39m[33m,[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/mobile-player.tsx [Client Component Browser]
+    ./components/header.tsx [Client Component Browser]
+    ./components/header.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/mobile-player.tsx [Client Component SSR]
+    ./components/header.tsx [Client Component SSR]
+    ./components/header.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/mobile-player.tsx:4:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useMusic[33m,[39m songs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m {
+ [90m 6 |[39m   [33mPlay[39m[33m,[39m [33mPause[39m[33m,[39m [33mSkipForward[39m[33m,[39m [33mSkipBack[39m[33m,[39m
+ [90m 7 |[39m   [33mRepeat[39m[33m,[39m [33mShuffle[39m[33m,[39m [33mVolume2[39m[33m,[39m [33mVolumeX[39m[33m,[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/mobile-player.tsx [Client Component Browser]
+    ./components/header.tsx [Client Component Browser]
+    ./components/header.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/mobile-player.tsx [Client Component SSR]
+    ./components/header.tsx [Client Component SSR]
+    ./components/header.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/mobile-player.tsx:4:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useMusic[33m,[39m songs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m {
+ [90m 6 |[39m   [33mPlay[39m[33m,[39m [33mPause[39m[33m,[39m [33mSkipForward[39m[33m,[39m [33mSkipBack[39m[33m,[39m
+ [90m 7 |[39m   [33mRepeat[39m[33m,[39m [33mShuffle[39m[33m,[39m [33mVolume2[39m[33m,[39m [33mVolumeX[39m[33m,[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/mobile-player.tsx [Client Component Browser]
+    ./components/header.tsx [Client Component Browser]
+    ./components/header.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/mobile-player.tsx [Client Component SSR]
+    ./components/header.tsx [Client Component SSR]
+    ./components/header.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/mobile-player.tsx:4:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useMusic[33m,[39m songs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m {
+ [90m 6 |[39m   [33mPlay[39m[33m,[39m [33mPause[39m[33m,[39m [33mSkipForward[39m[33m,[39m [33mSkipBack[39m[33m,[39m
+ [90m 7 |[39m   [33mRepeat[39m[33m,[39m [33mShuffle[39m[33m,[39m [33mVolume2[39m[33m,[39m [33mVolumeX[39m[33m,[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/mobile-player.tsx [Client Component Browser]
+    ./components/header.tsx [Client Component Browser]
+    ./components/header.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/mobile-player.tsx [Client Component SSR]
+    ./components/header.tsx [Client Component SSR]
+    ./components/header.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/header.tsx:13:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 11 |[39m [36mimport[39m { [33mButton[39m } [36mfrom[39m [32m"@/components/ui/button"[39m
+ [90m 12 |[39m [36mimport[39m { useMusic[33m,[39m songs [36mas[39m musicSongs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 13 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 14 |[39m [36mimport[39m { [33mExpandedPlayer[39m } [36mfrom[39m [32m"@/components/expanded-player"[39m
+ [90m 15 |[39m [36mimport[39m { [33mMobilePlayer[39m } [36mfrom[39m [32m"@/components/mobile-player"[39m
+ [90m 16 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/header.tsx
+    ./app/gallery/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/header.tsx:13:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 11 |[39m [36mimport[39m { [33mButton[39m } [36mfrom[39m [32m"@/components/ui/button"[39m
+ [90m 12 |[39m [36mimport[39m { useMusic[33m,[39m songs [36mas[39m musicSongs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 13 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 14 |[39m [36mimport[39m { [33mExpandedPlayer[39m } [36mfrom[39m [32m"@/components/expanded-player"[39m
+ [90m 15 |[39m [36mimport[39m { [33mMobilePlayer[39m } [36mfrom[39m [32m"@/components/mobile-player"[39m
+ [90m 16 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/header.tsx
+    ./app/gallery/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/header.tsx:13:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 11 |[39m [36mimport[39m { [33mButton[39m } [36mfrom[39m [32m"@/components/ui/button"[39m
+ [90m 12 |[39m [36mimport[39m { useMusic[33m,[39m songs [36mas[39m musicSongs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 13 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 14 |[39m [36mimport[39m { [33mExpandedPlayer[39m } [36mfrom[39m [32m"@/components/expanded-player"[39m
+ [90m 15 |[39m [36mimport[39m { [33mMobilePlayer[39m } [36mfrom[39m [32m"@/components/mobile-player"[39m
+ [90m 16 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/header.tsx
+    ./app/gallery/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/header.tsx:13:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 11 |[39m [36mimport[39m { [33mButton[39m } [36mfrom[39m [32m"@/components/ui/button"[39m
+ [90m 12 |[39m [36mimport[39m { useMusic[33m,[39m songs [36mas[39m musicSongs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 13 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 14 |[39m [36mimport[39m { [33mExpandedPlayer[39m } [36mfrom[39m [32m"@/components/expanded-player"[39m
+ [90m 15 |[39m [36mimport[39m { [33mMobilePlayer[39m } [36mfrom[39m [32m"@/components/mobile-player"[39m
+ [90m 16 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/header.tsx
+    ./app/gallery/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/mobile-player.tsx:4:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useMusic[33m,[39m songs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m {
+ [90m 6 |[39m   [33mPlay[39m[33m,[39m [33mPause[39m[33m,[39m [33mSkipForward[39m[33m,[39m [33mSkipBack[39m[33m,[39m
+ [90m 7 |[39m   [33mRepeat[39m[33m,[39m [33mShuffle[39m[33m,[39m [33mVolume2[39m[33m,[39m [33mVolumeX[39m[33m,[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/mobile-player.tsx [Client Component Browser]
+    ./components/header.tsx [Client Component Browser]
+    ./components/header.tsx [Server Component]
+    ./app/gallery/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/mobile-player.tsx [Client Component SSR]
+    ./components/header.tsx [Client Component SSR]
+    ./components/header.tsx [Server Component]
+    ./app/gallery/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/mobile-player.tsx:4:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useMusic[33m,[39m songs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m {
+ [90m 6 |[39m   [33mPlay[39m[33m,[39m [33mPause[39m[33m,[39m [33mSkipForward[39m[33m,[39m [33mSkipBack[39m[33m,[39m
+ [90m 7 |[39m   [33mRepeat[39m[33m,[39m [33mShuffle[39m[33m,[39m [33mVolume2[39m[33m,[39m [33mVolumeX[39m[33m,[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/mobile-player.tsx [Client Component Browser]
+    ./components/header.tsx [Client Component Browser]
+    ./components/header.tsx [Server Component]
+    ./app/gallery/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/mobile-player.tsx [Client Component SSR]
+    ./components/header.tsx [Client Component SSR]
+    ./components/header.tsx [Server Component]
+    ./app/gallery/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/mobile-player.tsx:4:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useMusic[33m,[39m songs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m {
+ [90m 6 |[39m   [33mPlay[39m[33m,[39m [33mPause[39m[33m,[39m [33mSkipForward[39m[33m,[39m [33mSkipBack[39m[33m,[39m
+ [90m 7 |[39m   [33mRepeat[39m[33m,[39m [33mShuffle[39m[33m,[39m [33mVolume2[39m[33m,[39m [33mVolumeX[39m[33m,[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/mobile-player.tsx [Client Component Browser]
+    ./components/header.tsx [Client Component Browser]
+    ./components/header.tsx [Server Component]
+    ./app/gallery/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/mobile-player.tsx [Client Component SSR]
+    ./components/header.tsx [Client Component SSR]
+    ./components/header.tsx [Server Component]
+    ./app/gallery/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/mobile-player.tsx:4:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useMusic[33m,[39m songs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m {
+ [90m 6 |[39m   [33mPlay[39m[33m,[39m [33mPause[39m[33m,[39m [33mSkipForward[39m[33m,[39m [33mSkipBack[39m[33m,[39m
+ [90m 7 |[39m   [33mRepeat[39m[33m,[39m [33mShuffle[39m[33m,[39m [33mVolume2[39m[33m,[39m [33mVolumeX[39m[33m,[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/mobile-player.tsx [Client Component Browser]
+    ./components/header.tsx [Client Component Browser]
+    ./components/header.tsx [Server Component]
+    ./app/gallery/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/mobile-player.tsx [Client Component SSR]
+    ./components/header.tsx [Client Component SSR]
+    ./components/header.tsx [Server Component]
+    ./app/gallery/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/header.tsx:13:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 11 |[39m [36mimport[39m { [33mButton[39m } [36mfrom[39m [32m"@/components/ui/button"[39m
+ [90m 12 |[39m [36mimport[39m { useMusic[33m,[39m songs [36mas[39m musicSongs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 13 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 14 |[39m [36mimport[39m { [33mExpandedPlayer[39m } [36mfrom[39m [32m"@/components/expanded-player"[39m
+ [90m 15 |[39m [36mimport[39m { [33mMobilePlayer[39m } [36mfrom[39m [32m"@/components/mobile-player"[39m
+ [90m 16 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/header.tsx
+    ./app/gallery/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/header.tsx:13:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 11 |[39m [36mimport[39m { [33mButton[39m } [36mfrom[39m [32m"@/components/ui/button"[39m
+ [90m 12 |[39m [36mimport[39m { useMusic[33m,[39m songs [36mas[39m musicSongs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 13 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 14 |[39m [36mimport[39m { [33mExpandedPlayer[39m } [36mfrom[39m [32m"@/components/expanded-player"[39m
+ [90m 15 |[39m [36mimport[39m { [33mMobilePlayer[39m } [36mfrom[39m [32m"@/components/mobile-player"[39m
+ [90m 16 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/header.tsx
+    ./app/gallery/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/header.tsx:13:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 11 |[39m [36mimport[39m { [33mButton[39m } [36mfrom[39m [32m"@/components/ui/button"[39m
+ [90m 12 |[39m [36mimport[39m { useMusic[33m,[39m songs [36mas[39m musicSongs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 13 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 14 |[39m [36mimport[39m { [33mExpandedPlayer[39m } [36mfrom[39m [32m"@/components/expanded-player"[39m
+ [90m 15 |[39m [36mimport[39m { [33mMobilePlayer[39m } [36mfrom[39m [32m"@/components/mobile-player"[39m
+ [90m 16 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/header.tsx
+    ./app/gallery/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/header.tsx:13:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 11 |[39m [36mimport[39m { [33mButton[39m } [36mfrom[39m [32m"@/components/ui/button"[39m
+ [90m 12 |[39m [36mimport[39m { useMusic[33m,[39m songs [36mas[39m musicSongs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 13 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 14 |[39m [36mimport[39m { [33mExpandedPlayer[39m } [36mfrom[39m [32m"@/components/expanded-player"[39m
+ [90m 15 |[39m [36mimport[39m { [33mMobilePlayer[39m } [36mfrom[39m [32m"@/components/mobile-player"[39m
+ [90m 16 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/header.tsx
+    ./app/gallery/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/mobile-player.tsx:4:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useMusic[33m,[39m songs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m {
+ [90m 6 |[39m   [33mPlay[39m[33m,[39m [33mPause[39m[33m,[39m [33mSkipForward[39m[33m,[39m [33mSkipBack[39m[33m,[39m
+ [90m 7 |[39m   [33mRepeat[39m[33m,[39m [33mShuffle[39m[33m,[39m [33mVolume2[39m[33m,[39m [33mVolumeX[39m[33m,[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/mobile-player.tsx [Client Component Browser]
+    ./components/header.tsx [Client Component Browser]
+    ./components/header.tsx [Server Component]
+    ./app/gallery/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/mobile-player.tsx [Client Component SSR]
+    ./components/header.tsx [Client Component SSR]
+    ./components/header.tsx [Server Component]
+    ./app/gallery/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/mobile-player.tsx:4:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useMusic[33m,[39m songs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m {
+ [90m 6 |[39m   [33mPlay[39m[33m,[39m [33mPause[39m[33m,[39m [33mSkipForward[39m[33m,[39m [33mSkipBack[39m[33m,[39m
+ [90m 7 |[39m   [33mRepeat[39m[33m,[39m [33mShuffle[39m[33m,[39m [33mVolume2[39m[33m,[39m [33mVolumeX[39m[33m,[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/mobile-player.tsx [Client Component Browser]
+    ./components/header.tsx [Client Component Browser]
+    ./components/header.tsx [Server Component]
+    ./app/gallery/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/mobile-player.tsx [Client Component SSR]
+    ./components/header.tsx [Client Component SSR]
+    ./components/header.tsx [Server Component]
+    ./app/gallery/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/mobile-player.tsx:4:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useMusic[33m,[39m songs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m {
+ [90m 6 |[39m   [33mPlay[39m[33m,[39m [33mPause[39m[33m,[39m [33mSkipForward[39m[33m,[39m [33mSkipBack[39m[33m,[39m
+ [90m 7 |[39m   [33mRepeat[39m[33m,[39m [33mShuffle[39m[33m,[39m [33mVolume2[39m[33m,[39m [33mVolumeX[39m[33m,[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/mobile-player.tsx [Client Component Browser]
+    ./components/header.tsx [Client Component Browser]
+    ./components/header.tsx [Server Component]
+    ./app/gallery/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/mobile-player.tsx [Client Component SSR]
+    ./components/header.tsx [Client Component SSR]
+    ./components/header.tsx [Server Component]
+    ./app/gallery/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./components/mobile-player.tsx:4:1
+Module not found: Can't resolve '@/components/marquee-text'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useMusic[33m,[39m songs } [36mfrom[39m [32m"@/context/music-context"[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mMarqueeText[39m } [36mfrom[39m [32m"@/components/marquee-text"[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m {
+ [90m 6 |[39m   [33mPlay[39m[33m,[39m [33mPause[39m[33m,[39m [33mSkipForward[39m[33m,[39m [33mSkipBack[39m[33m,[39m
+ [90m 7 |[39m   [33mRepeat[39m[33m,[39m [33mShuffle[39m[33m,[39m [33mVolume2[39m[33m,[39m [33mVolumeX[39m[33m,[39m[0m
+
+Import map: aliased to relative './components/marquee-text' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/mobile-player.tsx [Client Component Browser]
+    ./components/header.tsx [Client Component Browser]
+    ./components/header.tsx [Server Component]
+    ./app/gallery/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/mobile-player.tsx [Client Component SSR]
+    ./components/header.tsx [Client Component SSR]
+    ./components/header.tsx [Server Component]
+    ./app/gallery/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ✓ Compiled in 76ms
+ GET /gallery/ 200 in 165ms (compile: 94ms, render: 71ms)
+ GET /gallery/ 200 in 46ms (compile: 4ms, render: 42ms)
+ GET / 200 in 312ms (compile: 90ms, render: 221ms)
+ GET /gallery/ 200 in 224ms (compile: 93ms, render: 132ms)
+ GET /gallery/ 200 in 61ms (compile: 6ms, render: 56ms)
+ GET / 200 in 239ms (compile: 92ms, render: 148ms)
+ GET /gallery/ 200 in 262ms (compile: 112ms, render: 150ms)
+ GET /gallery/ 200 in 69ms (compile: 5ms, render: 64ms)
+ GET /gallery/ 200 in 214ms (compile: 78ms, render: 136ms)
+ GET /gallery/ 200 in 59ms (compile: 5ms, render: 54ms)
+ GET / 200 in 356ms (compile: 94ms, render: 262ms)
+ GET / 200 in 138ms (compile: 6ms, render: 133ms)
+ GET / 200 in 104ms (compile: 5ms, render: 99ms)
+ ✓ Compiled in 111ms
+ ✓ Compiled in 128ms
+ GET /gallery/ 200 in 186ms (compile: 138ms, render: 48ms)
+ GET /gallery/ 200 in 206ms (compile: 5ms, render: 201ms)
+ GET /gallery/ 200 in 108ms (compile: 4ms, render: 104ms)
+ GET / 200 in 37ms (compile: 5ms, render: 32ms)
+ ✓ Compiled in 104ms
+ ✓ Compiled in 55ms
+ GET / 200 in 237ms (compile: 65ms, render: 172ms)
+ GET / 200 in 101ms (compile: 4ms, render: 96ms)
+ ✓ Compiled in 51ms
+ ✓ Compiled in 69ms
+ GET / 200 in 326ms (compile: 96ms, render: 230ms)
+ GET /gallery/ 200 in 273ms (compile: 94ms, render: 179ms)
+ GET /studs/ 200 in 855ms (compile: 380ms, render: 475ms)
+ GET /about/ 200 in 738ms (compile: 395ms, render: 343ms)
+ GET /about/ 200 in 159ms (compile: 5ms, render: 153ms)
+ GET /locations/ 200 in 373ms (compile: 305ms, render: 68ms)
+ GET / 200 in 116ms (compile: 4ms, render: 111ms)
+ GET /about/ 200 in 126ms (compile: 4ms, render: 121ms)
+ GET /studs/ 200 in 174ms (compile: 4ms, render: 170ms)
+ GET /studs/king-simba/ 200 in 852ms (compile: 296ms, render: 556ms)
+ GET /puppies/ 200 in 820ms (compile: 336ms, render: 484ms)
+ GET /gallery/ 200 in 78ms (compile: 4ms, render: 74ms)
+ GET /locations/ 200 in 215ms (compile: 3ms, render: 211ms)
+ GET /contact/ 200 in 455ms (compile: 274ms, render: 181ms)
+ GET /faq/ 200 in 336ms (compile: 242ms, render: 95ms)
+ GET /health-guarantee/ 200 in 370ms (compile: 264ms, render: 107ms)
+ GET /breeding-policies/ 200 in 344ms (compile: 229ms, render: 115ms)
+ GET /shipping/ 200 in 391ms (compile: 249ms, render: 142ms)
+ GET /privacy/ 200 in 348ms (compile: 260ms, render: 89ms)
+ GET /terms/ 200 in 383ms (compile: 279ms, render: 103ms)
+ GET / 200 in 152ms (compile: 5ms, render: 147ms)
+ GET /about/ 200 in 160ms (compile: 6ms, render: 155ms)
+ GET /studs/ 200 in 165ms (compile: 4ms, render: 162ms)
+ GET /studs/king-simba/ 200 in 183ms (compile: 5ms, render: 178ms)
+ GET /puppies/ 200 in 151ms (compile: 4ms, render: 147ms)
+ GET /gallery/ 200 in 85ms (compile: 6ms, render: 78ms)
+ GET /locations/ 200 in 151ms (compile: 4ms, render: 146ms)
+ GET /contact/ 200 in 89ms (compile: 4ms, render: 84ms)
+ GET /faq/ 200 in 67ms (compile: 4ms, render: 63ms)
+ GET /health-guarantee/ 200 in 90ms (compile: 4ms, render: 86ms)
+ GET /breeding-policies/ 200 in 77ms (compile: 5ms, render: 72ms)
+ GET /shipping/ 200 in 133ms (compile: 4ms, render: 129ms)
+ GET /privacy/ 200 in 78ms (compile: 4ms, render: 74ms)
+ GET /terms/ 200 in 83ms (compile: 5ms, render: 78ms)
+ ✓ Compiled in 75ms
+ GET /locations/ 200 in 113ms (compile: 4ms, render: 109ms)
+ GET /locations/ 200 in 60ms (compile: 4ms, render: 56ms)
+ GET /locations/ 200 in 160ms (compile: 5ms, render: 155ms)
+ GET /locations/ 200 in 148ms (compile: 5ms, render: 143ms)
+ GET /locations/ 200 in 132ms (compile: 5ms, render: 127ms)
+ GET /locations/ 200 in 76ms (compile: 5ms, render: 70ms)
+ GET /locations/ 200 in 176ms (compile: 96ms, render: 80ms)
+ GET / 200 in 152ms (compile: 4ms, render: 148ms)
+ GET /about/ 200 in 103ms (compile: 5ms, render: 98ms)
+ GET /studs/ 200 in 152ms (compile: 4ms, render: 148ms)
+ GET /studs/king-simba/ 200 in 193ms (compile: 4ms, render: 188ms)
+ GET /puppies/ 200 in 132ms (compile: 4ms, render: 129ms)
+ GET /gallery/ 200 in 78ms (compile: 4ms, render: 74ms)
+ GET /locations/ 200 in 248ms (compile: 4ms, render: 244ms)
+ GET /contact/ 200 in 105ms (compile: 4ms, render: 102ms)
+ GET /faq/ 200 in 286ms (compile: 89ms, render: 198ms)
+ GET /health-guarantee/ 200 in 305ms (compile: 131ms, render: 174ms)
+ GET /breeding-policies/ 200 in 411ms (compile: 142ms, render: 269ms)
+ GET /shipping/ 200 in 322ms (compile: 116ms, render: 207ms)
+ GET /privacy/ 200 in 335ms (compile: 105ms, render: 230ms)
+ GET /terms/ 200 in 283ms (compile: 79ms, render: 204ms)
+ ✓ Compiled in 63ms
+ GET / 200 in 328ms (compile: 105ms, render: 222ms)
+ GET /about/ 200 in 102ms (compile: 4ms, render: 97ms)
+ GET /studs/ 200 in 220ms (compile: 5ms, render: 214ms)
+ GET /studs/king-simba/ 200 in 135ms (compile: 4ms, render: 131ms)
+ GET /puppies/ 200 in 159ms (compile: 4ms, render: 155ms)
+ GET /gallery/ 200 in 72ms (compile: 4ms, render: 68ms)
+ GET /locations/ 200 in 160ms (compile: 3ms, render: 157ms)
+ GET /contact/ 200 in 140ms (compile: 3ms, render: 137ms)
+ GET /faq/ 200 in 65ms (compile: 3ms, render: 62ms)
+ GET /health-guarantee/ 200 in 56ms (compile: 3ms, render: 53ms)
+ GET /breeding-policies/ 200 in 70ms (compile: 4ms, render: 66ms)
+ GET /shipping/ 200 in 66ms (compile: 4ms, render: 63ms)
+ GET /privacy/ 200 in 63ms (compile: 4ms, render: 59ms)
+ GET /terms/ 200 in 71ms (compile: 4ms, render: 67ms)
+ GET / 200 in 125ms (compile: 4ms, render: 120ms)
+ GET /about/ 200 in 150ms (compile: 4ms, render: 146ms)
+ GET /studs/ 200 in 143ms (compile: 4ms, render: 140ms)
+ GET /studs/king-simba/ 200 in 138ms (compile: 4ms, render: 134ms)
+ GET /puppies/ 200 in 149ms (compile: 4ms, render: 145ms)
+ GET /gallery/ 200 in 69ms (compile: 4ms, render: 65ms)
+ GET /locations/ 200 in 126ms (compile: 4ms, render: 123ms)
+ GET /contact/ 200 in 83ms (compile: 4ms, render: 79ms)
+ GET /faq/ 200 in 66ms (compile: 4ms, render: 62ms)
+ GET /health-guarantee/ 200 in 61ms (compile: 4ms, render: 56ms)
+ GET /breeding-policies/ 200 in 64ms (compile: 3ms, render: 60ms)
+ GET /shipping/ 200 in 80ms (compile: 4ms, render: 76ms)
+ GET /privacy/ 200 in 64ms (compile: 4ms, render: 60ms)
+ GET /terms/ 200 in 61ms (compile: 3ms, render: 58ms)
+ GET /faq/ 200 in 99ms (compile: 5ms, render: 94ms)
+ GET /health-guarantee/ 200 in 87ms (compile: 4ms, render: 83ms)
+ GET /terms/ 200 in 76ms (compile: 4ms, render: 72ms)
+ ✓ Compiled in 86ms
+ GET /locations/ 200 in 109ms (compile: 4ms, render: 105ms)
+ GET /locations/ 200 in 110ms (compile: 4ms, render: 106ms)
+ GET /locations/ 200 in 120ms (compile: 4ms, render: 115ms)
+ GET /locations/ 200 in 123ms (compile: 5ms, render: 119ms)
+ GET /locations/ 200 in 73ms (compile: 4ms, render: 69ms)
+ GET /locations/ 200 in 72ms (compile: 4ms, render: 68ms)
+ GET / 200 in 136ms (compile: 5ms, render: 131ms)
+ GET /about/ 200 in 120ms (compile: 3ms, render: 117ms)
+ GET /studs/ 200 in 142ms (compile: 4ms, render: 138ms)
+ GET /puppies/ 200 in 188ms (compile: 3ms, render: 184ms)
+ GET /gallery/ 200 in 75ms (compile: 4ms, render: 71ms)
+ GET /locations/ 200 in 171ms (compile: 4ms, render: 167ms)
+ GET /contact/ 200 in 93ms (compile: 4ms, render: 90ms)
+ GET /faq/ 200 in 212ms (compile: 68ms, render: 144ms)
+ GET /health-guarantee/ 200 in 178ms (compile: 69ms, render: 108ms)
+ GET /breeding-policies/ 200 in 201ms (compile: 79ms, render: 122ms)
+ GET /shipping/ 200 in 252ms (compile: 91ms, render: 162ms)
+ GET /privacy/ 200 in 230ms (compile: 83ms, render: 147ms)
+ GET /terms/ 200 in 239ms (compile: 85ms, render: 153ms)
+ GET /studs/king-simba/ 200 in 160ms (compile: 4ms, render: 157ms)
+ ✓ Compiled in 75ms
+ GET /locations/ 200 in 200ms (compile: 5ms, render: 195ms)
+ GET /locations/ 200 in 186ms (compile: 6ms, render: 180ms)
+ GET /locations/ 200 in 114ms (compile: 6ms, render: 108ms)
+ GET /locations/ 200 in 113ms (compile: 4ms, render: 109ms)
+ GET /locations/ 200 in 131ms (compile: 5ms, render: 126ms)
+ GET /locations/ 200 in 73ms (compile: 4ms, render: 69ms)
+ GET /studs/ 200 in 214ms (compile: 6ms, render: 208ms)
+ GET /gallery/ 200 in 90ms (compile: 4ms, render: 86ms)
+ GET /contact/ 200 in 98ms (compile: 4ms, render: 94ms)
+ GET /faq/ 200 in 215ms (compile: 77ms, render: 137ms)
+ GET /health-guarantee/ 200 in 213ms (compile: 84ms, render: 129ms)
+ GET /terms/ 200 in 233ms (compile: 81ms, render: 153ms)
+ ✓ Compiled in 55ms
+ GET /locations/ 200 in 108ms (compile: 5ms, render: 104ms)
+ GET /locations/ 200 in 116ms (compile: 5ms, render: 111ms)
+ GET /locations/ 200 in 119ms (compile: 5ms, render: 114ms)
+ GET /locations/ 200 in 104ms (compile: 5ms, render: 99ms)
+ GET /locations/ 200 in 98ms (compile: 4ms, render: 94ms)
+ GET /locations/ 200 in 55ms (compile: 4ms, render: 51ms)
+ GET /studs/ 200 in 187ms (compile: 4ms, render: 183ms)
+ GET /gallery/ 200 in 73ms (compile: 4ms, render: 69ms)
+ GET /contact/ 200 in 88ms (compile: 4ms, render: 84ms)
+ GET /faq/ 200 in 204ms (compile: 71ms, render: 133ms)
+ GET /health-guarantee/ 200 in 189ms (compile: 65ms, render: 125ms)
+ GET /breeding-policies/ 200 in 208ms (compile: 73ms, render: 135ms)
+ GET /shipping/ 200 in 191ms (compile: 69ms, render: 122ms)
+ GET /privacy/ 200 in 180ms (compile: 70ms, render: 109ms)
+ GET /terms/ 200 in 238ms (compile: 77ms, render: 160ms)
+ GET /health-guarantee/ 200 in 72ms (compile: 3ms, render: 69ms)
+ GET /locations/ 200 in 174ms (compile: 5ms, render: 169ms)
+ GET /locations/ 200 in 192ms (compile: 5ms, render: 187ms)
+ ✓ Compiled in 110ms
+ GET /locations/ 200 in 188ms (compile: 115ms, render: 73ms)
+ GET /locations/ 200 in 297ms (compile: 5ms, render: 292ms)
+ GET /locations/ 200 in 202ms (compile: 6ms, render: 196ms)
+ GET /locations/ 200 in 127ms (compile: 4ms, render: 122ms)
+ GET /locations/ 200 in 184ms (compile: 106ms, render: 78ms)
+ GET /locations/ 200 in 289ms (compile: 5ms, render: 284ms)
+ GET /locations/ 200 in 159ms (compile: 5ms, render: 154ms)
+ ✓ Compiled in 108ms
+ GET / 200 in 109ms (compile: 80ms, render: 29ms)
+ GET / 200 in 218ms (compile: 4ms, render: 214ms)
+ GET / 200 in 108ms (compile: 4ms, render: 104ms)
+ GET / 200 in 94ms (compile: 5ms, render: 89ms)
+ GET / 200 in 96ms (compile: 5ms, render: 91ms)
+ GET / 200 in 87ms (compile: 4ms, render: 83ms)
+ ✓ Compiled in 120ms
+ GET / 200 in 298ms (compile: 109ms, render: 189ms)
+ GET / 200 in 110ms (compile: 4ms, render: 107ms)
+ ✓ Compiled in 143ms
+ GET / 200 in 707ms (compile: 326ms, render: 381ms)
+ GET / 200 in 87ms (compile: 4ms, render: 83ms)
+ GET / 200 in 137ms (compile: 6ms, render: 131ms)
+ ✓ Compiled in 102ms
+ ✓ Compiled in 205ms
+ GET / 200 in 258ms (compile: 216ms, render: 41ms)
+ ✓ Compiled in 163ms
+ ✓ Compiled in 108ms
+ GET / 200 in 138ms (compile: 95ms, render: 43ms)
+ ✓ Compiled in 237ms
+ GET / 200 in 296ms (compile: 5ms, render: 291ms)
+ ✓ Compiled in 68ms
+ GET / 200 in 223ms (compile: 72ms, render: 151ms)
+ ✓ Compiled in 47ms
+ GET / 200 in 280ms (compile: 92ms, render: 188ms)
+ GET / 200 in 122ms (compile: 85ms, render: 38ms)
