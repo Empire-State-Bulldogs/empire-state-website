@@ -107,6 +107,8 @@ export type ServicePath = {
   name: string
   shortName: string
   summary: string
+  /** One-line "who this is for", shown on the tab card. */
+  bestFor: string
   dueToday: string
   balanceDue: string
   balanceTiming: string
@@ -119,22 +121,24 @@ export const servicePaths: ServicePath[] = [
     id: "shipped",
     name: "Shipped — Breeder Box",
     shortName: "Shipped",
+    /** Kept to a similar length as the other path so the two tabs read as equals. */
     summary:
-      "We collect with a reproductive veterinarian and overnight a chilled Breeder Box to your repro vet. Best option if you are outside driving distance.",
+      "We collect with a reproductive vet and overnight a chilled Breeder Box to your clinic. Best if you are outside driving distance.",
+    bestFor: "Breeders outside driving distance",
     dueToday: `$${DEPOSIT_AMOUNT} deposit`,
     balanceDue: "Remaining stud fee",
-    balanceTiming: "Paid in full BEFORE the box ships",
+    balanceTiming: "Paid in full before the box ships",
     buyerCovers: [
       "Reproductive vet collection fee",
       "Overnight shipping both directions",
-      "Your own vet's insemination and progesterone costs",
+      "Your vet's insemination and progesterone",
     ],
     steps: [
       "Send the deposit to reserve your slot in the book.",
       "Return the signed contract with your dam's health testing and DNA panel.",
-      "Your repro vet runs progesterone and tells us the collection day.",
-      "Pay the remaining balance in full — the box does not ship before it clears.",
-      "We collect and overnight the chilled Breeder Box to your vet's clinic.",
+      "Your repro vet runs progesterone and sets the collection day.",
+      "Pay the remaining balance — the box does not ship before it clears.",
+      "We collect and overnight the chilled Breeder Box to your clinic.",
       "Your vet inseminates on the timed window and confirms receipt.",
     ],
   },
@@ -144,20 +148,21 @@ export const servicePaths: ServicePath[] = [
     shortName: "Live Cover",
     summary:
       "You travel to us in Albany, NY with your dam for a natural, supervised breeding across the timed window.",
+    bestFor: "Breeders within driving distance of Albany",
     dueToday: `$${DEPOSIT_AMOUNT} deposit`,
     balanceDue: "Remaining stud fee",
-    balanceTiming: "Paid in full BEFORE breeding takes place",
+    balanceTiming: "Paid in full before breeding takes place",
     buyerCovers: [
       "Your travel and accommodation",
-      "Your own vet's progesterone testing",
-      "Any boarding if you leave the dam with us",
+      "Your vet's progesterone testing",
+      "Boarding if you leave the dam with us",
     ],
     steps: [
       "Send the deposit to reserve your slot in the book.",
       "Return the signed contract with your dam's health testing and DNA panel.",
-      "Your repro vet runs progesterone and we set the breeding dates together.",
-      "Pay the remaining balance in full — breeding does not happen before it clears.",
-      "Travel to Albany, NY for the scheduled window.",
+      "Your repro vet runs progesterone and we set the dates together.",
+      "Pay the remaining balance — breeding does not happen before it clears.",
+      "Travel to Albany, NY for the scheduled breeding window.",
       "Supervised live cover, typically across two ties.",
     ],
   },

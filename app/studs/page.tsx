@@ -4,8 +4,8 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
 import Image from "next/image"
-import { Crown, Star, MapPin, Phone, ArrowRight, Shield, Award, Heart, Check, DollarSign, Dna, Eye, Truck, Package, ChevronRight } from "lucide-react"
-import { DepositPayment } from "@/components/deposit-payment"
+import { Crown, Star, MapPin, Phone, ArrowRight, Shield, Award, Heart, Check, Dna, Eye, ChevronRight } from "lucide-react"
+import { ServiceSelector } from "@/components/service-selector"
 import { stud, servicePaths, DEPOSIT_AMOUNT, studFaq } from "@/lib/stud-data"
 import type { Metadata } from "next"
 
@@ -312,7 +312,7 @@ export default function StudsPage() {
         </div>
       </section>
 
-      {/* PAYPAL DEPOSIT */}
+      {/* BOOKING & DEPOSIT */}
       <section id="deposit" className="py-16 bg-card border-t border-border">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -323,36 +323,8 @@ export default function StudsPage() {
               availability, then send the deposit to lock in your slot.
             </p>
           </div>
-          <div className="grid lg:grid-cols-2 gap-5 max-w-5xl mx-auto items-start">
-            {servicePaths.map((path) => (
-              <div key={path.id} className="bg-background rounded-2xl border border-border overflow-hidden hover:border-primary/40 transition-colors">
-                <div className="bg-gradient-to-r from-primary/20 to-accent/10 p-5 border-b border-border">
-                  <div className="flex items-center gap-3 mb-2">
-                    <div className="w-10 h-10 bg-background/60 rounded-xl flex items-center justify-center shrink-0">
-                      {path.id === "shipped" ? <Truck className="w-5 h-5 text-primary" /> : <MapPin className="w-5 h-5 text-primary" />}
-                    </div>
-                    <h3 className="text-xl font-black text-foreground leading-tight">{path.name}</h3>
-                  </div>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{path.summary}</p>
-                </div>
-                <div className="p-5">
-                  <div className="grid grid-cols-2 gap-3 mb-5">
-                    <div className="bg-primary/10 border border-primary/25 rounded-xl p-3.5">
-                      <p className="text-[10px] font-black uppercase tracking-widest text-primary mb-1">Due Today</p>
-                      <p className="text-xl font-black text-foreground leading-tight">${DEPOSIT_AMOUNT}</p>
-                      <p className="text-[11px] text-muted-foreground mt-0.5">non-refundable</p>
-                    </div>
-                    <div className="bg-card border border-border rounded-xl p-3.5">
-                      <p className="text-[10px] font-black uppercase tracking-widest text-muted-foreground mb-1">Balance Due</p>
-                      <p className="text-sm font-black text-foreground leading-tight">{path.balanceDue}</p>
-                      <p className="text-[11px] text-muted-foreground mt-0.5">{path.balanceTiming}</p>
-                    </div>
-                  </div>
-                  <DepositPayment serviceName={path.shortName} />
-                </div>
-              </div>
-            ))}
-          </div>
+          <ServiceSelector />
+
           <p className="text-center text-xs text-muted-foreground mt-6 max-w-2xl mx-auto leading-relaxed">
             Deposits are non-refundable booking fees for a scheduled service appointment and are credited toward your
             stud fee. Full stud service agreement provided upon booking.{" "}

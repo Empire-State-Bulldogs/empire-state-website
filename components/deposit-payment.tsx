@@ -50,21 +50,21 @@ export function DepositPayment({ serviceName }: DepositPaymentProps) {
         Reserves your slot in King Simba&apos;s book.
       </p>
 
-      <div className="grid sm:grid-cols-2 gap-3 mb-4">
+      <div className="grid sm:grid-cols-2 gap-3 mb-4 items-stretch">
         {/* ── Cash App ── */}
-        <div className="rounded-xl border border-border bg-background p-3">
+        <div className="rounded-xl border border-border bg-background p-4 flex flex-col">
           <Button
             asChild
-            className="w-full bg-[#00D64F] hover:bg-[#00D64F]/90 !text-black font-black rounded-lg py-5 border-0 mb-2"
+            className="w-full h-auto min-h-14 bg-[#00D64F] hover:bg-[#00D64F]/90 !text-black font-black rounded-xl px-5 py-4 border-0 mb-2.5 text-sm sm:text-base whitespace-normal"
           >
             <Link
               href={CASHAPP_CONFIGURED ? cashAppUrl : "/contact/"}
               {...(CASHAPP_CONFIGURED ? { target: "_blank", rel: "noopener noreferrer" } : {})}
               className="flex items-center justify-center gap-2"
             >
-              <span className="text-lg font-black">$</span>
-              {CASHAPP_CONFIGURED ? "Cash App" : "Request Cash App"}
-              <ArrowRight className="w-4 h-4" />
+              <span className="text-lg font-black shrink-0">$</span>
+              <span className="leading-tight">{CASHAPP_CONFIGURED ? "Cash App" : "Request Cash App"}</span>
+              <ArrowRight className="w-4 h-4 shrink-0" />
             </Link>
           </Button>
           {CASHAPP_CONFIGURED ? (
@@ -85,18 +85,18 @@ export function DepositPayment({ serviceName }: DepositPaymentProps) {
         </div>
 
         {/* ── Venmo ── */}
-        <div className="rounded-xl border border-border bg-background p-3">
+        <div className="rounded-xl border border-border bg-background p-4 flex flex-col">
           <Button
             asChild
-            className="w-full bg-[#008CFF] hover:bg-[#008CFF]/90 !text-white font-black rounded-lg py-5 border-0 mb-2"
+            className="w-full h-auto min-h-14 bg-[#008CFF] hover:bg-[#008CFF]/90 !text-white font-black rounded-xl px-5 py-4 border-0 mb-2.5 text-sm sm:text-base whitespace-normal"
           >
             <Link
               href={VENMO_CONFIGURED ? venmoUrl : "/contact/"}
               {...(VENMO_CONFIGURED ? { target: "_blank", rel: "noopener noreferrer" } : {})}
               className="flex items-center justify-center gap-2"
             >
-              {VENMO_CONFIGURED ? "Venmo" : "Request Venmo"}
-              <ArrowRight className="w-4 h-4" />
+              <span className="leading-tight">{VENMO_CONFIGURED ? "Venmo" : "Request Venmo"}</span>
+              <ArrowRight className="w-4 h-4 shrink-0" />
             </Link>
           </Button>
           {VENMO_CONFIGURED ? (

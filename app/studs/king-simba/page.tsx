@@ -3,11 +3,11 @@ import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { StudGallery } from "@/components/stud-gallery"
-import { DepositPayment } from "@/components/deposit-payment"
+import { ServiceSelector } from "@/components/service-selector"
 import Link from "next/link"
 import {
-  Crown, Phone, ArrowRight, Dna, ShieldCheck, Package, Truck,
-  MapPin, Check, AlertTriangle, ChevronRight, Clock,
+  Crown, Phone, ArrowRight, Dna, ShieldCheck, Package,
+  Check, AlertTriangle, ChevronRight, Clock,
 } from "lucide-react"
 import type { Metadata } from "next"
 import {
@@ -272,63 +272,7 @@ export default function KingSimbaPage() {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-5 max-w-6xl mx-auto items-start">
-            {servicePaths.map((path) => (
-              <div key={path.id} id={path.id} className="bg-card rounded-2xl border border-border overflow-hidden scroll-mt-20 hover:border-primary/40 transition-colors">
-                {/* Card header */}
-                <div className="bg-gradient-to-r from-primary/20 to-accent/10 p-5 sm:p-6 border-b border-border">
-                  <div className="flex items-center gap-3 mb-1">
-                    <div className="w-10 h-10 bg-background/60 rounded-xl flex items-center justify-center shrink-0">
-                      {path.id === "shipped" ? <Truck className="w-5 h-5 text-primary" /> : <MapPin className="w-5 h-5 text-primary" />}
-                    </div>
-                    <h3 className="text-xl sm:text-2xl font-black text-foreground leading-tight">{path.name}</h3>
-                  </div>
-                  <p className="text-sm text-muted-foreground leading-relaxed mt-3">{path.summary}</p>
-                </div>
-
-                <div className="p-5 sm:p-6">
-                  {/* Due today / balance split */}
-                  <div className="grid grid-cols-2 gap-3 mb-6">
-                    <div className="bg-primary/10 border border-primary/25 rounded-xl p-3.5">
-                      <p className="text-[10px] font-black uppercase tracking-widest text-primary mb-1">Due Today</p>
-                      <p className="text-xl sm:text-2xl font-black text-foreground leading-tight">${DEPOSIT_AMOUNT}</p>
-                      <p className="text-[11px] text-muted-foreground mt-0.5">non-refundable</p>
-                    </div>
-                    <div className="bg-background border border-border rounded-xl p-3.5">
-                      <p className="text-[10px] font-black uppercase tracking-widest text-muted-foreground mb-1">Balance Due</p>
-                      <p className="text-sm font-black text-foreground leading-tight">{path.balanceDue}</p>
-                      <p className="text-[11px] text-muted-foreground mt-0.5">{path.balanceTiming}</p>
-                    </div>
-                  </div>
-
-                  {/* Steps */}
-                  <p className="text-xs font-black text-primary uppercase tracking-widest mb-3">How It Goes</p>
-                  <ol className="space-y-2.5 mb-6">
-                    {path.steps.map((step, i) => (
-                      <li key={step} className="flex gap-3 items-start">
-                        <span className="w-6 h-6 rounded-lg bg-primary/10 text-primary text-xs font-black flex items-center justify-center shrink-0 mt-0.5">
-                          {i + 1}
-                        </span>
-                        <span className="text-sm text-muted-foreground leading-relaxed">{step}</span>
-                      </li>
-                    ))}
-                  </ol>
-
-                  {/* Buyer covers */}
-                  <p className="text-xs font-black text-primary uppercase tracking-widest mb-3">You Cover</p>
-                  <ul className="space-y-1.5 mb-2">
-                    {path.buyerCovers.map((item) => (
-                      <li key={item} className="flex gap-2 items-start text-sm text-muted-foreground">
-                        <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />{item}
-                      </li>
-                    ))}
-                  </ul>
-
-                  <DepositPayment serviceName={path.shortName} />
-                </div>
-              </div>
-            ))}
-          </div>
+          <ServiceSelector />
         </div>
       </section>
 
