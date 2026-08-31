@@ -5,10 +5,11 @@ import { Instagram } from "lucide-react"
 const footerLinks = {
   explore: [
     { label: "about us", href: "/#about" },
-    { label: "stud services", href: "/#studs" },
-    { label: "available puppies", href: "/#puppies" },
+    { label: "stud services", href: "/studs" },
+    { label: "king simba stud", href: "/studs/king-simba" },
+    { label: "available puppies", href: "/puppies" },
     { label: "nationwide locations", href: "/locations" },
-    { label: "gallery", href: "/#gallery" },
+    { label: "gallery", href: "/gallery" },
   ],
   support: [
     { label: "contact us", href: "/#contact" },

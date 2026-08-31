@@ -6,26 +6,22 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Crown, MapPin, Star, Clock } from "lucide-react"
+import { Crown, MapPin, Star, Clock, ArrowRight } from "lucide-react"
+import { stud } from "@/lib/stud-data"
 
-const simbaPhotos = [
-  "/images/simba1.jpg",
-  "/images/simba2.jpg",
-  "/images/simba3.jpg",
-  "/images/simba4.jpg",
-  "/images/simba5.jpg",
-]
+const simbaPhotos = stud.photos
 
 const studs = [
   {
     name: "King Simba",
-    title: "Flagship Stud",
+    title: `Flagship ${stud.breed} Stud`,
     description:
-      "Our premier stud with exceptional lineage, champion bloodlines, and proven track record. Known for producing healthy, well-tempered puppies with outstanding conformation.",
-    traits: ["Champion Bloodline", "Health Tested", "Proven Sire"],
-    color: "Blue Fawn",
+      "Our premier stud — thick bone, compact structure, and the easy temperament the breed is known for. Available for shipped Breeder Box service or in-person live cover.",
+    traits: ["Health Tested", "Proven Sire", "Shipped Or Live Cover"],
+    color: "Lilac Fawn",
     available: true,
     featured: true,
+    href: "/studs/king-simba",
   },
   {
     name: "Coming Soon",
@@ -79,33 +75,36 @@ export function StudServicesSection() {
             Meet the New York <br className="hidden md:block" /> <span className="text-primary italic">champions</span>
           </h2>
           <p className="text-xl md:text-2xl lg:text-3xl text-muted-foreground max-w-4xl mx-auto text-pretty font-medium leading-[1.4]">
-            Our carefully selected studs represent the finest in French Bulldog breeding. Each male is health tested,
-            AKC registered, and selected for exceptional genetics and temperament.
+            Our carefully selected studs represent the finest in French Bulldog breeding. Each male is health tested and
+            chosen for exceptional structure, genetics, and temperament.
           </p>
         </div>
 
         {/* Studs Grid */}
         <div className="grid grid-cols-1 gap-12 md:gap-16 mb-20 max-w-6xl mx-auto">
-          {studs.map((stud) => (
+          {studs.map((item) => (
             <Card
-              key={stud.name}
-              className={`bg-card border-border overflow-hidden hover:border-primary/50 transition-all duration-300 flex flex-col xl:flex-row ${stud.featured ? "ring-2 ring-primary shadow-2xl shadow-primary/10" : ""} ${stud.comingSoon ? "opacity-75" : ""}`}
+              key={item.name}
+              className={`bg-card border-border overflow-hidden hover:border-primary/50 transition-all duration-300 flex flex-col xl:flex-row ${item.featured ? "ring-2 ring-primary shadow-2xl shadow-primary/10" : ""} ${item.comingSoon ? "opacity-75" : ""}`}
             >
               <div className="relative aspect-square xl:aspect-auto xl:w-[40%] bg-secondary shrink-0 overflow-hidden">
                 <Image
                   src={
-                    stud.featured
-                      ? simbaPhotos[activeSimbaPhoto]
-                      : stud.comingSoon
-                        ? "/images/coming_soon.jpg"
-                        : `/placeholder.svg?height=400&width=400&query=handsome ${stud.color} french bulldog portrait professional photo`
+                    item.featured
+                      ? simbaPhotos[activeSimbaPhoto].src
+                      : "/images/coming_soon.jpg"
                   }
-                  alt={stud.name}
+                  alt={
+                    item.featured
+                      ? simbaPhotos[activeSimbaPhoto].alt
+                      : "Next stud joining the Empire State Bulldogs breeding program — coming soon"
+                  }
                   fill
+                  sizes="(max-width: 1280px) 100vw, 40vw"
                   className="object-contain p-4 transition-all duration-500 rounded-2xl"
-                  priority={stud.featured}
+                  priority={item.featured}
                 />
-                {stud.featured && (
+                {item.featured && (
                   <>
                     <div className="absolute top-4 left-4">
                       <Badge className="bg-primary text-primary-foreground">
@@ -120,13 +119,16 @@ export function StudServicesSection() {
                           key={idx}
                           onMouseEnter={() => setActiveSimbaPhoto(idx)}
                           onClick={() => setActiveSimbaPhoto(idx)}
+                          aria-label={`View photo ${idx + 1} of King Simba`}
+                          aria-current={activeSimbaPhoto === idx}
                           className={`relative w-6 h-6 rounded-full overflow-hidden border-2 transition-all ${activeSimbaPhoto === idx ? "border-primary scale-110" : "border-transparent opacity-70 hover:opacity-100"
                             }`}
                         >
                           <Image
-                            src={photo}
-                            alt={`Simba ${idx + 1}`}
+                            src={photo.src}
+                            alt={photo.alt}
                             fill
+                            sizes="24px"
                             className="object-cover rounded-full"
                           />
                         </button>
@@ -134,7 +136,7 @@ export function StudServicesSection() {
                     </div>
                   </>
                 )}
-                {stud.comingSoon && (
+                {item.comingSoon && (
                   <div className="absolute top-4 right-4">
                     <Badge className="bg-accent text-accent-foreground">
                       <Clock className="w-3 h-3 mr-1" />
@@ -142,7 +144,7 @@ export function StudServicesSection() {
                     </Badge>
                   </div>
                 )}
-                {stud.available && !stud.comingSoon && (
+                {item.available && !item.comingSoon && (
                   <div className="absolute top-4 right-4">
                     <Badge variant="outline" className="bg-background/80 text-primary border-primary">
                       Available
@@ -152,13 +154,13 @@ export function StudServicesSection() {
               </div>
               <CardContent className="p-8 md:p-10 xl:p-12 flex flex-col justify-center flex-1">
                 <div className="flex items-center gap-4 mb-3">
-                  <h3 className="text-4xl lg:text-5xl font-black text-card-foreground tracking-tight capitalize">{stud.name}</h3>
-                  {stud.featured && <Star className="w-6 h-6 md:w-8 md:h-8 text-accent fill-accent" />}
+                  <h3 className="text-4xl lg:text-5xl font-black text-card-foreground tracking-tight capitalize">{item.name}</h3>
+                  {item.featured && <Star className="w-6 h-6 md:w-8 md:h-8 text-accent fill-accent" />}
                 </div>
-                <p className="text-primary text-xl md:text-2xl font-black mb-4 italic capitalize">{stud.title}</p>
-                <p className="text-lg lg:text-xl text-muted-foreground mb-6 leading-relaxed font-medium">{stud.description}</p>
+                <p className="text-primary text-xl md:text-2xl font-black mb-4 italic capitalize">{item.title}</p>
+                <p className="text-lg lg:text-xl text-muted-foreground mb-6 leading-relaxed font-medium">{item.description}</p>
                 <div className="flex flex-wrap gap-3 mb-8">
-                  {stud.traits.map((trait) => (
+                  {item.traits.map((trait) => (
                     <Badge key={trait} variant="secondary" className="text-sm md:text-lg px-4 py-2 font-bold rounded-xl">
                       {trait}
                     </Badge>
@@ -166,8 +168,19 @@ export function StudServicesSection() {
                 </div>
                 <div className="flex items-center gap-4 text-2xl md:text-3xl text-muted-foreground border-t border-border pt-8">
                   <span className="font-black text-foreground">Color:</span>
-                  <span className="font-medium italic">{stud.color}</span>
+                  <span className="font-medium italic">{item.color}</span>
                 </div>
+                {item.href && (
+                  <Button
+                    asChild
+                    size="lg"
+                    className="mt-8 w-full sm:w-auto self-start bg-primary text-white hover:bg-primary/90 px-10 py-6 text-lg md:text-xl font-black rounded-2xl shadow-xl shadow-primary/30"
+                  >
+                    <Link href={item.href} className="flex items-center justify-center gap-2">
+                      View Full Profile &amp; Book <ArrowRight className="w-5 h-5" />
+                    </Link>
+                  </Button>
+                )}
               </CardContent>
             </Card>
           ))}

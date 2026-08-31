@@ -220,8 +220,8 @@ export default function RootLayout({
                     "@type": "Offer",
                     itemOffered: {
                       "@type": "Service",
-                      name: "French Bulldog Puppies for Sale",
-                      description: "Healthy, vaccinated French Bulldog puppies with a 1-year health guarantee against life-threatening congenital and hereditary defects",
+                      name: "French Bulldog Puppy Placement",
+                      description: "Healthy, vaccinated French Bulldog puppies placed with families, backed by a 1-year health guarantee against life-threatening congenital and hereditary defects",
                     },
                   },
                   {

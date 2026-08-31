@@ -14,30 +14,38 @@ export const metadata: Metadata = {
   description: "Browse our gallery of stunning French Bulldog photos. See King Simba, our puppies, and the Empire State Bulldogs lifestyle in Albany, NY.",
 }
 
-// Add a placeholder for Fresh7
-const Fresh7_PATH = "/images/fresh7.jpg"
-
-// Define specific spans for a "hip" asymmetrical look
+/**
+ * Masonry gallery. `label` is the hover caption; `alt` is what screen readers and
+ * image search actually read, so it describes the dog rather than the vibe.
+ */
 const galleryItems = [
-  { src: "/images/simba1.jpg", label: "King Simba", span: "md:col-span-2 md:row-span-2" }, // Large square
-  { src: "/images/puppy1-1.jpg", label: "Puppy Life", span: "col-span-1 row-span-1" },
-  { src: Fresh7_PATH, label: "Fresh Drops", span: "col-span-1 row-span-1" },
-  { src: "/images/simba2.jpg", label: "The Legend", span: "md:col-span-1 md:row-span-2" }, // Tall
-  { src: "/images/puppy2-1.jpg", label: "New Litters", span: "col-span-1 row-span-1" },
-  { src: "/images/fam1.jpg", label: "ESB Family", span: "md:col-span-2 md:row-span-1" }, // Wide
-  { src: "/images/puppy3-1.jpg", label: "Adorable", span: "col-span-1 row-span-1" },
-  { src: "/images/simba3.jpg", label: "King Simba", span: "col-span-1 row-span-1" },
-  { src: "/images/fresh1.jpg", label: "Lifestyle", span: "md:col-span-2 md:row-span-2" }, // Large square
-  { src: "/images/puppy4-1.jpg", label: "Puppy Dreams", span: "col-span-1 row-span-1" },
-  { src: "/images/simba4.jpg", label: "Blue Fawn", span: "col-span-1 row-span-1" },
-  { src: "/images/fresh2.jpg", label: "Vibe", span: "md:col-span-1 md:row-span-2" }, // Tall
-  { src: "/images/puppy5-1.jpg", label: "Playtime", span: "col-span-1 row-span-1" },
-  { src: "/images/fam2.jpg", label: "Tradition", span: "md:col-span-2 md:row-span-1" }, // Wide
-  { src: "/images/simba5.jpg", label: "Champion", span: "col-span-1 row-span-1" },
-  { src: "/images/fresh3.jpg", label: "Albany NY", span: "col-span-1 row-span-1" },
-  { src: "/images/fresh4.jpg", label: "Behind Scenes", span: "md:col-span-2 md:row-span-2" },
-  { src: "/images/fresh5.jpg", label: "Details", span: "col-span-1 row-span-1" },
-  { src: "/images/coming_soon.jpg", label: "Next Drop", span: "md:col-span-1 md:row-span-1" },
+  { src: "/images/fluffy-french-bulldog-puppy-lilac-merle-albany-ny-1.jpg", label: "Lilac Merle", alt: "Lilac merle fluffy French Bulldog puppy with blue eyes, available in Albany NY" },
+  { src: "/images/simba1.jpg", label: "King Simba", alt: "King Simba, lilac French Bulldog stud, sitting on grass in Albany NY" },
+  { src: "/images/fluffy-french-bulldog-puppy-black-tan-albany-ny-1.jpg", label: "Black & Tan Fluffy", alt: "Black and tan fluffy French Bulldog puppy with tan points lying on grass" },
+  { src: "/images/fresh7.jpg", label: "Fresh Drops", alt: "French Bulldog from Empire State Bulldogs in Albany, NY" },
+  { src: "/images/fluffy-french-bulldog-puppy-chocolate-albany-ny-1.jpg", label: "Chocolate Fluffy", alt: "Rich chocolate fluffy French Bulldog puppy with tongue out on grass" },
+  { src: "/images/simba2.jpg", label: "The Legend", alt: "King Simba French Bulldog stud showing head structure and rope" },
+  { src: "/images/fluffy-french-bulldog-puppy-chocolate-tan-albany-ny-1.jpg", label: "Chocolate & Tan", alt: "Chocolate and tan fluffy French Bulldog puppy sitting on hardwood floor" },
+  { src: "/images/fam1.jpg", label: "ESB Family", alt: "The Empire State Bulldogs family with their dogs" },
+  { src: "/images/fluffy-french-bulldog-puppy-lilac-merle-albany-ny-2.jpg", label: "Merle Coat", alt: "Lilac merle fluffy French Bulldog puppy in profile showing merle coat pattern" },
+  { src: "/images/puppy1-1.jpg", label: "Puppy Life", alt: "Lilac tan French Bulldog puppy placed by Empire State Bulldogs" },
+  { src: "/images/simba3.jpg", label: "Show Ready", alt: "King Simba stacked on show turf showing thick bone and compact build" },
+  { src: "/images/fluffy-french-bulldog-puppy-black-tan-albany-ny-2.jpg", label: "Tan Points", alt: "Black and tan long-haired French Bulldog puppy facing the camera" },
+  { src: "/images/fresh1.jpg", label: "Lifestyle", alt: "Empire State Bulldogs French Bulldog in Albany, NY" },
+  { src: "/images/puppy2-1.jpg", label: "New Litters", alt: "Blue fawn French Bulldog puppy from a past Empire State Bulldogs litter" },
+  { src: "/images/fluffy-french-bulldog-puppy-chocolate-tan-albany-ny-2.jpg", label: "Cream Paws", alt: "Chocolate fluffy French Bulldog puppy with light tan points sitting upright" },
+  { src: "/images/simba4.jpg", label: "Lilac Fawn", alt: "King Simba lilac French Bulldog stud profile view" },
+  { src: "/images/puppy3-1.jpg", label: "Adorable", alt: "Chocolate French Bulldog puppy raised in Albany, NY" },
+  { src: "/images/fresh2.jpg", label: "Vibe", alt: "French Bulldog from the Empire State Bulldogs program" },
+  { src: "/images/fluffy-french-bulldog-puppy-lilac-merle-albany-ny-3.jpg", label: "Blue Eyes", alt: "Lilac merle long-haired French Bulldog puppy sitting, Albany NY" },
+  { src: "/images/puppy4-1.jpg", label: "Puppy Dreams", alt: "Cream French Bulldog puppy from Empire State Bulldogs" },
+  { src: "/images/fam2.jpg", label: "Tradition", alt: "Empire State Bulldogs family tradition photo with their bulldogs" },
+  { src: "/images/simba5.jpg", label: "Champion", alt: "King Simba handled at the Liberty State Dog Show" },
+  { src: "/images/puppy5-1.jpg", label: "Playtime", alt: "Brindle French Bulldog puppy placed in a loving home" },
+  { src: "/images/fresh3.jpg", label: "Albany NY", alt: "Empire State Bulldogs Frenchie lifestyle photo in Albany NY" },
+  { src: "/images/fresh4.jpg", label: "Behind Scenes", alt: "French Bulldog raised by Empire State Bulldogs" },
+  { src: "/images/fresh5.jpg", label: "Details", alt: "Empire State Bulldogs French Bulldog portrait" },
+  { src: "/images/coming_soon.jpg", label: "Next Drop", alt: "Next litter of French Bulldog puppies coming soon at Empire State Bulldogs" },
 ]
 
 export default function GalleryPage() {
@@ -85,9 +93,10 @@ export default function GalleryPage() {
                 {/* Standard img tag allows intrinsic aspect ratio mapping perfectly for masonry */}
                 <img
                   src={item.src}
-                  alt={item.label}
+                  alt={item.alt}
                   className="w-full h-auto block transition-transform duration-700 group-hover:scale-110 grayscale-[15%] group-hover:grayscale-0"
                   loading="lazy"
+                  decoding="async"
                 />
                 
                 {/* Overlay */}

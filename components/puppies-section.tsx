@@ -8,14 +8,8 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Check } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { useScrollAnimation } from "@/hooks/use-scroll-animation"
-
-const puppyData = [
-  { id: 1, name: "Puppy 1", photos: ["/images/puppy1-1.jpg"], color: "Lilac Tan" },
-  { id: 2, name: "Puppy 2", photos: ["/images/puppy2-1.jpg"], color: "Blue Fawn" },
-  { id: 3, name: "Puppy 3", photos: ["/images/puppy3-1.jpg", "/images/puppy3-2.jpg"], color: "Chocolate" },
-  { id: 4, name: "Puppy 4", photos: ["/images/puppy4-1.jpg"], color: "Cream" },
-  { id: 5, name: "Puppy 5", photos: ["/images/puppy5-1.jpg"], color: "Brindle" },
-]
+import { PuppyCard } from "@/components/puppy-card"
+import { availablePuppies } from "@/lib/puppy-data"
 
 const includes = [
   "Up-to-date vaccinations",
@@ -30,9 +24,6 @@ const includes = [
 
 export function PuppiesSection() {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.1 })
-  const [activePhotos, setActivePhotos] = useState<Record<number, number>>({
-    1: 0, 2: 0, 3: 0, 4: 0, 5: 0
-  })
 
   const pawEmojis = Array.from({ length: 7 }).map((_, i) => ({
     id: i,
@@ -42,10 +33,6 @@ export function PuppiesSection() {
     duration: 3.5 + Math.random() * 2,
     rotation: Math.random() * 360,
   }))
-
-  const handlePhotoChange = (puppyId: number, photoIdx: number) => {
-    setActivePhotos(prev => ({ ...prev, [puppyId]: photoIdx }))
-  }
 
   return (
     <section ref={ref} id="puppies" className="py-16 md:py-24 bg-card relative overflow-hidden">
@@ -81,38 +68,65 @@ export function PuppiesSection() {
           </p>
         </div>
 
-        {/* Puppies Grid - Coming Soon */}
-        <div className="max-w-6xl mx-auto mb-20">
-          <Card className={`bg-secondary border-border overflow-hidden hover:border-primary/50 transition-all duration-300 group flex flex-col xl:flex-row xl:items-center shadow-2xl shadow-primary/5 ${isVisible ? "scroll-fade-up" : "opacity-0"}`}>
-            <div className="w-full xl:w-[45%] shrink-0 p-6 md:p-8 xl:p-12">
-              <div className="relative aspect-square w-full bg-muted flex items-center justify-center overflow-hidden rounded-[2rem] shadow-2xl shadow-black/20 ring-1 ring-border border-[3px] border-primary/10">
+        {/* Available Now */}
+        <div className={`max-w-7xl mx-auto mb-16 ${isVisible ? "scroll-fade-up" : "opacity-0"}`}>
+          <div className="text-center mb-10">
+            <Badge className="bg-primary text-white px-5 py-2 text-base md:text-lg font-black rounded-xl uppercase tracking-wider mb-4">
+              Available Now
+            </Badge>
+            <h3 className="text-3xl md:text-5xl font-black text-card-foreground tracking-tight leading-tight">
+              Meet Our Fluffy Frenchies
+            </h3>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {availablePuppies.map((puppy) => (
+              <PuppyCard key={puppy.id} puppy={puppy} />
+            ))}
+          </div>
+          <div className="text-center mt-8">
+            <Button
+              asChild
+              size="lg"
+              className="bg-primary text-white hover:bg-primary/90 px-10 py-6 text-lg md:text-xl font-black rounded-2xl shadow-xl shadow-primary/30"
+            >
+              <Link href="/puppies">See All Puppy Details</Link>
+            </Button>
+          </div>
+        </div>
+
+        {/* Next Litter — Coming Soon */}
+        <div className={`max-w-4xl mx-auto mb-20 ${isVisible ? "scroll-fade-up delay-100" : "opacity-0"}`}>
+          <Card className="bg-secondary border-border overflow-hidden hover:border-primary/50 transition-all duration-300 group flex flex-col sm:flex-row sm:items-center">
+            <div className="w-full sm:w-[38%] shrink-0 p-5 sm:p-6">
+              <div className="relative aspect-square w-full bg-muted overflow-hidden rounded-3xl ring-1 ring-border">
                 <Image
                   src="/images/coming_soon.jpg"
-                  alt="New Puppies Coming Soon"
+                  alt="Next litter of French Bulldog puppies coming soon at Empire State Bulldogs"
                   fill
+                  sizes="(max-width: 640px) 100vw, 38vw"
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
                 />
               </div>
             </div>
-            <div className="text-center md:text-left p-8 md:p-10 xl:p-14 flex flex-col justify-center flex-1">
-              <div className="md:inline-block">
-                <Badge variant="secondary" className="bg-primary text-white mb-6 px-4 py-1.5 text-lg md:text-xl font-black rounded-xl italic capitalize">
-                  dropping soon!
+            <div className="text-center sm:text-left p-6 sm:p-8 flex flex-col justify-center flex-1">
+              <div className="sm:inline-block">
+                <Badge variant="secondary" className="bg-accent text-white mb-4 px-4 py-1.5 text-sm md:text-base font-black rounded-xl uppercase tracking-wider">
+                  Dropping Soon
                 </Badge>
               </div>
-              <h3 className="text-4xl md:text-5xl xl:text-6xl font-black text-card-foreground mb-6 tracking-tight leading-tight capitalize">
-                new puppies <br /> coming soon
+              <h3 className="text-2xl md:text-3xl font-black text-card-foreground mb-3 tracking-tight leading-tight">
+                Next Litter On The Way
               </h3>
-              <p className="text-lg md:text-xl xl:text-2xl text-muted-foreground mb-10 leading-relaxed font-medium">
-                We have an incredible new litter in preparation. These purebred Frenchies will be dropping soon—check back to find your perfect match.
+              <p className="text-base md:text-lg text-muted-foreground mb-6 leading-relaxed font-medium">
+                Another litter is in preparation. Join the waitlist and get first pick before they&apos;re listed.
               </p>
               <div>
                 <Button
                   asChild
                   size="lg"
-                  className="w-full md:w-auto bg-primary text-white hover:bg-primary/90 px-12 py-7 text-xl md:text-2xl font-black rounded-[1.5rem] shadow-xl shadow-primary/30 capitalize tracking-tight"
+                  className="w-full sm:w-auto bg-primary text-white hover:bg-primary/90 px-8 py-5 text-base md:text-lg font-black rounded-2xl shadow-xl shadow-primary/30"
                 >
-                  <Link href="#contact">inquire early</Link>
+                  <Link href="#contact">Join The Waitlist</Link>
                 </Button>
               </div>
             </div>

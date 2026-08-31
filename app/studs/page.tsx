@@ -4,8 +4,9 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
 import Image from "next/image"
-import { Crown, Star, MapPin, Phone, ArrowRight, Shield, Award, Heart, Check, DollarSign, Dna, Eye } from "lucide-react"
-import { PayPalDepositButton } from "@/components/paypal-button"
+import { Crown, Star, MapPin, Phone, ArrowRight, Shield, Award, Heart, Check, DollarSign, Dna, Eye, Truck, Package, ChevronRight } from "lucide-react"
+import { DepositPayment } from "@/components/deposit-payment"
+import { stud, servicePaths, DEPOSIT_AMOUNT, studFaq } from "@/lib/stud-data"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -13,16 +14,23 @@ export const metadata: Metadata = {
         canonical: "/studs/",
     },
   title: "French Bulldog Stud Services",
-  description: "Book a stud service with King Simba. Health tested, AKC registered, champion bloodline French Bulldog stud. Serving NY, CT, MA, and nationwide.",
+  description: `Book stud service with King Simba, our flagship French Bulldog stud in Albany, NY. Shipped Breeder Box or live cover, $${DEPOSIT_AMOUNT} booking deposit. Serving NY, CT, MA, and nationwide.`,
+  openGraph: {
+    title: "French Bulldog Stud Services | Empire State Bulldogs",
+    description: `Book King Simba — flagship French Bulldog stud in Albany, NY. Shipped or live cover, $${DEPOSIT_AMOUNT} booking deposit.`,
+    url: "https://www.empirestatebulldogs.com/studs/",
+    type: "website",
+    images: [{ url: "/images/simba1.jpg", width: 1200, height: 1200, alt: "King Simba, French Bulldog stud at Empire State Bulldogs in Albany NY" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "French Bulldog Stud Services | Empire State Bulldogs",
+    description: `Book King Simba — flagship French Bulldog stud. Shipped or live cover, $${DEPOSIT_AMOUNT} deposit.`,
+    images: ["/images/simba1.jpg"],
+  },
 }
 
-const simbaPhotos = [
-  "/images/simba1.jpg",
-  "/images/simba2.jpg",
-  "/images/simba3.jpg",
-  "/images/simba4.jpg",
-  "/images/simba5.jpg",
-]
+const simbaPhotos = stud.photos
 
 const traits = [
   { icon: Dna, label: "Genetics Tested", detail: "Full genetic panel performed — clear on all tested diseases" },
@@ -50,8 +58,55 @@ const steps = [
 ]
 
 export default function StudsPage() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: studFaq.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  }
+
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: `${stud.breed} Stud Services`,
+    serviceType: "Dog stud service",
+    description: `Bulldog stud services featuring ${stud.name} at Empire State Bulldogs in ${stud.location}. Shipped Breeder Box or in-person live cover.`,
+    image: `https://www.empirestatebulldogs.com${stud.photos[0].src}`,
+    provider: {
+      "@type": "LocalBusiness",
+      "@id": "https://www.empirestatebulldogs.com/#business",
+      name: "Empire State Bulldogs",
+      telephone: "+1-518-917-3429",
+    },
+    areaServed: { "@type": "Country", name: "United States" },
+    offers: servicePaths.map((p) => ({
+      "@type": "Offer",
+      name: p.name,
+      description: p.summary,
+      price: DEPOSIT_AMOUNT,
+      priceCurrency: "USD",
+      availability: "https://schema.org/LimitedAvailability",
+      url: "https://www.empirestatebulldogs.com/studs/king-simba/",
+    })),
+  }
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.empirestatebulldogs.com/" },
+      { "@type": "ListItem", position: 2, name: "Stud Services", item: "https://www.empirestatebulldogs.com/studs/" },
+    ],
+  }
+
   return (
     <main className="min-h-screen">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <Header />
 
       {/* HERO */}
@@ -59,6 +114,15 @@ export default function StudsPage() {
         <div className="absolute inset-0 bg-gradient-to-b from-primary/8 via-transparent to-transparent pointer-events-none" />
         <div className="absolute inset-0 opacity-5 pointer-events-none" style={{backgroundImage: 'radial-gradient(circle at 20% 50%, hsl(var(--primary)) 0%, transparent 50%), radial-gradient(circle at 80% 20%, hsl(var(--accent)) 0%, transparent 50%)'}} />
         <div className="container mx-auto px-4 text-center relative z-10">
+          {/* Breadcrumbs */}
+          <nav aria-label="Breadcrumb" className="mb-6 flex justify-center">
+            <ol className="flex items-center gap-1.5 text-xs sm:text-sm text-muted-foreground">
+              <li><Link href="/" className="hover:text-primary transition-colors">Home</Link></li>
+              <li aria-hidden="true"><ChevronRight className="w-3.5 h-3.5" /></li>
+              <li><span className="text-foreground font-bold" aria-current="page">Stud Services</span></li>
+            </ol>
+          </nav>
+
           <Badge className="bg-primary/20 text-primary border-primary/30 mb-6 text-sm px-4 py-1.5 inline-flex items-center gap-2">
             <Crown className="w-3.5 h-3.5" />
             Champion Stud Services — Albany, NY
@@ -102,11 +166,11 @@ export default function StudsPage() {
               <div className="absolute -inset-4 bg-primary/20 rounded-3xl blur-2xl opacity-40" />
               <div className="relative grid grid-cols-3 grid-rows-2 gap-2 h-80 sm:h-96 md:h-[480px]">
                 <div className="col-span-2 row-span-2 relative rounded-2xl overflow-hidden">
-                  <Image src={simbaPhotos[0]} alt="King Simba" fill className="object-cover" priority />
+                  <Image src={simbaPhotos[0].src} alt={simbaPhotos[0].alt} fill sizes="(max-width: 1024px) 66vw, 33vw" className="object-cover" priority />
                 </div>
-                {simbaPhotos.slice(1, 5).map((photo, i) => (
-                  <div key={i} className="relative rounded-xl overflow-hidden">
-                    <Image src={photo} alt={`King Simba ${i + 2}`} fill className="object-cover" />
+                {simbaPhotos.slice(1, 5).map((photo) => (
+                  <div key={photo.src} className="relative rounded-xl overflow-hidden">
+                    <Image src={photo.src} alt={photo.alt} fill sizes="(max-width: 1024px) 33vw, 17vw" className="object-cover" />
                   </div>
                 ))}
               </div>
@@ -121,10 +185,23 @@ export default function StudsPage() {
                 <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-foreground">King Simba</h2>
                 <Star className="w-7 h-7 text-accent fill-accent shrink-0" />
               </div>
-              <p className="text-primary text-lg font-bold mb-2 uppercase tracking-widest">Flagship Champion — Blue Fawn Fluffy Frenchie</p>
+              <p className="text-primary text-lg font-bold mb-2 uppercase tracking-widest">Flagship Stud — {stud.breed}</p>
               <p className="text-muted-foreground text-lg sm:text-xl mb-6 leading-relaxed">
-                King Simba is a powerhouse of genetics and temperament. His offspring consistently excel in conformation, color expression, and personality — producing the rarest color combinations with perfect health profiles.
+                King Simba is a powerhouse of genetics and temperament — thick bone, compact structure, and the easy
+                disposition the breed is known for. Available for shipped Breeder Box service or in-person live cover.
               </p>
+
+              {/* Deposit callout */}
+              <div className="bg-gradient-to-br from-primary/15 via-card to-accent/10 border border-primary/25 rounded-2xl p-5 mb-6">
+                <div className="flex items-baseline gap-2 flex-wrap mb-1">
+                  <span className="text-3xl sm:text-4xl font-black text-foreground">${DEPOSIT_AMOUNT}</span>
+                  <span className="text-sm text-muted-foreground font-bold">non-refundable booking deposit</span>
+                </div>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Reserves your slot and is credited toward the stud fee. Remaining balance quoted on inquiry and due in
+                  full before service.
+                </p>
+              </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
                 {traits.map((t) => (
@@ -141,15 +218,23 @@ export default function StudsPage() {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-3">
-                <Button asChild size="lg" className="bg-primary text-white hover:bg-primary/90 flex-1 py-5 rounded-xl shadow-xl shadow-primary/30">
+                <Button asChild size="lg" className="bg-primary text-white hover:bg-primary/90 flex-1 py-5 rounded-xl shadow-xl shadow-primary/30 font-black">
+                  <Link href="/studs/king-simba" className="flex items-center justify-center gap-2">
+                    View Full Profile <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </Button>
+                <Button asChild size="lg" variant="outline" className="border-2 border-primary text-primary hover:bg-primary/10 flex-1 py-5 rounded-xl font-black">
                   <a href="tel:5189173429" className="flex items-center justify-center gap-2">
                     <Phone className="w-4 h-4" /> Call to Inquire
                   </a>
                 </Button>
-                <Button asChild size="lg" variant="outline" className="border-2 border-primary text-primary hover:bg-primary/10 flex-1 py-5 rounded-xl">
-                  <a href="mailto:hello@empirestatebulldogs.com">Email Us</a>
-                </Button>
               </div>
+              <p className="text-sm text-muted-foreground mt-3 text-center sm:text-left">
+                Full DNA color panel, health clearances, and booking on{" "}
+                <Link href="/studs/king-simba" className="text-primary underline hover:no-underline font-bold">
+                  King Simba&apos;s profile
+                </Link>.
+              </p>
             </div>
           </div>
         </div>
@@ -233,27 +318,47 @@ export default function StudsPage() {
           <div className="text-center mb-12">
             <span className="text-primary font-bold uppercase tracking-widest text-sm">Secure Your Spot</span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mt-2 text-foreground">Book Your Stud Service</h2>
-            <p className="text-muted-foreground mt-3 max-w-xl mx-auto text-sm sm:text-base">
-              Pay your deposit securely online to lock in your breeding date. Contact us first to confirm availability before submitting a deposit.
+            <p className="text-muted-foreground mt-3 max-w-2xl mx-auto text-sm sm:text-base">
+              Both paths take the same ${DEPOSIT_AMOUNT} non-refundable booking deposit. Contact us first to confirm
+              availability, then send the deposit to lock in your slot.
             </p>
           </div>
-          <div className="grid sm:grid-cols-2 gap-5 max-w-2xl mx-auto">
-            <PayPalDepositButton
-              label="Stud Service Deposit — Natural Tie"
-              description="Secures your breeding appointment with King Simba. Deposit amount discussed upon inquiry. Balance due at time of service."
-              noteMessage="Contact us first at 518-917-3429 to confirm availability before paying."
-              variant="stud"
-            />
-            <PayPalDepositButton
-              label="Stud Service — AI / Chilled Semen"
-              description="For veterinary-assisted AI breeding. Includes coordination, chilled shipment, and full support. Deposit amount provided upon inquiry."
-              noteMessage="Progesterone testing and vet coordination required. Call us first."
-              variant="stud"
-            />
+          <div className="grid lg:grid-cols-2 gap-5 max-w-5xl mx-auto items-start">
+            {servicePaths.map((path) => (
+              <div key={path.id} className="bg-background rounded-2xl border border-border overflow-hidden hover:border-primary/40 transition-colors">
+                <div className="bg-gradient-to-r from-primary/20 to-accent/10 p-5 border-b border-border">
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="w-10 h-10 bg-background/60 rounded-xl flex items-center justify-center shrink-0">
+                      {path.id === "shipped" ? <Truck className="w-5 h-5 text-primary" /> : <MapPin className="w-5 h-5 text-primary" />}
+                    </div>
+                    <h3 className="text-xl font-black text-foreground leading-tight">{path.name}</h3>
+                  </div>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{path.summary}</p>
+                </div>
+                <div className="p-5">
+                  <div className="grid grid-cols-2 gap-3 mb-5">
+                    <div className="bg-primary/10 border border-primary/25 rounded-xl p-3.5">
+                      <p className="text-[10px] font-black uppercase tracking-widest text-primary mb-1">Due Today</p>
+                      <p className="text-xl font-black text-foreground leading-tight">${DEPOSIT_AMOUNT}</p>
+                      <p className="text-[11px] text-muted-foreground mt-0.5">non-refundable</p>
+                    </div>
+                    <div className="bg-card border border-border rounded-xl p-3.5">
+                      <p className="text-[10px] font-black uppercase tracking-widest text-muted-foreground mb-1">Balance Due</p>
+                      <p className="text-sm font-black text-foreground leading-tight">{path.balanceDue}</p>
+                      <p className="text-[11px] text-muted-foreground mt-0.5">{path.balanceTiming}</p>
+                    </div>
+                  </div>
+                  <DepositPayment serviceName={path.shortName} />
+                </div>
+              </div>
+            ))}
           </div>
-          <p className="text-center text-xs text-muted-foreground mt-5">
-            All deposits are non-refundable but transferable within 12 months. Full stud service agreement provided upon booking.{" "}
-            <Link href="/terms/#deposits" className="underline hover:text-primary">Read the full deposit terms</Link>.
+          <p className="text-center text-xs text-muted-foreground mt-6 max-w-2xl mx-auto leading-relaxed">
+            Deposits are non-refundable booking fees for a scheduled service appointment and are credited toward your
+            stud fee. Full stud service agreement provided upon booking.{" "}
+            <Link href="/terms/#deposits" className="underline hover:text-primary">Read the full deposit terms</Link>{" "}
+            or see{" "}
+            <Link href="/studs/king-simba" className="underline hover:text-primary">King Simba&apos;s full profile</Link>.
           </p>
         </div>
       </section>
@@ -267,7 +372,7 @@ export default function StudsPage() {
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
             {[
-              { name: "Sarah M.", location: "Queens, NY", text: "King Simba produced the most stunning lilac tri puppies I've ever seen. Every single one sold before 6 weeks. Will 100% breed back!", stars: 5 },
+              { name: "Sarah M.", location: "Queens, NY", text: "King Simba produced the most stunning lilac tri puppies I've ever seen. Every single one was spoken for before 6 weeks. Will 100% breed back!", stars: 5 },
               { name: "Derek T.", location: "Hartford, CT", text: "Professional, knowledgeable, and the genetic quality is undeniable. My female took on first tie. Highly recommend to any serious breeder.", stars: 5 },
               { name: "Melissa R.", location: "Boston, MA", text: "They drove out to us, were on time, and the follow-up support was incredible. Got a beautiful litter of blue fawns.", stars: 5 },
             ].map((t) => (
@@ -280,6 +385,24 @@ export default function StudsPage() {
                   <p className="font-bold text-foreground">{t.name}</p>
                   <p className="text-xs text-muted-foreground">{t.location}</p>
                 </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-16 bg-card border-t border-border">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <span className="text-primary font-bold uppercase tracking-widest text-sm">Before You Book</span>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mt-2 text-foreground">Stud Service FAQ</h2>
+          </div>
+          <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-4">
+            {studFaq.map((f) => (
+              <div key={f.q} className="p-5 sm:p-6 bg-background rounded-2xl border border-border hover:border-primary/30 transition-colors">
+                <h3 className="font-bold text-foreground text-base sm:text-lg mb-2 leading-snug">{f.q}</h3>
+                <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">{f.a}</p>
               </div>
             ))}
           </div>

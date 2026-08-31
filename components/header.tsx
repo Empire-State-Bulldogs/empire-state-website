@@ -25,6 +25,7 @@ const navLinks = [
 ]
 
 const extraLinks = [
+  { href: "/studs/king-simba", label: "King Simba", icon: Crown },
   { href: "/health-guarantee", label: "Health Guarantee", icon: Shield },
   { href: "/breeding-policies", label: "Breeding Policies", icon: BookOpen },
   { href: "/faq", label: "FAQ", icon: HelpCircle },
@@ -219,7 +220,7 @@ export function Header() {
             {/* More links */}
             <div className="border-t border-border pt-8 mb-10">
               <p className="text-sm font-black text-muted-foreground mb-6 px-4 capitalize tracking-tight">more info</p>
-              <div className="grid grid-cols-3 gap-3">
+              <div className="grid grid-cols-2 gap-3">
                 {extraLinks.map((link) => (
                   <Link
                     key={link.href}

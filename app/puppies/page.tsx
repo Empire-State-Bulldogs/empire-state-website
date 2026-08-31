@@ -6,14 +6,23 @@ import Link from "next/link"
 import Image from "next/image"
 import { Heart, Phone, Star, ArrowRight, Shield, Check, Clock, DollarSign, Truck, Users } from "lucide-react"
 import { PayPalDepositButton } from "@/components/paypal-button"
+import { PuppyCard } from "@/components/puppy-card"
+import { availablePuppies } from "@/lib/puppy-data"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
     alternates: {
         canonical: "/puppies/",
     },
-  title: "French Bulldog Puppies For Sale",
-  description: "Fluffy French Bulldog puppies from champion bloodlines. Health tested, vaccinated, AKC registered. Albany, NY — nationwide shipping available.",
+  title: "Available Fluffy French Bulldog Puppies",
+  description: "Meet our available fluffy French Bulldog puppies in Albany, NY — lilac merle, chocolate, and black & tan long coats. Health tested, vaccinated, 1-year guarantee, nationwide delivery.",
+  openGraph: {
+    title: "Available Fluffy French Bulldog Puppies | Empire State Bulldogs",
+    description: "Meet our available fluffy Frenchie puppies in Albany, NY — lilac merle, chocolate, and black & tan long coats. Nationwide delivery.",
+    url: "https://www.empirestatebulldogs.com/puppies/",
+    type: "website",
+    images: [{ url: "/images/fluffy-french-bulldog-puppy-lilac-merle-albany-ny-1.jpg", width: 960, height: 1280, alt: "Lilac merle fluffy French Bulldog puppy available at Empire State Bulldogs" }],
+  },
 }
 
 const includes = [
@@ -28,12 +37,12 @@ const includes = [
 ]
 
 const puppyPhotos = [
-  "/images/puppy1-1.jpg",
-  "/images/puppy2-1.jpg",
-  "/images/puppy3-1.jpg",
-  "/images/puppy3-2.jpg",
-  "/images/puppy4-1.jpg",
-  "/images/puppy5-1.jpg",
+  { src: "/images/puppy1-1.jpg", alt: "Lilac tan French Bulldog puppy placed by Empire State Bulldogs" },
+  { src: "/images/puppy2-1.jpg", alt: "Blue fawn French Bulldog puppy from a past Empire State Bulldogs litter" },
+  { src: "/images/puppy3-1.jpg", alt: "Chocolate French Bulldog puppy raised in Albany, NY" },
+  { src: "/images/puppy3-2.jpg", alt: "Chocolate French Bulldog puppy playing indoors" },
+  { src: "/images/puppy4-1.jpg", alt: "Cream French Bulldog puppy from Empire State Bulldogs" },
+  { src: "/images/puppy5-1.jpg", alt: "Brindle French Bulldog puppy placed in a loving home" },
 ]
 
 const guarantees = [
@@ -55,8 +64,49 @@ const faq = [
 ]
 
 export default function PuppiesPage() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faq.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  }
+
+  const listSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Available Fluffy French Bulldog Puppies",
+    itemListElement: availablePuppies.map((p, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      // Described as the animal itself rather than a retail product listing —
+      // keeps rich results without framing the page as an e-commerce sale.
+      item: {
+        "@type": "Thing",
+        name: `${p.name} French Bulldog Puppy`,
+        description: p.blurb,
+        image: `https://www.empirestatebulldogs.com${p.photos[0].src}`,
+        url: "https://www.empirestatebulldogs.com/puppies/#available",
+      },
+    })),
+  }
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.empirestatebulldogs.com/" },
+      { "@type": "ListItem", position: 2, name: "Puppies", item: "https://www.empirestatebulldogs.com/puppies/" },
+    ],
+  }
+
   return (
     <main className="min-h-screen">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(listSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <Header />
 
       {/* HERO */}
@@ -82,13 +132,34 @@ export default function PuppiesPage() {
             </Button>
             <Button asChild size="lg" variant="outline" className="border-2 border-primary text-primary hover:bg-primary/10 px-8 py-6 text-base sm:text-lg rounded-2xl">
               <Link href="#deposit" className="flex items-center gap-2">
-                Reserve Your Spot <ArrowRight className="w-5 h-5" />
+                Join The Waitlist <ArrowRight className="w-5 h-5" />
               </Link>
             </Button>
           </div>
           <div className="flex flex-wrap justify-center gap-6 mt-10 text-sm text-muted-foreground">
             {["AKC Registered", "1-Year Health Guarantee", "Family Raised", "Nationwide Shipping", "Vet Checked"].map((t) => (
               <div key={t} className="flex items-center gap-1.5"><Check className="w-4 h-4 text-primary" />{t}</div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* AVAILABLE NOW */}
+      <section id="available" className="py-16 bg-background border-t border-border scroll-mt-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <Badge className="bg-primary text-white mb-4 px-5 py-2 text-sm font-black uppercase tracking-widest">
+              Available Now
+            </Badge>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-foreground">Puppies Ready to Reserve</h2>
+            <p className="text-muted-foreground mt-3 max-w-2xl mx-auto text-sm sm:text-base">
+              These fluffy Frenchies are with us right now. Reach out to meet them and talk about whether one is the
+              right fit — once a pup is matched with a family, we take the listing down the same day.
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-7xl mx-auto">
+            {availablePuppies.map((puppy) => (
+              <PuppyCard key={puppy.id} puppy={puppy} />
             ))}
           </div>
         </div>
@@ -113,7 +184,8 @@ export default function PuppiesPage() {
                 <span className="text-primary">On the Way</span>
               </h2>
               <p className="text-muted-foreground text-base sm:text-lg mb-6 leading-relaxed">
-                King Simba's next litter is incoming. These puppies are in extremely high demand and selections go fast. Join our priority waitlist now — deposit holders get first pick.
+                King Simba's next litter is on the way. If you'd like to be considered, join the waitlist and we'll
+                reach out with photos when they arrive — waitlist families hear from us first.
               </p>
               <div className="bg-background/60 rounded-2xl p-4 mb-6 border border-border">
                 <p className="text-xs font-bold text-primary uppercase tracking-widest mb-3">Expected Colors This Litter</p>
@@ -140,7 +212,7 @@ export default function PuppiesPage() {
                   </a>
                 </Button>
                 <Button asChild size="lg" variant="outline" className="border-2 border-accent text-accent hover:bg-accent/10 flex-1 py-5 rounded-xl">
-                  <Link href="#deposit">Reserve Online</Link>
+                  <Link href="#deposit">Waitlist Deposit</Link>
                 </Button>
               </div>
             </div>
@@ -157,9 +229,9 @@ export default function PuppiesPage() {
             <p className="text-muted-foreground mt-3 max-w-xl mx-auto text-sm sm:text-base">A look at the beautiful puppies we've placed in loving homes across the US.</p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 max-w-5xl mx-auto">
-            {puppyPhotos.map((src, i) => (
-              <div key={i} className="aspect-square rounded-2xl overflow-hidden group relative">
-                <Image src={src} alt={`Puppy ${i + 1}`} fill className="object-cover group-hover:scale-110 transition-transform duration-700" />
+            {puppyPhotos.map((photo) => (
+              <div key={photo.src} className="aspect-square rounded-2xl overflow-hidden group relative">
+                <Image src={photo.src} alt={photo.alt} fill sizes="(max-width: 768px) 50vw, 33vw" className="object-cover group-hover:scale-110 transition-transform duration-700" />
                 <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity" />
               </div>
             ))}
@@ -200,11 +272,12 @@ export default function PuppiesPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <Badge className="bg-primary/20 text-primary border-primary/30 mb-4 px-4 py-1.5 text-sm inline-flex items-center gap-2">
-              <DollarSign className="w-3.5 h-3.5" /> Secure Reservation
+              <DollarSign className="w-3.5 h-3.5" /> Waitlist Deposit
             </Badge>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-foreground">Reserve Your Puppy</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-foreground">Join The Waitlist</h2>
             <p className="text-muted-foreground mt-4 max-w-xl mx-auto text-sm sm:text-base">
-              Secure your spot on the waitlist with a deposit. Contact us first to confirm litter availability and discuss your preferences before submitting payment.
+              A deposit holds your place on the waitlist. Talk to us first so we can confirm what's coming and make
+              sure it's a good match before anything is paid.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 gap-5 max-w-2xl mx-auto">
@@ -222,7 +295,7 @@ export default function PuppiesPage() {
             />
           </div>
           <p className="text-center text-xs text-muted-foreground mt-5 max-w-lg mx-auto">
-            Deposits are non-refundable but fully transferable to a future litter within 12 months. All sales include our written health guarantee.{" "}
+            Deposits are non-refundable but fully transferable to a future litter within 12 months. Every placement includes our written health guarantee.{" "}
             <Link href="/terms/#deposits" className="underline hover:text-primary">Read the full deposit terms</Link>.
           </p>
         </div>
@@ -254,7 +327,7 @@ export default function PuppiesPage() {
             Ready to Meet Your New Best Friend?
           </h2>
           <p className="text-muted-foreground text-base sm:text-lg mb-8 max-w-xl mx-auto">
-            Don't miss out. Our puppies go to loving homes fast. Get on the list today.
+            Our pups go home with families we've gotten to know. Reach out and let's talk.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-primary text-white hover:bg-primary/90 px-8 py-6 text-base sm:text-lg shadow-xl shadow-primary/30 rounded-2xl">

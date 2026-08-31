@@ -3,33 +3,22 @@
 import Image from "next/image"
 import { BackgroundElements } from "@/components/background-elements"
 
-const freshPhotos = [
-  { src: "/images/fresh1.jpg", alt: "Fresh Frenchie Photo 1" },
-  { src: "/images/fresh2.jpg", alt: "Fresh Frenchie Photo 2" },
-  { src: "/images/fresh3.jpg", alt: "Fresh Frenchie Photo 3" },
-  { src: "/images/fresh4.jpg", alt: "Fresh Frenchie Photo 4" },
-  { src: "/images/fresh5.jpg", alt: "Fresh Frenchie Photo 5" },
-  { src: "/images/fresh7.jpg", alt: "Fresh Frenchie Photo 6" }, // Note: fresh6 is missing in file list
-  { src: "/images/fresh1.jpg", alt: "Fresh Frenchie Photo 7" }, // Duplicate fresh1 to make 7 if user insists on 7 but only 6 unique exist, otherwise I'll just use the 6.
-]
+import { allPuppyPhotos } from "@/lib/puppy-data"
 
-// The user said there are 7 fresh photos, but list_dir only showed: 
-// fresh1, fresh2, fresh3, fresh4, fresh5, fresh7. 
-// I will use them and repeat fresh1 to fill the 7th spot if they really want 7, or just use the 6.
-// Let's use the 6 unique ones and center them.
-
-const uniqueFreshPhotos = [
-  "/images/fresh1.jpg",
-  "/images/fresh2.jpg",
-  "/images/fresh3.jpg",
-  "/images/fresh4.jpg",
-  "/images/fresh5.jpg",
-  "/images/fresh7.jpg",
-  "/images/puppy1-1.jpg",
-  "/images/puppy2-1.jpg",
-  "/images/puppy3-1.jpg",
-  "/images/puppy4-1.jpg",
-  "/images/puppy5-1.jpg",
+const galleryPhotos = [
+  // Newest litter first — these are the puppies currently available.
+  ...allPuppyPhotos,
+  { src: "/images/fresh1.jpg", alt: "Empire State Bulldogs French Bulldog in Albany, NY" },
+  { src: "/images/fresh2.jpg", alt: "French Bulldog from the Empire State Bulldogs program" },
+  { src: "/images/fresh3.jpg", alt: "Empire State Bulldogs Frenchie lifestyle photo" },
+  { src: "/images/fresh4.jpg", alt: "French Bulldog raised by Empire State Bulldogs" },
+  { src: "/images/fresh5.jpg", alt: "Empire State Bulldogs French Bulldog portrait" },
+  { src: "/images/fresh7.jpg", alt: "French Bulldog from Empire State Bulldogs in Albany, NY" },
+  { src: "/images/puppy1-1.jpg", alt: "Lilac tan French Bulldog puppy placed by Empire State Bulldogs" },
+  { src: "/images/puppy2-1.jpg", alt: "Blue fawn French Bulldog puppy from a past litter" },
+  { src: "/images/puppy3-1.jpg", alt: "Chocolate French Bulldog puppy raised in Albany, NY" },
+  { src: "/images/puppy4-1.jpg", alt: "Cream French Bulldog puppy from Empire State Bulldogs" },
+  { src: "/images/puppy5-1.jpg", alt: "Brindle French Bulldog puppy placed in a loving home" },
 ]
 
 export function GallerySection() {
@@ -51,15 +40,16 @@ export function GallerySection() {
 
         {/* Gallery Grid */}
         <div className="flex gap-4 md:gap-6 justify-center flex-wrap max-w-6xl mx-auto">
-          {uniqueFreshPhotos.map((src, index) => (
+          {galleryPhotos.map((photo, index) => (
             <div
-              key={index}
+              key={`${photo.src}-${index}`}
               className="relative rounded-2xl overflow-hidden group flex-shrink-0 w-44 md:w-64 aspect-square bg-muted/20"
             >
               <Image
-                src={src || "/placeholder.svg"}
-                alt={`Empire State Bulldog Gallery Photo ${index + 1}`}
+                src={photo.src}
+                alt={photo.alt}
                 fill
+                sizes="(max-width: 768px) 176px, 256px"
                 className="object-contain p-2 transition-transform duration-500 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
