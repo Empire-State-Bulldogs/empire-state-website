@@ -108,22 +108,27 @@ export default function LocationsPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {/* Five cards over three columns leaves two on the last row, so the
+              grid is centred and the cards are flex columns: the trailing
+              "and surrounding areas" line is pushed to the bottom, giving
+              cards with different city counts a shared baseline instead of
+              a pocket of dead space. */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-6 gap-8 max-w-6xl mx-auto [&>*]:lg:col-span-2 [&>*:nth-child(4)]:lg:col-start-2">
             {localAreas.map((area) => (
-              <div key={area.state} className="bg-card border border-border rounded-2xl p-8 hover:border-primary/50 transition-all shadow-lg hover:shadow-primary/5">
+              <div key={area.state} className="flex flex-col bg-card border border-border rounded-2xl p-8 hover:border-primary/50 transition-all shadow-lg hover:shadow-primary/5">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
                     <MapPin className="w-5 h-5 text-primary" />
                   </div>
                   <h3 className="text-3xl font-black text-foreground capitalize tracking-tight">{area.state}</h3>
                 </div>
-                <ul className="space-y-3">
+                <ul className="space-y-3 flex-1 flex flex-col">
                   {area.cities.map((city) => (
                      <li key={city} className="flex items-center text-lg md:text-xl font-medium text-muted-foreground before:content-[''] before:w-1.5 before:h-1.5 before:rounded-full before:bg-primary before:mr-3">
                        {city}
                      </li>
                   ))}
-                  <li className="text-primary font-bold italic pt-2 capitalize">and surrounding areas</li>
+                  <li className="text-primary font-bold italic pt-4 mt-auto capitalize">and surrounding areas</li>
                 </ul>
               </div>
             ))}
@@ -152,9 +157,11 @@ export default function LocationsPage() {
              </div>
 
              <div className="flex-1 w-full relative">
-                <div className="grid md:grid-cols-2 gap-6">
+                {/* Five over two columns leaves one alone on the last row, so
+                    the final card spans both. */}
+                <div className="grid md:grid-cols-2 gap-6 [&>*:last-child]:md:col-span-2">
                   {nationalAreas.map((area) => (
-                    <div key={area.state} className="bg-secondary border border-border rounded-xl p-6 hover:border-accent/50 transition-all">
+                    <div key={area.state} className="flex flex-col bg-secondary border border-border rounded-xl p-6 hover:border-accent/50 transition-all">
                       <h3 className="text-2xl font-black text-foreground mb-3 capitalize tracking-tight">{area.state}</h3>
                       <p className="text-lg text-muted-foreground font-medium leading-relaxed">
                         {area.cities.join(", ")}

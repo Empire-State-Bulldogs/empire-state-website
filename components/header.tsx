@@ -93,11 +93,15 @@ function Wordmark({ onClick }: { onClick?: () => void }) {
       />
       {/* The badge alone was unreadable at header scale, so the name is set as
           type beside it and does the identifying. */}
-      <span className="leading-[1.05]">
-        <span className="block text-[13px] sm:text-sm font-black uppercase tracking-[0.08em] text-foreground">
+      {/* Set like the hero headline: mixed case with tight tracking, rather
+          than the wide uppercase letter-spacing this carried before. Same
+          family and weight as the h1 on every page, so the chrome and the
+          page read as one voice. */}
+      <span className="leading-[1.02]">
+        <span className="block text-[15px] sm:text-[17px] font-black tracking-tight text-foreground">
           Empire State
         </span>
-        <span className="block text-[13px] sm:text-sm font-black uppercase tracking-[0.28em] text-primary">
+        <span className="block text-[15px] sm:text-[17px] font-black tracking-tight text-primary">
           Bulldogs
         </span>
       </span>
@@ -293,7 +297,7 @@ export function Header() {
                 >
                   <MarqueeText
                     active={isPlaying}
-                    className="hidden lg:block w-[110px] text-left text-[12px] font-semibold text-foreground"
+                    className="hidden lg:block w-[150px] xl:w-[190px] text-left text-[12px] font-semibold text-foreground"
                   >
                     {currentTrack.title}
                   </MarqueeText>
