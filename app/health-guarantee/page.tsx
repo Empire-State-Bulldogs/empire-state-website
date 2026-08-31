@@ -3,6 +3,7 @@ import { Footer } from "@/components/footer"
 import { Card, CardContent } from "@/components/ui/card"
 import { ShieldCheck } from "lucide-react"
 import type { Metadata } from "next"
+import { PageHero, PageBody } from "@/components/page-hero"
 
 export const metadata: Metadata = {
     alternates: {
@@ -16,17 +17,12 @@ export default function HealthGuaranteePage() {
     return (
         <main className="min-h-screen bg-background text-foreground">
             <Header />
-            <div className="container mx-auto px-4 py-32 md:py-40">
-                <div className="text-center mb-16">
-                    <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <ShieldCheck className="w-10 h-10 text-primary" />
-                    </div>
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Health Guarantee</h1>
-                    <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
-                        Our commitment to the health and well-being of every puppy that leaves our home.
-                    </p>
-                </div>
-
+            <PageHero
+                eyebrow="Our Promise"
+                title="Health Guarantee"
+                intro="Our commitment to the health and well-being of every puppy that leaves our home."
+            />
+            <PageBody>
                 <div className="max-w-4xl mx-auto">
                     <Card className="bg-card border-border rounded-2xl overflow-hidden shadow-xl mb-12">
                         <CardContent className="p-8 md:p-12 space-y-8">
@@ -66,7 +62,7 @@ export default function HealthGuaranteePage() {
                         </CardContent>
                     </Card>
                 </div>
-            </div>
+            </PageBody>
             <Footer />
         </main>
     )

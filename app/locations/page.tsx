@@ -88,7 +88,7 @@ export default function LocationsPage() {
             <MapPin className="w-4 h-4" />
             Nationwide Reach
           </div>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 text-foreground leading-[1.2] tracking-tight capitalize">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-black mb-6 text-foreground leading-[1.2] tracking-tight capitalize">
             locations we <br className="md:hidden" />
             <span className="text-primary italic">serve</span>
           </h1>

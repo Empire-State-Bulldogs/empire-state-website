@@ -2,6 +2,7 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Card, CardContent } from "@/components/ui/card"
 import type { Metadata } from "next"
+import { PageHero, PageBody } from "@/components/page-hero"
 
 export const metadata: Metadata = {
     alternates: {
@@ -15,9 +16,11 @@ export default function PrivacyPage() {
     return (
         <main className="min-h-screen bg-background text-foreground">
             <Header />
-            <div className="container mx-auto px-4 py-32 md:py-40">
-                <h1 className="text-4xl md:text-5xl font-bold text-center mb-16">Privacy Policy</h1>
-
+            <PageHero
+                eyebrow="Legal"
+                title="Privacy Policy"
+            />
+            <PageBody>
                 <div className="max-w-4xl mx-auto">
                     <Card className="bg-card border-border rounded-2xl overflow-hidden shadow-xl">
                         <CardContent className="p-8 md:p-12 prose prose-invert max-w-none">
@@ -50,7 +53,7 @@ export default function PrivacyPage() {
                         </CardContent>
                     </Card>
                 </div>
-            </div>
+            </PageBody>
             <Footer />
         </main>
     )

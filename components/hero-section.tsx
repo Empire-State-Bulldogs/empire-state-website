@@ -73,7 +73,7 @@ export function HeroSection({ as = "h1" }: { as?: "h1" | "p" } = {}) {
 
         {/* Headline */}
         <Headline
-          className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-3 sm:mb-4 md:mb-4 text-balance px-2 ${isVisible ? "scroll-fade-up delay-100" : "opacity-0"}`}
+          className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black mb-3 sm:mb-4 md:mb-4 text-balance px-2 ${isVisible ? "scroll-fade-up delay-100" : "opacity-0"}`}
         >
           <span className="text-foreground">New York's Premier</span>
           <br />

@@ -2,6 +2,7 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { FaqAccordion } from "@/components/faq-accordion"
 import type { Metadata } from "next"
+import { PageHero, PageBody } from "@/components/page-hero"
 
 export const metadata: Metadata = {
     title: "French Bulldog Puppy FAQ",
@@ -55,8 +56,12 @@ export default function FAQPage() {
                 }}
             />
             <Header />
-            <div className="container mx-auto px-4 py-32 md:py-40">
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-8">Frequently Asked Questions</h1>
+            <PageHero
+                eyebrow="Support"
+                title="Frequently Asked Questions"
+                intro="Answers on health guarantees, registration, shipping and visiting our dogs."
+            />
+            <PageBody>
                 <p className="text-xl text-muted-foreground text-center max-w-2xl mx-auto mb-16 text-pretty">
                     Everything you need to know about our puppies, breeding program, and services.
                 </p>
@@ -64,7 +69,7 @@ export default function FAQPage() {
                 <div className="max-w-3xl mx-auto">
                     <FaqAccordion faqs={faqs} />
                 </div>
-            </div>
+            </PageBody>
             <Footer />
         </main>
     )

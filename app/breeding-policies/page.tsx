@@ -3,6 +3,7 @@ import { Footer } from "@/components/footer"
 import { Card, CardContent } from "@/components/ui/card"
 import { Heart, Award, FileText } from "lucide-react"
 import type { Metadata } from "next"
+import { PageHero, PageBody } from "@/components/page-hero"
 
 export const metadata: Metadata = {
     alternates: {
@@ -16,17 +17,12 @@ export default function BreedingPoliciesPage() {
     return (
         <main className="min-h-screen bg-background text-foreground">
             <Header />
-            <div className="container mx-auto px-4 py-32 md:py-40">
-                <div className="text-center mb-16">
-                    <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <Heart className="w-10 h-10 text-primary" />
-                    </div>
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Breeding Philosophy</h1>
-                    <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
-                        Ethical standards, genetic excellence, and the relentless pursuit of the perfect French Bulldog.
-                    </p>
-                </div>
-
+            <PageHero
+                eyebrow="Standards"
+                title="Breeding Philosophy"
+                intro="Ethical standards, genetic excellence, and the relentless pursuit of the perfect French Bulldog."
+            />
+            <PageBody>
                 <div className="max-w-4xl mx-auto space-y-12">
                     <section className="grid md:grid-cols-2 gap-8 items-center">
                         <div>
@@ -75,7 +71,7 @@ export default function BreedingPoliciesPage() {
                         </CardContent>
                     </Card>
                 </div>
-            </div>
+            </PageBody>
             <Footer />
         </main>
     )
