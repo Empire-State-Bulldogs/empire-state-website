@@ -417,3 +417,36 @@
 .animate-in.slide-in-from-bottom {
   animation: slideInFromBottom 0.4s cubic-bezier(0.32, 0.72, 0, 1) forwards;
 }
+
+/* ─── Marquee title ───
+   Used by MarqueeText for player titles that do not fit their slot. The
+   element slides by exactly its hidden distance and returns, holding still at
+   each end so both the start and the end of the title are readable.
+
+   Keyframe percentages have to be literal (a var() cannot be a selector), so
+   the stops are fixed and only the distance and duration vary per element.
+   Duration is computed from the overflow, which keeps every title moving at
+   the same speed rather than the same duration. */
+@keyframes marquee-slide {
+  0%, 18% {
+    transform: translateX(0);
+  }
+  50%, 68% {
+    transform: translateX(var(--marquee-distance, 0));
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-marquee-slide {
+  animation: marquee-slide var(--marquee-duration, 8s) ease-in-out infinite;
+}
+
+/* Motion here is decorative: if the reader has asked for less of it, show the
+   title still and let the title attribute carry the rest. */
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee-slide {
+    animation: none;
+  }
+}

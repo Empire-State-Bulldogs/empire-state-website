@@ -10,6 +10,7 @@ import {
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useMusic, songs as musicSongs } from "@/context/music-context"
+import { MarqueeText } from "@/components/marquee-text"
 import { ExpandedPlayer } from "@/components/expanded-player"
 import { MobilePlayer } from "@/components/mobile-player"
 import { cn } from "@/lib/utils"
@@ -93,7 +94,12 @@ export function Header() {
               >
                 <div className="flex flex-col items-start overflow-hidden">
                   <span className="text-[11px] font-black uppercase tracking-widest text-primary leading-none">now playing</span>
-                  <span className="text-[15px] font-bold text-foreground truncate w-full leading-snug capitalize tracking-tight">{currentTrack.title}</span>
+                  <MarqueeText
+                    active={isPlaying}
+                    className="text-[15px] font-bold text-foreground w-full leading-snug capitalize tracking-tight"
+                  >
+                    {currentTrack.title}
+                  </MarqueeText>
                 </div>
                 <div className={cn("flex gap-0.5 items-end h-4 shrink-0 ml-1", !isPlaying && "opacity-30")}>
                   <div className={cn("w-0.5 h-1.5 bg-primary rounded-full", isPlaying && "animate-music-bar-1")} />
@@ -164,7 +170,12 @@ export function Header() {
                 </button>
                 <div className="w-px h-4 bg-primary/20 mx-1" />
                 <button onClick={() => setIsExpanded(!isExpanded)} className="flex items-center gap-1.5 group max-w-[110px]">
-                  <span className="text-[10px] text-foreground truncate hidden xl:block">{currentTrack.title}</span>
+                  <MarqueeText
+                    active={isPlaying}
+                    className="text-[11px] font-semibold text-foreground w-[104px] hidden lg:block"
+                  >
+                    {currentTrack.title}
+                  </MarqueeText>
                   {isExpanded ? <ChevronUp size={14} className="text-primary shrink-0" /> : <ChevronDown size={14} className="text-primary shrink-0" />}
                 </button>
               </div>

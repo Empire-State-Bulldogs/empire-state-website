@@ -1,6 +1,7 @@
 "use client"
 
 import { useMusic, songs } from "@/context/music-context"
+import { MarqueeText } from "@/components/marquee-text"
 import {
   Play, Pause, SkipForward, SkipBack,
   Repeat, Shuffle, Volume2, VolumeX,
@@ -127,8 +128,10 @@ export function MobilePlayer({ isOpen, onClose }: MobilePlayerProps) {
 
         {/* Track Info */}
         <div className="text-center px-6 pt-4">
-          <h2 className="text-2xl font-black text-foreground truncate leading-tight">
-            {currentTrack.title}
+          <h2 className="text-2xl font-black text-foreground leading-tight">
+            <MarqueeText active={isPlaying} speed={26}>
+              {currentTrack.title}
+            </MarqueeText>
           </h2>
           <p className="text-sm text-primary font-semibold mt-1 uppercase tracking-widest">
             {currentTrack.artist}
