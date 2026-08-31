@@ -1,8 +1,26 @@
 "use client"
 
+import { useEffect, useState } from "react"
+
+type Element = {
+  id: number
+  emoji: string
+  left: number
+  top: number
+  delay: number
+  duration: number
+  spin: boolean
+}
+
 export function BackgroundElements() {
-  // Generate randomized positions and animations for elements
-  const generateElements = () => {
+  // These positions are random, so the server and the client would each pick a
+  // different set and React would report a hydration mismatch, throwing away
+  // and re-rendering the tree. Generating them in an effect means the first
+  // client render matches the server's empty output, and the decorations
+  // appear immediately afterwards.
+  const [elements, setElements] = useState<Element[]>([])
+
+  const generateElements = (): Element[] => {
     const emojis = ["🐾", "🦴", "🐶", "🐕", "❤️", "⭐", "🦴", "🐾"]
     const elements = []
 
@@ -27,7 +45,9 @@ export function BackgroundElements() {
     return elements
   }
 
-  const elements = generateElements()
+  useEffect(() => {
+    setElements(generateElements())
+  }, [])
 
   return (
     <>
