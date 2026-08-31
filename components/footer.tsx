@@ -1,6 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Instagram } from "lucide-react"
+import { W7StationTag } from "./w7-station-tag"
 
 const footerLinks = {
   explore: [
@@ -147,6 +148,7 @@ export function Footer() {
             </p>
             <p className="text-lg md:text-xl text-muted-foreground font-medium capitalize tracking-tight italic">proudly serving new york state and beyond</p>
           </div>
+          <W7StationTag />
         </div>
       </div>
     </footer>
